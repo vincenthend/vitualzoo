@@ -3,11 +3,11 @@
 /** @class airAnimal
   * Kelas airAnimal 
   */
-class airAnimal : virtual public Animal	 {
+class AirAnimal : virtual public Animal	 {
 public:	
    /** @brief Konstruktor, menginisiasi.
      */
-    airAnimal();
+    AirAnimal();
 	
 private:
 };

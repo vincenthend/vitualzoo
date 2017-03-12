@@ -3,11 +3,11 @@
 /** @class waterAnimal
   * Kelas waterAnimal 
   */
-class waterAnimal : virtual public Animal {
+class WaterAnimal : virtual public Animal {
 public:	
    /** @brief Konstruktor, menginisiasi.
      */
-    waterAnimal();
+    WaterAnimal();
 	
 private:
 };

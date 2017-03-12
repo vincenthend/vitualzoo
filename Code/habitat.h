@@ -19,42 +19,38 @@ class Habitat: public Cell{
  * Kelas landHabitat, cellID bernilai 11
  *
  */
-class landHabitat: public Habitat{
+class LandHabitat: public Habitat{
 	public:
 		//ctor, dtor, cctor
 		/** @brief Membuat landHabitat dengan X dan Y 0 dan cellID 11
     	 */
-		landHabitat();
+		LandHabitat();
 		
 		/** @brief Membuat landHabitat dengan X dan Y terdefinisi dan cellID 11
     	 */
-		landHabitat(int x, int y);
-		
-		/** @brief Melakukan render terhadap jenis cell
-    	 */
-		void Render();
+		LandHabitat(int x, int y);
+	private:
+		const char defaultCode = 'L';
 	
 };
 
 /**
- * @class 	waterHabitat
- * Kelas waterHabitat, cellID bernilai 13
+ * @class 	WaterHabitat
+ * Kelas WaterHabitat, cellID bernilai 13
  *
  */
-class waterHabitat: public Habitat{
+class WaterHabitat: public Habitat{
 	public:
-	//ctor, dtor, cctor
-	/** @brief Membuat waterHabitat dengan X dan Y 0 dan cellID 11
-	*/
-	waterHabitat();
-
-	/** @brief Membuat waterHabitat dengan X dan Y terdefinisi dan cellID 11
-	*/
-	waterHabitat(int x, int y);
-
-	/** @brief Melakukan render terhadap jenis cell
-	*/
-	void Render();
+		//ctor, dtor, cctor
+		/** @brief Membuat waterHabitat dengan X dan Y 0 dan cellID 11
+		*/
+		WaterHabitat();
+	
+		/** @brief Membuat waterHabitat dengan X dan Y terdefinisi dan cellID 11
+		*/
+		WaterHabitat(int x, int y);
+	private:
+		const char defaultCode = 'W';
 
 };
 
@@ -64,20 +60,18 @@ class waterHabitat: public Habitat{
 * Kelas airHabitat, cellID bernilai 12
 *
 */
-class airHabitat : public Habitat {
-public:
-	//ctor, dtor, cctor
-	/** @brief Membuat airHabitat dengan X dan Y 0 dan cellID 12
-	*/
-	airHabitat();
-
-	/** @brief Membuat airHabitat dengan X dan Y terdefinisi dan cellID 12
-	*/
-	airHabitat(int x, int y);
-
-	/** @brief Melakukan render terhadap jenis cell
-	*/
-	void Render();
+class AirHabitat : public Habitat {
+	public:
+		//ctor, dtor, cctor
+		/** @brief Membuat airHabitat dengan X dan Y 0 dan cellID 12
+		*/
+		AirHabitat();
+	
+		/** @brief Membuat airHabitat dengan X dan Y terdefinisi dan cellID 12
+		*/
+		AirHabitat(int x, int y);
+	private:
+		const char defaultCode = 'A';
 
 };
 

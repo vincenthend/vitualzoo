@@ -11,11 +11,14 @@
  */
 
 class Cell: public Renderable{	
-public:
+	public:
+		void render();
+		void setCode(char c);
 	protected:
 		int cellID;
 		int locX;
 		int locY;
-		char renderObj;
+	private:
+		char code;
 };
 #endif

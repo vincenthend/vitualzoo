@@ -1,4 +1,4 @@
 #include "airanimal.h"
-airAnimal::airAnimal(){
+AirAnimal::AirAnimal(){
 	habitat[2] = true;
 }

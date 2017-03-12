@@ -1,4 +1,4 @@
 #include "wateranimal.h"
-waterAnimal::waterAnimal(){
+WaterAnimal::WaterAnimal(){
 	habitat[1] = true;
 }

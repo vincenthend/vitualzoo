@@ -20,11 +20,11 @@ class Cage{
 
 		/** @brief Menambahkan habitat ke dalam cage
 		*/
-		void AddHabitat(Habitat* H);
+		void addHabitat(Habitat* H);
 
 		/** @brief Menambahkan animal ke dalam cage
 		*/
-		void AddAnimal(Animal* A);
+		void addAnimal(Animal* A);
 		
 	private:
 		int n_animal;

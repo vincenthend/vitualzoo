@@ -6,6 +6,7 @@ Road::Road()
 	locY = 0;
 	cellID = 21;
 	type = 0;
+	Cell::setCode(defaultCode);
 }
 
 Road::Road(int x, int y)
@@ -14,6 +15,7 @@ Road::Road(int x, int y)
 	locY = y;
 	cellID = 21;
 	type = 0;
+	Cell::setCode(defaultCode);
 }
 
 Road::Road(int x, int y, int type)
@@ -22,11 +24,7 @@ Road::Road(int x, int y, int type)
 	locY = y;
 	cellID = 21;
 	this->type = type;
-}
-
-void Road::Render()
-{
-	cout << "X";
+	Cell::setCode(defaultCode);
 }
 
 Resto::Resto()
@@ -34,6 +32,7 @@ Resto::Resto()
 	locX = 0;
 	locY = 0;
 	cellID = 22;
+	Cell::setCode(defaultCode);
 }
 
 Resto::Resto(int x, int y)
@@ -41,11 +40,7 @@ Resto::Resto(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 22;
-}
-
-void Resto::Render()
-{
-	cout << "R";
+	Cell::setCode(defaultCode);
 }
 
 Park::Park()
@@ -53,6 +48,7 @@ Park::Park()
 	locX = 0;
 	locY = 0;
 	cellID = 23;
+	Cell::setCode(defaultCode);
 }
 
 Park::Park(int x, int y)
@@ -60,9 +56,5 @@ Park::Park(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 23;
-}
-
-void Park::Render()
-{
-	cout << "P";
+	Cell::setCode(defaultCode);
 }

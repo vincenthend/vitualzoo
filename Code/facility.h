@@ -37,11 +37,10 @@ class Road: public Facility{
 		/** @brief Membuat road dengan X dan Y terdefinisi dan cellID 21 dan tipe terdefinisi
 		*/
 		Road(int x, int y, int type);
-
-		void Render();
 		
 	private:
 		int type;
+		const char defaultCode = 'X';
 };
 
 /**
@@ -60,8 +59,8 @@ class Resto: public Facility{
 		/** @brief Membuat Resto dengan X dan Y terdefinisi dan cellID 22
 		*/
 		Resto(int x, int y);
-
-		void Render();
+	private:
+		const char defaultCode = 'R';
 };
 
 /**
@@ -81,8 +80,8 @@ class Park: public Facility{
 		/** @brief Membuat Park dengan X dan Y terdefinisi dan cellID 23
 		*/
 		Park(int x, int y);
-
-		void Render();
+	private:
+		const char defaultCode = 'P';
 };
 
 #endif

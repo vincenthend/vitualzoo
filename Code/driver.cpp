@@ -33,7 +33,7 @@ void Driver::printZoo()
 		for (j = 0; j < Z.getHeight(); j++) {
 			C = Z.getCell(i, j);
 			if (C != NULL) {
-				C->Render();
+				C->render();
 			}
 			else {
 				cout << " ";
@@ -53,7 +53,7 @@ void Driver::printZoo(int x1, int y1, int x2, int y2)
 		for (j = y1; j < y2; j++) {
 			C = Z.getCell(i, j);
 			if (C != NULL) {
-				C->Render();
+				C->render();
 			}
 			else {
 				cout << " ";

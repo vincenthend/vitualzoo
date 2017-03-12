@@ -1,4 +1,4 @@
 #include "landanimal.h"
-landAnimal::landAnimal(){
+LandAnimal::LandAnimal(){
 	habitat[0] = true;
 }

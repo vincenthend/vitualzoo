@@ -3,11 +3,11 @@
 /** @class landAnimal
   * Kelas landAnimal 
   */
-class landAnimal : virtual public Animal {
+class LandAnimal : virtual public Animal {
 public:	
    /** @brief Konstruktor, menginisiasi.
      */
-    landAnimal();
+    LandAnimal();
 	
 private:
 };
