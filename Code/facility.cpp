@@ -58,3 +58,13 @@ Park::Park(int x, int y)
 	cellID = 23;
 	Cell::setCode(defaultCode);
 }
+
+void Facility::setCageID(int n)
+{
+	cageID = n;
+}
+
+int Facility::getCageID()
+{
+	return cageID;
+}

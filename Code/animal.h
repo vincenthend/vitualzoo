@@ -9,7 +9,7 @@ using namespace std;
   * @param habitat
   * 0 = land, 1 = water, 2 = air
   */
-class Animal {
+class Animal : public Renderable {
 public:	
    /** @brief Menuliskan interaksi dengan hewan ke layar.
      */

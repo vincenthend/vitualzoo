@@ -1,3 +1,5 @@
+#include "animal.h"
+
 #ifndef LANDANIMAL_H
 #define LANDANIMAL_H
 /** @class landAnimal

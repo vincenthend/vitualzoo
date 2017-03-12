@@ -1,3 +1,5 @@
+#include "animal.h"
+
 #ifndef AIRANIMAL_H
 #define AIRANIMAL_H
 /** @class airAnimal

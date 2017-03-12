@@ -12,7 +12,14 @@
 * type entrance bernilai 1, exit bernilai 2, default 0
 */
 class Facility: public Cell{
+	public:
+	/** @brief Mengubah nilai cageID menjadi n
+	*/
+	void setCageID(int n);
 
+	/** @brief Mengembalikan nilai cageID
+	*/
+	int getCageID();
 };
 
 

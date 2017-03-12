@@ -35,7 +35,7 @@ class Zoo{
 
 		/** @brief Melakukan penambahan cage, cage sudah dialokasi di luar
 		*/
-		void addCage(Cage* cage);
+		void addCage();
 
 		/** @brief Melakukan penambahan cell dengan cell C yang sudah dictor di tempat lain
 		*/
