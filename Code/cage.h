@@ -1,6 +1,5 @@
 #include "animal.h"
 #include "habitat.h"
-#include "cell.h"
 
 #ifndef CAGE_H
 #define CAGE_H
@@ -31,7 +30,7 @@ class Cage{
 		int n_animal;
 		int n_cell;
 		Animal ** a;
-		Cell ** c;	
+		Habitat ** c;	
 };
 
 #endif
