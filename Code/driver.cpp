@@ -1,4 +1,6 @@
 #include "driver.h"
+#include <random>
+#include <time.h>
 
 Driver::Driver(int w, int h):Z(w,h)
 {
@@ -22,6 +24,7 @@ void Driver::initZoo()
 
 void Driver::startTour()
 {
+	srand(time(NULL));
 	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
 	Cell *C;
 	Tc = 0;
@@ -64,6 +67,9 @@ void Driver::startTour()
 			Tmove[cmove] = 4;
 			cmove++;
 		}
+
+		move == (rand() % 4) + 1;
+
 		//Random jalan yang mungkin pake mod cmove, simpen di move
 		if (move == 1) {
 			j--;
