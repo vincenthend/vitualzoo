@@ -19,7 +19,12 @@ int Animal::getTame(){
 	return (tame);
 }
 
-void Animal::move(int x, int y);
+int Animal::getType()
+{
+	return 0;
+}
+
+void Animal::move(int x, int y){
 	locX += x;
 	locY += y;
 }

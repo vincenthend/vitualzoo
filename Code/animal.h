@@ -11,7 +11,6 @@ using namespace std;
   */
 class Animal {
 public:	
-
    /** @brief Menuliskan interaksi dengan hewan ke layar.
      */
 	virtual void interact() = 0;
@@ -40,6 +39,11 @@ public:
      * @return True jika jinak dan false jika tidak jinak.
      */
 	int getTame();
+
+	/** @brief Mengembalikan nilai type hewan.
+	* @return Nilai type hewan.
+	*/
+	int getType();
 	
    /** @brief Memindahkan hewan sejauh x, y
      */
@@ -49,6 +53,7 @@ protected:
 	bool habitat[3] = {false, false, false};
 	
 private:
+	int type;
 	int locX;
 	int locY;
 	int weight;

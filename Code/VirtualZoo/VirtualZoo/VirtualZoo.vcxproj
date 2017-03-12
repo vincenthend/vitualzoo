@@ -83,8 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -152,19 +151,21 @@
     <ClInclude Include="..\..\animal.h" />
     <ClInclude Include="..\..\cage.h" />
     <ClInclude Include="..\..\cell.h" />
+    <ClInclude Include="..\..\driver.h" />
     <ClInclude Include="..\..\facility.h" />
     <ClInclude Include="..\..\habitat.h" />
     <ClInclude Include="..\..\renderable.h" />
     <ClInclude Include="..\..\zoo.h" />
+    <ClInclude Include="gui.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\animal.cpp" />
     <ClCompile Include="..\..\cage.cpp" />
-    <ClCompile Include="..\..\cell.cpp" />
+    <ClCompile Include="..\..\driver.cpp" />
     <ClCompile Include="..\..\facility.cpp" />
     <ClCompile Include="..\..\habitat.cpp" />
+    <ClCompile Include="..\..\VirtualZoo.cpp" />
     <ClCompile Include="..\..\zoo.cpp" />
-    <ClCompile Include="VirtualZoo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

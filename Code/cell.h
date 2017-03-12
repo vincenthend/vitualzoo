@@ -10,16 +10,7 @@
  *
  */
 
-class Cell: public Renderable{
-	public:
-		/** @brief Membuat Cell dengan X dan Y 0 dan cellID 0
-    	 */
-		Cell();
-		
-	    /** @brief Membuat Cell pada X dan Y tertentu dengan cellID terdefinisi
-    	 */
-		Cell(int x, int y, int ID);
-	
+class Cell: public Renderable{	
 	protected:
 		int cellID;
 		int locX;

@@ -1,4 +1,5 @@
 #include "animal.h"
+#include "habitat.h"
 #include "cell.h"
 
 #ifndef CAGE_H
@@ -20,15 +21,15 @@ class Cage{
 
 		/** @brief Menambahkan habitat ke dalam cage
 		*/
-		void AddHabitat();
+		void AddHabitat(Habitat* H);
 
 		/** @brief Menambahkan animal ke dalam cage
 		*/
-		void AddAnimal();
+		void AddAnimal(Animal* A);
 		
 	private:
-		int n_animal = 0;
-		int n_cell = 0;
+		int n_animal;
+		int n_cell;
 		Animal ** a;
 		Cell ** c;	
 };

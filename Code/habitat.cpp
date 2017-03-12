@@ -38,14 +38,14 @@ void airHabitat::Render()
 	cout << "A";
 }
 
-waterHabitat::landHabitat()
+waterHabitat::waterHabitat()
 {
 	locX = 0;
 	locY = 0;
 	cellID = 13;
 }
 
-waterHabitat::landHabitat(int x, int y)
+waterHabitat::waterHabitat(int x, int y)
 {
 	locX = x;
 	locY = y;
