@@ -1,12 +1,10 @@
 ﻿  zoo.cpp
-  driver.cpp
-  Generating Code...
-  Compiling...
   VirtualZoo.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
   habitat.cpp
   facility.cpp
+  driver.cpp
   cage.cpp
+  animal.cpp
+  Generating Code...
   VirtualZoo.vcxproj -> E:\Literal Zoo\babi\Code\VirtualZoo\Debug\VirtualZoo.exe
   VirtualZoo.vcxproj -> E:\Literal Zoo\babi\Code\VirtualZoo\Debug\VirtualZoo.pdb (Full PDB)

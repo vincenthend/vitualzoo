@@ -7,7 +7,7 @@ using namespace std;
 /** @class Animal
   * Kelas Animal 
   * @param habitat
-  * 0 = land, 1 = water, 2 = air
+  * 0 = land, 1 = air, 2 = water
   */
 class Animal {
 public:	

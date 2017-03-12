@@ -105,3 +105,8 @@ Cage * Zoo::getCage(int n)
 {
 	return cg[n];
 }
+
+int Zoo::getNCage()
+{
+	return n_cage;
+}

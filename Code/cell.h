@@ -11,9 +11,11 @@
  */
 
 class Cell: public Renderable{	
+public:
 	protected:
 		int cellID;
 		int locX;
 		int locY;
+		char renderObj;
 };
 #endif

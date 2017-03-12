@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Cell.h"
+#include "cell.h"
 
 using namespace std;
 
@@ -12,7 +12,6 @@ using namespace std;
  *
  */
 class Habitat: public Cell{
-	//Isi menyusul
 };
 
 /**
@@ -38,28 +37,6 @@ class landHabitat: public Habitat{
 };
 
 /**
- * @class 	airHabitat
- * Kelas airHabitat, cellID bernilai 12
- *
- */
-class airHabitat: public Habitat{
-	public:
-	//ctor, dtor, cctor
-	/** @brief Membuat airHabitat dengan X dan Y 0 dan cellID 12
-	*/
-	airHabitat();
-
-	/** @brief Membuat airHabitat dengan X dan Y terdefinisi dan cellID 12
-	*/
-	airHabitat(int x, int y);
-
-	/** @brief Melakukan render terhadap jenis cell
-	*/
-	void Render();
-
-};
-
-/**
  * @class 	waterHabitat
  * Kelas waterHabitat, cellID bernilai 13
  *
@@ -74,6 +51,29 @@ class waterHabitat: public Habitat{
 	/** @brief Membuat waterHabitat dengan X dan Y terdefinisi dan cellID 11
 	*/
 	waterHabitat(int x, int y);
+
+	/** @brief Melakukan render terhadap jenis cell
+	*/
+	void Render();
+
+};
+
+
+/**
+* @class 	airHabitat
+* Kelas airHabitat, cellID bernilai 12
+*
+*/
+class airHabitat : public Habitat {
+public:
+	//ctor, dtor, cctor
+	/** @brief Membuat airHabitat dengan X dan Y 0 dan cellID 12
+	*/
+	airHabitat();
+
+	/** @brief Membuat airHabitat dengan X dan Y terdefinisi dan cellID 12
+	*/
+	airHabitat(int x, int y);
 
 	/** @brief Melakukan render terhadap jenis cell
 	*/

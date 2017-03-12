@@ -3,9 +3,7 @@
 Cage::Cage()
 {
 	n_animal = 0;
-	n_cell = 0;
 	a = new Animal*[99];
-	c = new Cell*[99];
 }
 
 void Cage::AddAnimal(Animal* A)

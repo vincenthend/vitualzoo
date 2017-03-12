@@ -61,13 +61,11 @@ class Zoo{
 		*/
 		Cage* getCage(int n);
 
-
-		//Fungsi lain
-
-		/** @brief Melakukan print pada peta zoo
+		/** @brief getter untuk cage ke-n
+		* @return Alamat cage ke-n dalam memory
 		*/
-		void printZoo();
-	
+		int getNCage();
+
 	private:
 		int width;
 		int height;

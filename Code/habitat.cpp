@@ -19,25 +19,6 @@ void landHabitat::Render()
 	cout << "L";
 }
 
-airHabitat::airHabitat()
-{
-	locX = 0;
-	locY = 0;
-	cellID = 12;
-}
-
-airHabitat::airHabitat(int x, int y)
-{
-	locX = x;
-	locY = y;
-	cellID = 12;
-}
-
-void airHabitat::Render()
-{
-	cout << "A";
-}
-
 waterHabitat::waterHabitat()
 {
 	locX = 0;
@@ -55,4 +36,23 @@ waterHabitat::waterHabitat(int x, int y)
 void waterHabitat::Render()
 {
 	cout << "W";
+}
+
+airHabitat::airHabitat()
+{
+	locX = 0;
+	locY = 0;
+	cellID = 12;
+}
+
+airHabitat::airHabitat(int x, int y)
+{
+	locX = x;
+	locY = y;
+	cellID = 12;
+}
+
+void airHabitat::Render()
+{
+	cout << "A";
 }
