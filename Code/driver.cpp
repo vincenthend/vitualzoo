@@ -40,7 +40,58 @@ void Driver::startTour()
 	move = 0;
 	while (C->getCageID() != 211){
 		//Random entrance yang dipake, simpen  x y di i j
-		interactSurrounding(i, j);//Interact sekitar dia
+		if (((j - 1) >= 0) && (move != 1)){
+			C = Z.getCell(i, j - 1);
+			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+				if (C != NULL) {
+					if (C->getCageID() > -1) {
+						A = Z.getCage(C->getCageID())->isSpaceOccupied(i, j);
+						if (A != NULL) {
+							A->interact();
+						}
+					}
+				}
+			}
+		}
+		if (((i + 1) >= 0) && (move != 2)){
+			C = Z.getCell(i + 1, j);
+			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+				if (C != NULL) {
+					if (C->getCageID() > -1) {
+						A = Z.getCage(C->getCageID())->isSpaceOccupied(i, j);
+						if (A != NULL) {
+							A->interact();
+						}
+					}
+				}
+			}
+		}
+		if (((j + 1) >= 0) && (move != 3)){
+			C = Z.getCell(i, j + 1);
+			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+				if (C != NULL) {
+					if (C->getCageID() > -1) {
+						A = Z.getCage(C->getCageID())->isSpaceOccupied(i, j);
+						if (A != NULL) {
+							A->interact();
+						}
+					}
+				}
+			}
+		}
+		if (((i - 1) >= 0) && (move != 4)){
+			C = Z.getCell(i - 1, j);
+			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+				if (C != NULL) {
+					if (C->getCageID() > -1) {
+						A = Z.getCage(C->getCageID())->isSpaceOccupied(i, j);
+						if (A != NULL) {
+							A->interact();
+						}
+					}
+				}
+			}
+		}
 		/*Metode gerak: 
 		atas (y - 1): 1
 		kanan (x + 1): 2
@@ -50,28 +101,28 @@ void Driver::startTour()
 		cmove = 0;
 		if (((j - 1) >= 0) && (move != 1)){
 			C = Z.getCell(i, j - 1);
-			if (C->getCageID() == 21){
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 1;
 				cmove++;
 			}
 		}
 		if (((i + 1) >= 0) && (move != 2)){
 			C = Z.getCell(i + 1, j);
-			if (C->getCageID() == 21){
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 2;
 				cmove++;
 			}
 		}
 		if (((j + 1) >= 0) && (move != 3)){
 			C = Z.getCell(i, j + 1);
-			if (C->getCageID() == 21){
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 3;
 				cmove++;
 			}
 		}
 		if (((i - 1) >= 0) && (move != 4)){
 			C = Z.getCell(i - 1, j);
-			if (C->getCageID() == 21){
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 4;
 				cmove++;
 			}
