@@ -19,12 +19,19 @@ int Animal::getTame(){
 	return (tame);
 }
 
-int Animal::getType()
-{
-	return 0;
-}
-
-void Animal::move(int x, int y){
+void Animal::move(int x, int y);
 	locX += x;
 	locY += y;
+}
+
+LandAnimal::LandAnimal(){
+	habitat[0] = true;
+}
+
+WaterAnimal::WaterAnimal(){
+	habitat[1] = true;
+}
+
+AirAnimal::AirAnimal(){
+	habitat[2] = true;
 }

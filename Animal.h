@@ -6,8 +6,6 @@
 using namespace std;
 /** @class Animal
   * Kelas Animal 
-  * @param habitat
-  * 0 = land, 1 = water, 2 = air
   */
 class Animal {
 public:	
@@ -39,11 +37,6 @@ public:
      * @return True jika jinak dan false jika tidak jinak.
      */
 	int getTame();
-
-	/** @brief Mengembalikan nilai type hewan.
-	* @return Nilai type hewan.
-	*/
-	int getType();
 	
    /** @brief Memindahkan hewan sejauh x, y
      */
@@ -53,12 +46,47 @@ protected:
 	bool habitat[3] = {false, false, false};
 	
 private:
-	int type;
 	int locX;
 	int locY;
 	int weight;
 	int food_Weight;
 	int foodType;
 	bool tame;
+};
+
+/** @class LandAnimal
+  * Kelas LandAnimal 
+  */
+class LandAnimal {
+public:	
+   /** @brief Konstruktor, menginisiasi.
+     */
+    LandAnimal();
+	
+private:
+};
+
+/** @class WaterAnimal
+  * Kelas WaterAnimal 
+  */
+class WaterAnimal {
+public:	
+   /** @brief Konstruktor, menginisiasi.
+     */
+    WaterAnimal();
+	
+private:
+};
+
+/** @class AirAnimal
+  * Kelas AirAnimal 
+  */
+class AirAnimal {
+public:	
+   /** @brief Konstruktor, menginisiasi.
+     */
+    AirAnimal();
+	
+private:
 };
 #endif
