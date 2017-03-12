@@ -41,9 +41,10 @@ class Road: public Facility{
 		*/
 		Road(int x, int y);
 
-		/** @brief Membuat road dengan X dan Y terdefinisi dan cellID 21 dan tipe terdefinisi
+		/** @brief Membuat road dengan X dan Y terdefinisi dan cellID sesuai tipe
+		* type 210 = entrance, type 211 = exit
 		*/
-		Road(int x, int y, int type);
+		Road(int x, int y, bool isEntrance);
 		
 	private:
 		int type;

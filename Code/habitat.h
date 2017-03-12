@@ -81,6 +81,7 @@ class AirHabitat : public Habitat {
 		AirHabitat(int x, int y);
 
 		void render();
+
 	private:
 		const char defaultCode = 'A';
 
