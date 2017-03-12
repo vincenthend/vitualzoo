@@ -1,3 +1,5 @@
+#include "animal.h"
+
 #ifndef WATERANIMAL_H
 #define WATERANIMAL_H
 /** @class waterAnimal

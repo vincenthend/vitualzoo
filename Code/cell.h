@@ -11,11 +11,24 @@
  */
 
 class Cell: public Renderable{	
-public:
+
+	public:
+		virtual void setCageID(int n) {
+
+		}
+		virtual int getCageID() {
+			return cageID;
+		}
+
+	/** @brief Mengembalikan nilai cellID
+	*/
+	int getCellID();
 	protected:
 		int cellID;
 		int locX;
 		int locY;
+		int cageID;
 		char renderObj;
+
 };
 #endif

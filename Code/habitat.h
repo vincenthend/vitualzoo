@@ -12,6 +12,15 @@ using namespace std;
  *
  */
 class Habitat: public Cell{
+	
+	public:
+	/** @brief Mengubah nilai cageID menjadi n
+	*/
+	void setCageID(int n);
+
+	/** @brief Mengembalikan nilai cageID
+	*/
+	int getCageID();
 };
 
 /**

@@ -56,3 +56,13 @@ void airHabitat::Render()
 {
 	cout << "A";
 }
+
+void Habitat::setCageID(int n)
+{
+	cageID = n;
+}
+
+int Habitat::getCageID()
+{
+	return cageID;
+}

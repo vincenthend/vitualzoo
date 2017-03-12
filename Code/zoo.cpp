@@ -75,10 +75,11 @@ Zoo::Zoo(const Zoo& Z){
 	}	
 }
 
-void Zoo::addCage(Cage* cage)
+void Zoo::addCage()
 {
-	cg[n_cage] = cage;
-	n_cage += 1;
+	cg[n_cage] = new Cage;
+	cg[n_cage]->setCageID(n_cage);
+	n_cage += 1;	
 }
 
 void Zoo::addCell(int x, int y, Cell* C)

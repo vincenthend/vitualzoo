@@ -33,7 +33,14 @@ void Driver::printZoo()
 		for (j = 0; j < Z.getHeight(); j++) {
 			C = Z.getCell(i, j);
 			if (C != NULL) {
-				C->Render();
+				if (C->getCellID() == 11 || C->getCellID() == 12 || C->getCellID() == 13) {
+					if (C->getCageID() > -1) {
+					
+					}
+				}
+				else {
+					C->Render();
+				}
 			}
 			else {
 				cout << " ";
