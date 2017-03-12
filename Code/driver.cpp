@@ -28,14 +28,17 @@ void Driver::printZoo()
 {
 	int i, j;
 	Cell* C;
+	Animal* A;
+
 	for (i = 0; i < Z.getWidth(); i++) {
 		cout << "|";
 		for (j = 0; j < Z.getHeight(); j++) {
 			C = Z.getCell(i, j);
 			if (C != NULL) {
-				if (C->getCellID() == 11 || C->getCellID() == 12 || C->getCellID() == 13) {
-					if (C->getCageID() > -1) {
-					
+				if (C->getCageID() > -1) {
+					A = Z.getCage[C->getCageID()]->isSpaceOccupied(i, j);
+					if (A != NULL) {
+						A->render();
 					}
 				}
 				else {
