@@ -24,14 +24,14 @@ void Animal::move(int x, int y);
 	locY += y;
 }
 
-LandAnimal::LandAnimal(){
+landAnimal::landAnimal(){
 	habitat[0] = true;
 }
 
-WaterAnimal::WaterAnimal(){
+waterAnimal::waterAnimal(){
 	habitat[1] = true;
 }
 
-AirAnimal::AirAnimal(){
+airAnimal::airAnimal(){
 	habitat[2] = true;
 }

@@ -1,10 +1,9 @@
-#ifndef CELL_H
-#define CELL_H
-
-
 #include <iostream>
 #include "renderable.h"
 #include "animal.h"
+
+#ifndef CELL_H
+#define CELL_H
 
 /** @class 	Cell
  * Kelas Cell, cellID didefinisikan pada turunan Cell, default ID = 0
@@ -20,13 +19,8 @@ class Cell: public Renderable{
 	    /** @brief Membuat Cell pada X dan Y tertentu dengan cellID terdefinisi
     	 */
 		Cell(int x, int y, int ID);
-		
-		/** @brief Membuat Cell pada X dan Y tertentu dengan ID tertentu.
-    	 */
-		~Cell();
-		Cell(Cell& C);
 	
-	private:
+	protected:
 		int cellID;
 		int locX;
 		int locY;

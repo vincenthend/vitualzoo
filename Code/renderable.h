@@ -6,24 +6,11 @@
  * Mengatur render
  */
 
-class Renderable(){
+class Renderable{
 	public:
-		/** @brief Membuat Cell pada X dan Y tertentu dengan ID tertentu.
-    	 */
-		Renderable();
-		
-		/** @brief Membuat Cell pada X dan Y tertentu dengan ID tertentu.
-    	 */
-		~Renderable();
-		
-		/** @brief Membuat Cell pada X dan Y tertentu dengan ID tertentu.
-    	 */
-		Renderable(Renderable& R);
-		
 		/** @brief Melakukan print berdasarkan tipe
     	 */
-		virtual	Render() = 0;
-	
+		virtual void Render() = 0;	
 };
 
 #endif

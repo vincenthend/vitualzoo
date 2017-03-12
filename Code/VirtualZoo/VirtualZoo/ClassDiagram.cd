@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Animal">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMABAAAAAAAAACADAAAAAAAABAAACAgAAAAQAEBBAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airAnimal" Collapsed="true">
+    <Position X="4.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="landAnimal" Collapsed="true">
+    <Position X="3" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="waterAnimal" Collapsed="true">
+    <Position X="1.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Habitat" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\habitat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cell" Collapsed="true">
+    <Position X="13" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAADABAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\cell.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Facility" Collapsed="true">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\facility.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Park" Collapsed="true">
+    <Position X="14" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\facility.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resto" Collapsed="true">
+    <Position X="17.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\facility.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Road" Collapsed="true">
+    <Position X="15.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAABAAAAABAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\facility.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="landHabitat" Collapsed="true">
+    <Position X="10.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\habitat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="airHabitat" Collapsed="true">
+    <Position X="12.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\habitat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="waterHabitat" Collapsed="true">
+    <Position X="8.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\habitat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zoo" Collapsed="true">
+    <Position X="6.25" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAQAQAAAAABAAAAAAAKAAAAAAEAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\zoo.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="c" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Renderable" Collapsed="true">
+    <Position X="13" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\renderable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cage" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <AssociationLine Name="a" Type="Animal" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="5.312" />
+        <Point X="7.5" Y="7.682" />
+        <Point X="4.5" Y="7.682" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAABAAACAAAAAAgAAAAAAAAACgAAAEAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\Code\cage.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="a" />
+      <Field Name="c" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

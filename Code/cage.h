@@ -1,3 +1,6 @@
+#include "animal.h"
+#include "cell.h"
+
 #ifndef CAGE_H
 #define CAGE_H
 
@@ -10,14 +13,24 @@
  
 class Cage{
 	public :
+		/** @brief Inisialisasi cage dengan n_animal 0 dan n_cell 0
+		* membuat array a dan c sebanyak 99 buah
+		*/
 		Cage();
+
+		/** @brief Menambahkan habitat ke dalam cage
+		*/
+		void AddHabitat();
+
+		/** @brief Menambahkan animal ke dalam cage
+		*/
+		void AddAnimal();
 		
 	private:
 		int n_animal = 0;
 		int n_cell = 0;
 		Animal ** a;
-		Cell ** c;
-	
+		Cell ** c;	
 };
 
 #endif

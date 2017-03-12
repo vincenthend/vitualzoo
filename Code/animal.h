@@ -6,6 +6,8 @@
 using namespace std;
 /** @class Animal
   * Kelas Animal 
+  * @param habitat
+  * 0 = land, 1 = water, 2 = air
   */
 class Animal {
 public:	
@@ -55,38 +57,38 @@ private:
 	bool tame;
 };
 
-/** @class LandAnimal
-  * Kelas LandAnimal 
+/** @class landAnimal
+  * Kelas landAnimal 
   */
-class LandAnimal : virtual public Animal {
+class landAnimal : virtual public Animal {
 public:	
    /** @brief Konstruktor, menginisiasi.
      */
-    LandAnimal();
+    landAnimal();
 	
 private:
 };
 
-/** @class WaterAnimal
-  * Kelas WaterAnimal 
+/** @class waterAnimal
+  * Kelas waterAnimal 
   */
-class WaterAnimal : virtual public Animal {
+class waterAnimal : virtual public Animal {
 public:	
    /** @brief Konstruktor, menginisiasi.
      */
-    WaterAnimal();
+    waterAnimal();
 	
 private:
 };
 
-/** @class AirAnimal
-  * Kelas AirAnimal 
+/** @class airAnimal
+  * Kelas airAnimal 
   */
-class AirAnimal : virtual public Animal	 {
+class airAnimal : virtual public Animal	 {
 public:	
    /** @brief Konstruktor, menginisiasi.
      */
-    AirAnimal();
+    airAnimal();
 	
 private:
 };
