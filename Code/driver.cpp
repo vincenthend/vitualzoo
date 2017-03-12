@@ -1,6 +1,6 @@
 #include "driver.h"
-#include <random>
 #include <time.h>
+#include <random>
 
 Driver::Driver(int w, int h):Z(w,h)
 {
@@ -24,15 +24,16 @@ void Driver::initZoo()
 
 void Driver::startTour()
 {
-	srand(time(NULL));
 	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
 	Cell *C;
 	Tc = 0;
+	C = Z.getCell(0, 0); //Visstud error without this
+	srand((unsigned int)time(NULL));
 	for (i = 0; i < Z.getWidth(); i++) {
 		for (j = 0; j < Z.getHeight(); j++) {
 			C = Z.getCell(i, j);
 			if (C != NULL) {
-				if (C->getCageID() == /*entranceID*/) {
+				if (C->getCageID() == 210) {
 					Tx[Tc] = i;
 					Ty[Tc] = j;
 					Tc++;
@@ -41,9 +42,9 @@ void Driver::startTour()
 		}
 	}
 	move = 0;
-	while (C->getCageID() != /*exitID*/){
+	while (C->getCageID() != 211){
 		//Random entrance yang dipake, simpen  x y di i j
-		interactSurrounding(i, j);//Interact sekitar dia
+		//interactSurrounding(i, j);//Interact sekitar dia
 		/*Metode gerak: 
 		atas (y - 1): 1
 		kanan (x + 1): 2
@@ -67,10 +68,9 @@ void Driver::startTour()
 			Tmove[cmove] = 4;
 			cmove++;
 		}
-
-		move == (rand() % 4) + 1;
-
 		//Random jalan yang mungkin pake mod cmove, simpen di move
+		move = (rand() % 4) + 1;
+
 		if (move == 1) {
 			j--;
 		}
