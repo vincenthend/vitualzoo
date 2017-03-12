@@ -22,6 +22,68 @@ void Driver::initZoo()
 
 void Driver::startTour()
 {
+	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
+	Cell *C;
+	Tc = 0;
+	for (i = 0; i < Z.getWidth(); i++) {
+		for (j = 0; j < Z.getHeight(); j++) {
+			C = Z.getCell(i, j);
+			if (C != NULL) {
+				if (C->getCageID() == /*entranceID*/) {
+					Tx[Tc] = i;
+					Ty[Tc] = j;
+					Tc++;
+				}
+			}
+		}
+	}
+	move = 0;
+	while (C->getCageID() != /*exitID*/){
+		//Random entrance yang dipake, simpen  x y di i j
+		interactSurrounding(i, j);//Interact sekitar dia
+		/*Metode gerak: 
+		atas (y - 1): 1
+		kanan (x + 1): 2
+		bawah (y + 1): 3
+		kiri (x - 1): 4
+		*/
+		cmove = 0;
+		if (((j - 1) >= 0) && (move != 1)){
+			Tmove[cmove] = 1;
+			cmove++;
+		}
+		if (((i + 1) >= 0) && (move != 2)){
+			Tmove[cmove] = 2;
+			cmove++;
+		}
+		if (((j + 1) >= 0) && (move != 3)){
+			Tmove[cmove] = 3;
+			cmove++;
+		}
+		if (((i - 1) >= 0) && (move != 4)){
+			Tmove[cmove] = 4;
+			cmove++;
+		}
+		//Random jalan yang mungkin pake mod cmove, simpen di move
+		if (move == 1) {
+			j--;
+		}
+		else {
+			if (move == 2) {
+				i++;
+			}
+			else {
+				if (move == 3) {
+					j++;
+				}
+				else {
+					i--;
+				}
+			}
+		}
+		C = Z.getCell(i, j);
+	}
+	cout << "Tur selesai :D" << endl;
 }
 
 void Driver::printZoo()

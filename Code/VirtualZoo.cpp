@@ -6,7 +6,6 @@
 int main()
 {
 	Driver D(4,4);
-	
 	D.initZoo();
 	D.printZoo();
 
