@@ -106,7 +106,7 @@
     <Position X="13" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
-      <FileName>E:\Literal Zoo\babi\Code\renderable.h</FileName>
+      <FileName>E:\Literal Zoo\babi\Code\Renderable.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cage">

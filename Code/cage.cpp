@@ -15,16 +15,13 @@ void Cage::addAnimal(Animal* A)
 	n_animal += 1;
 }
 
-<<<<<<< HEAD
-void Cage::addHabitat(Habitat* H)
-=======
+
 void Cage::setCageID(int n)
 {
 	cageID = n;
 }
 
 int Cage::getCageID()
->>>>>>> 786693fe39eaccf034845372b6b4ce5b35a21a2a
 {
 	return cageID;
 }
@@ -50,7 +47,7 @@ Animal* Cage::isSpaceOccupied(int x, int y)
 	return ret;
 }
 
-void Cage::AddHabitat(Habitat* H)
+void Cage::addHabitat(Habitat* H)
 {	
 	//Cek apakah sudah ada isi
 	if (n_cell = 0) {

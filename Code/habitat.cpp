@@ -47,10 +47,8 @@ AirHabitat::AirHabitat(int x, int y)
 	cellID = 12;
 	Cell::setCode(defaultCode);
 }
-<<<<<<< HEAD
-=======
 
-void airHabitat::Render()
+void AirHabitat::render()
 {
 	cout << "A";
 }
@@ -64,4 +62,3 @@ int Habitat::getCageID()
 {
 	return cageID;
 }
->>>>>>> 786693fe39eaccf034845372b6b4ce5b35a21a2a

@@ -79,6 +79,8 @@ class AirHabitat : public Habitat {
 		/** @brief Membuat airHabitat dengan X dan Y terdefinisi dan cellID 12
 		*/
 		AirHabitat(int x, int y);
+
+		void render();
 	private:
 		const char defaultCode = 'A';
 

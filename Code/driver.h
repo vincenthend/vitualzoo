@@ -9,7 +9,7 @@
 #include "cell.h"
 #include "facility.h"
 #include "habitat.h"
-#include "renderable.h"
+#include "Renderable.h"
 #include "zoo.h"
 
 #ifndef DRIVER_H

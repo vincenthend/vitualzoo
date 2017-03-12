@@ -24,11 +24,7 @@ class Cage{
 
 		/** @brief Menambahkan animal ke dalam cage
 		*/
-<<<<<<< HEAD
 		void addAnimal(Animal* A);
-		
-=======
-		void AddAnimal(Animal* A);
 
 		//Setter and Getter
 
@@ -51,7 +47,6 @@ class Cage{
 		*/
 		Animal* isSpaceOccupied(int x, int y);
 
->>>>>>> 786693fe39eaccf034845372b6b4ce5b35a21a2a
 	private:
 		int cageID;
 		int n_animal;

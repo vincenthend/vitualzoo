@@ -2,6 +2,7 @@
 #define ANIMAL_H
 
 #include <iostream>
+#include "renderable.h"
 
 using namespace std;
 /** @class Animal
