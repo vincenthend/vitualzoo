@@ -12,6 +12,8 @@
 
 class Cell: public Renderable{	
 	public:
+		Cell();
+
 		void render();
 		void setCode(char c);
 		virtual void setCageID(int n) {
