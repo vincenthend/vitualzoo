@@ -29,7 +29,7 @@ void Driver::startTour()
 		for (j = 0; j < Z.getHeight(); j++) {
 			C = Z.getCell(i, j);
 			if (C != NULL) {
-				if (C->getCageID() == /*entranceID*/) {
+				if (C->getCageID() == 210) {
 					Tx[Tc] = i;
 					Ty[Tc] = j;
 					Tc++;
@@ -38,7 +38,7 @@ void Driver::startTour()
 		}
 	}
 	move = 0;
-	while (C->getCageID() != /*exitID*/){
+	while (C->getCageID() != 211){
 		//Random entrance yang dipake, simpen  x y di i j
 		interactSurrounding(i, j);//Interact sekitar dia
 		/*Metode gerak: 
@@ -49,20 +49,32 @@ void Driver::startTour()
 		*/
 		cmove = 0;
 		if (((j - 1) >= 0) && (move != 1)){
-			Tmove[cmove] = 1;
-			cmove++;
+			C = Z.getCell(i, j - 1);
+			if (C->getCageID() == 21){
+				Tmove[cmove] = 1;
+				cmove++;
+			}
 		}
 		if (((i + 1) >= 0) && (move != 2)){
-			Tmove[cmove] = 2;
-			cmove++;
+			C = Z.getCell(i + 1, j);
+			if (C->getCageID() == 21){
+				Tmove[cmove] = 2;
+				cmove++;
+			}
 		}
 		if (((j + 1) >= 0) && (move != 3)){
-			Tmove[cmove] = 3;
-			cmove++;
+			C = Z.getCell(i, j + 1);
+			if (C->getCageID() == 21){
+				Tmove[cmove] = 3;
+				cmove++;
+			}
 		}
 		if (((i - 1) >= 0) && (move != 4)){
-			Tmove[cmove] = 4;
-			cmove++;
+			C = Z.getCell(i - 1, j);
+			if (C->getCageID() == 21){
+				Tmove[cmove] = 4;
+				cmove++;
+			}
 		}
 		//Random jalan yang mungkin pake mod cmove, simpen di move
 		if (move == 1) {
