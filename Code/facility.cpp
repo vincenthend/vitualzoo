@@ -18,12 +18,17 @@ Road::Road(int x, int y)
 	Cell::setCode(defaultCode);
 }
 
-Road::Road(int x, int y, int type)
-{
+Road::Road(int x, int y, bool isEntrance)
+{	
 	locX = x;
 	locY = y;
-	cellID = 21;
-	this->type = type;
+
+	if (isEntrance) {
+		type = 210;
+	}
+	else {
+		type = 211;
+	}
 	Cell::setCode(defaultCode);
 }
 
