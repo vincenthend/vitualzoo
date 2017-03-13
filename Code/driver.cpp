@@ -72,23 +72,6 @@ Driver::Driver(string Input)
 	}
 }
 
-void Driver::initZoo()
-{
-	Cell* C[5]; //Temporary storage
-
-	C[0] = new Road();
-	C[1] = new WaterHabitat();
-	C[2] = new Resto();
-	C[3] = new Park();
-	C[4] = new Park();
-
-	Z->addCell(0, 0, C[0]);
-	Z->addCell(0, 1, C[1]);
-	Z->addCell(1, 0, C[2]);
-	Z->addCell(1, 1, C[3]);
-	Z->addCell(1, 2, C[4]);
-}
-
 void Driver::startTour()
 {
 	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
@@ -106,7 +89,7 @@ void Driver::startTour()
 		for (j = 0; j < Z->getHeight(); j++) {
 			C = Z->getCell(i, j);
 			if (C != NULL) {
-				if (C->getCageID() == 210) {
+				if (C->getCellID() == 210) {
 					Tx[Tc] = i;
 					Ty[Tc] = j;
 					Tc++;
@@ -115,11 +98,14 @@ void Driver::startTour()
 		}
 	}
 	move = 0;
-	while (C->getCageID() != 211){
+	while (C->getCellID() != 211){
 		//Random entrance yang dipake, simpen  x y di i j
+		Tc = rand() % (Tc);
+		i = Tx[Tc];
+		j = Ty[Tc];
 		if (((j - 1) >= 0) && (move != 1)){
 			C = Z->getCell(i, j - 1);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
@@ -132,7 +118,7 @@ void Driver::startTour()
 		}
 		if (((i + 1) >= 0) && (move != 2)){
 			C = Z->getCell(i + 1, j);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
@@ -145,7 +131,7 @@ void Driver::startTour()
 		}
 		if (((j + 1) >= 0) && (move != 3)){
 			C = Z->getCell(i, j + 1);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
@@ -158,7 +144,7 @@ void Driver::startTour()
 		}
 		if (((i - 1) >= 0) && (move != 4)){
 			C = Z->getCell(i - 1, j);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
@@ -183,14 +169,14 @@ void Driver::startTour()
 				cmove++;
 			}
 		}
-		if (((i + 1) >= 0) && (move != 2)){
+		if (((i + 1) < Z->getHeight()) && (move != 2)){
 			C = Z->getCell(i + 1, j);
 			if (C->getCellID() == 21){
 				Tmove[cmove] = 2;
 				cmove++;
 			}
 		}
-		if (((j + 1) >= 0) && (move != 3)){
+		if (((j + 1) <= Z->getWidth()) && (move != 3)){
 			C = Z->getCell(i, j + 1);
 			if (C->getCellID() == 21){
 				Tmove[cmove] = 3;
@@ -205,7 +191,7 @@ void Driver::startTour()
 			}
 		}
 		//Random jalan yang mungkin pake mod cmove, simpen di move
-		move = (rand() % 4) + 1;
+		move = Tmove[(rand() % cmove) + 1];
 
 		if (move == 1) {
 			j--;

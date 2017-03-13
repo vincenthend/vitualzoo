@@ -149,7 +149,7 @@ void Driver::startTour()
 		}
 		if (((i - 1) >= 0) && (move != 4)) {
 			C = Z->getCell(i - 1, j);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
@@ -167,36 +167,36 @@ void Driver::startTour()
 		kiri (x - 1): 4
 		*/
 		cmove = 0;
-		if (((j - 1) >= 0) && (move != 3)) {
+		if (((j - 1) >= 0) && (move != 1)){
 			C = Z->getCell(i, j - 1);
-			if (C->getCellID() == 21) {
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 1;
 				cmove++;
 			}
 		}
-		if (((i + 1) >= 0) && (move != 4)) {
+		if (((i + 1) < Z->getHeight()) && (move != 2)){
 			C = Z->getCell(i + 1, j);
-			if (C->getCellID() == 21) {
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 2;
 				cmove++;
 			}
 		}
-		if (((j + 1) >= 0) && (move != 1)) {
+		if (((j + 1) <= Z->getWidth()) && (move != 3)){
 			C = Z->getCell(i, j + 1);
-			if (C->getCellID() == 21) {
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 3;
 				cmove++;
 			}
 		}
-		if (((i - 1) >= 0) && (move != 2)) {
+		if (((i - 1) >= 0) && (move != 4)){
 			C = Z->getCell(i - 1, j);
-			if (C->getCellID() == 21) {
+			if (C->getCellID() == 21){
 				Tmove[cmove] = 4;
 				cmove++;
 			}
 		}
 		//Random jalan yang mungkin pake mod cmove, simpen di move
-		move = (rand() % 4) + 1;
+		move = Tmove[(rand() % cmove) + 1];
 
 		if (move == 1) {
 			j--;
