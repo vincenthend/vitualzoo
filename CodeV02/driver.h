@@ -17,13 +17,9 @@ class Driver
 {
 public:
 	
-	/** @brief Membuat driver yang membuat Zoo sebesar w x h
+	/** @brief Membuat driver yang membuat Zoo sesuai file Input
 	*/
-	Driver(int w, int h);
-
-	/** @brief Melakukan inisialisasi pada Zoo
-	*/
-	void initZoo();
+	Driver(string Input);
 
 	/** @brief Menjalankan Tour
 	*/
@@ -44,7 +40,7 @@ public:
 	void printStatus();
 
 private:
-	Zoo Z;
+	Zoo* Z;
 };
 
 #endif

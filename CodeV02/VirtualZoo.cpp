@@ -8,8 +8,7 @@ int main()
 	//int choice;
 
 	//Inisialisasi Zoo disini
-	Driver D(4,4);
-	D.initZoo();
+	Driver D("map.txt");
 	/*choice = 0;
 	do{
 		cout << "Menu :" << endl << "1. Tampilkan Zoo" << endl << "2. Mulai Tour" << endl << "9. Keluar" << endl << "Pilihan : ";
