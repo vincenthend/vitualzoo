@@ -66,6 +66,24 @@ class Zoo{
 		*/
 		int getNCage();
 
+		//Fungsi lain
+
+		/** @brief menghitung total makanan herbivore dalam zoo
+		* @return total makanan herbivore
+		*/
+		int CountFoodHerbivore();
+
+		/** @brief menghitung total makanan carnivore dalam zoo
+		* @return total makanan carnivore
+		*/
+		int CountFoodCarnivore();
+
+		/** @brief menghitung total makanan omnivore dalam zoo
+		* @return total makanan omnivore
+		*/
+		int CountFoodOmnivore();
+
+
 	private:
 		int width;
 		int height;

@@ -49,6 +49,11 @@ public:
    /** @brief Memindahkan hewan sejauh x, y
      */
 	void move(int x, int y);
+
+	/** @brief Mengembalikan nilai type hewan.
+	* @return habitat yang dapat ditinggali hewan
+	*/
+	bool* getHabitat();
 	
 protected:
 	bool habitat[3] = {false, false, false};

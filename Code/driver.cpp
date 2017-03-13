@@ -9,17 +9,19 @@ Driver::Driver(int w, int h):Z(w,h)
 
 void Driver::initZoo()
 {
-	Cell* C[4]; //Temporary storage
+	Cell* C[5]; //Temporary storage
 
 	C[0] = new Road();
 	C[1] = new WaterHabitat();
 	C[2] = new Resto();
 	C[3] = new Park();
+	C[4] = new Park();
 
 	Z.addCell(0, 0, C[0]);
 	Z.addCell(0, 1, C[1]);
 	Z.addCell(1, 0, C[2]);
 	Z.addCell(1, 1, C[3]);
+	Z.addCell(1, 2, C[4]);
 }
 
 void Driver::startTour()
@@ -32,7 +34,7 @@ void Driver::startTour()
 	
 	ClearScreen();
 	printZoo();
-	printLegend();
+	//printLegend();
 
 	srand((unsigned int)time(NULL));
 	for (i = 0; i < Z.getWidth(); i++) {
@@ -219,4 +221,14 @@ void Driver::printZoo(int x1, int y1, int x2, int y2)
 		}
 		cout << endl;
 	}
+}
+
+void Driver::printStatus()
+{
+	cout << "========================================" << endl;
+	cout << "              - Food Count -" << endl;
+	cout << "   Herbivore : " << Z.CountFoodHerbivore() << endl;
+	cout << "   Carnivore : " << Z.CountFoodCarnivore() << endl;
+	cout << "   Omnivore  : " << Z.CountFoodOmnivore() << endl;
+	cout << "========================================" << endl;
 }

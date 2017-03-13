@@ -48,7 +48,9 @@ Zoo::~Zoo(){
 	//Delete cell & cell data
 	for (i = 0; i < width; i++) {
 		for (j = 0;j < width;j++) {
-			delete c[i][j];
+			if (c[i][j] != NULL) {
+				delete c[i][j];
+			}
 		}
 		delete[] c[i];
 	}
@@ -110,4 +112,37 @@ Cage * Zoo::getCage(int n)
 int Zoo::getNCage()
 {
 	return n_cage;
+}
+
+int Zoo::CountFoodHerbivore()
+{
+	int i, sum;
+	i = 0;
+	sum = 0;
+	for (i = 0; i < n_cage;i++) {
+		sum += cg[i]->CountFoodHerbivore();
+	}
+	return sum;
+}
+
+int Zoo::CountFoodCarnivore()
+{
+	int i,sum;
+	i = 0;
+	sum = 0;
+	for (i = 0; i < n_cage;i++) {
+		sum += cg[i]->CountFoodCarnivore();
+	}
+	return sum;
+}
+
+int Zoo::CountFoodOmnivore()
+{
+	int i, sum;
+	i = 0;
+	sum = 0;
+	for (i = 0; i < n_cage;i++) {
+		sum += cg[i]->CountFoodOmnivore();
+	}
+	return sum;
 }

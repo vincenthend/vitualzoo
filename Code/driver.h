@@ -40,7 +40,11 @@ public:
 	*/
 	void printZoo(int x1, int y1, int x2, int y2);
 
-	void printLegend();
+	//void printLegend();
+
+	/** @brief Mencetak zoo dari titik (x1,y1) hingga (x2,y2)
+	*/
+	void printStatus();
 
 private:
 	Zoo Z;

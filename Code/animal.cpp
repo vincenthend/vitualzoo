@@ -1,4 +1,4 @@
-#include "Animal.h"
+#include "animal.h"
 int Animal::getFoodQuantity (){
 	return (food_Weight * weight);
 }
@@ -27,4 +27,9 @@ int Animal::getType()
 void Animal::move(int x, int y){
 	locX += x;
 	locY += y;
+}
+
+bool * Animal::getHabitat()
+{
+	return habitat;
 }

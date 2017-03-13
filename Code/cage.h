@@ -22,7 +22,8 @@ class Cage{
 		*/
 		void addHabitat(Habitat* H);
 
-		/** @brief Menambahkan animal ke dalam cage
+		/** @brief Menambahkan animal ke dalam cage, jika cageType 
+		* sesuai dengan kebutuhan animal, maka ditambahkan; cageType pasti != 0
 		*/
 		void addAnimal(Animal* A);
 
@@ -46,6 +47,22 @@ class Cage{
 		* @return pointer menuju animal
 		*/
 		Animal* isSpaceOccupied(int x, int y);
+
+		//Fungsi lain
+
+		/** @brief menghitung total jumlah makanan herbivore
+		* @return nilai total makanan herbivore
+		*/
+		int CountFoodHerbivore();
+		/** @brief menghitung total jumlah makanan carnivore
+		* @return nilai total makanan carnivore
+		*/
+		int CountFoodCarnivore();
+		/** @brief menghitung total jumlah makanan omnivore
+		* @return nilai total makanan omnivore
+		*/
+		int CountFoodOmnivore();
+
 
 	private:
 		int cageID;
