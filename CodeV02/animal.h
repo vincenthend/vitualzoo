@@ -2,6 +2,7 @@
 #define ANIMAL_H
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 /** @class Animal
@@ -11,9 +12,14 @@ using namespace std;
   */
 class Animal{
 public:	
+	//ctor dan cctor
+	Animal();
+
+	Animal(int x, int y, int id);
+
    /** @brief Menuliskan interaksi dengan hewan ke layar.
      */
-	virtual void interact() = 0;
+	virtual void interact();
 
 	//Setter dan Getter
 	
@@ -47,7 +53,7 @@ public:
 	*/
 	int getType();
 
-	/** @brief Mengembalikan nilai type hewan.
+	/** @brief Mengembalikan nilai habitat hewan.
 	* @return habitat yang dapat ditinggali hewan
 	*/
 	bool* getHabitat();
@@ -73,5 +79,6 @@ private:
 	int foodType;
 	bool tame;
 	char code;
+	string sound;
 };
 #endif

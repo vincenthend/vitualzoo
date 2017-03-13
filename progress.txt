@@ -8,9 +8,10 @@
 5. Bug : AddAnimal di cage.cpp belom ngecek jenis habitat 		- done -
 6. Maximum hewan di cage belom diimplement 						- done -
 7. Rename variabel dan class
-8. startTour
+8. startTour --> MIKE?
 9. Menu
-10. VZ02
+10. VZ02														- done?-
+11. Animal code di VZ03											
 ===========================
 |   TO DO LIST SOFTCOPY   |
 ===========================

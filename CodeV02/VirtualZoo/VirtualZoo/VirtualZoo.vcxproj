@@ -148,26 +148,20 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\air_animal.h" />
     <ClInclude Include="..\..\animal.h" />
     <ClInclude Include="..\..\cage.h" />
     <ClInclude Include="..\..\cell.h" />
     <ClInclude Include="..\..\driver.h" />
     <ClInclude Include="..\..\gui.h" />
-    <ClInclude Include="..\..\land_animal.h" />
-    <ClInclude Include="..\..\water_animal.h" />
     <ClInclude Include="..\..\zoo.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\air_animal.cpp" />
     <ClCompile Include="..\..\animal.cpp" />
     <ClCompile Include="..\..\cage.cpp" />
     <ClCompile Include="..\..\cell.cpp" />
     <ClCompile Include="..\..\driver.cpp" />
     <ClCompile Include="..\..\gui.cpp" />
-    <ClCompile Include="..\..\land_animal.cpp" />
     <ClCompile Include="..\..\VirtualZoo.cpp" />
-    <ClCompile Include="..\..\water_animal.cpp" />
     <ClCompile Include="..\..\zoo.cpp" />
   </ItemGroup>
   <ItemGroup>

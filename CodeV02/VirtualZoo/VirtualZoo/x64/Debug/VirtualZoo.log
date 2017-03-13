@@ -1,4 +1,10 @@
-﻿  driver.cpp
+﻿  animal.cpp
+  Generating Code...
+  Compiling...
+  zoo.cpp
+  driver.cpp
+  cell.cpp
+  cage.cpp
   VirtualZoo.cpp
   Generating Code...
   VirtualZoo.vcxproj -> E:\Literal Zoo\babi\CodeV02\VirtualZoo\x64\Debug\VirtualZoo.exe
