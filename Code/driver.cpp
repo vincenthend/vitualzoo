@@ -72,6 +72,10 @@ Driver::Driver(string Input)
 	}
 }
 
+Driver::~Driver() {
+	delete Z;
+}
+
 void Driver::startTour()
 {
 	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
