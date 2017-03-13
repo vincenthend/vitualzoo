@@ -24,12 +24,11 @@ Road::Road(int x, int y, bool isEntrance)
 	locY = y;
 
 	if (isEntrance) {
-		type = 210;
+		Cell::setCode(210);
 	}
 	else {
-		type = 211;
+		Cell::setCode(211);
 	}
-	Cell::setCode(defaultCode);
 }
 
 Resto::Resto()
