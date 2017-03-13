@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Animal">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMABAAAAAAAAACADQAAAAAAIRABACAgAAAAQAERBAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cell">
+    <Position X="10.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAACAAAAAAAARAADABAAAAAIAAAAAAAAAIAAAAQgAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\cell.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zoo">
+    <Position X="5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>YAACAEQAAAAAIAUAQACAAAAAAIAAQAKQAAAAAAAAAEA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\zoo.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="c" />
+      <Field Name="cg" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Cage">
+    <Position X="10.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAQAIBgAIRAQAAAAkAAAAAAAAASwAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\cage.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="a" />
+      <Field Name="c" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AirAnimal">
+    <Position X="3.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaterAnimal">
+    <Position X="5.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LandAnimal">
+    <Position X="1.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnjingLaut">
+    <Position X="10.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ayam">
+    <Position X="2.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bunglon">
+    <Position X="0.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bushido">
+    <Position X="9" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capung">
+    <Position X="10.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gagak">
+    <Position X="12" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kambing">
+    <Position X="4.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kelinci">
+    <Position X="0.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kepik">
+    <Position X="15.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kucing">
+    <Position X="4.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kuda">
+    <Position X="2.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KudaLaut">
+    <Position X="14.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mas">
+    <Position X="16" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nyamuk">
+    <Position X="17.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pelikan">
+    <Position X="19" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Penyu">
+    <Position X="17.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Puyuh">
+    <Position X="20.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salmon">
+    <Position X="19.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sapi">
+    <Position X="0.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Semut">
+    <Position X="2.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ular">
+    <Position X="4.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\land_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CumiCumi">
+    <Position X="12.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\water_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KunangKunang">
+    <Position X="13.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>E:\Literal Zoo\babi\CodeV02\air_animal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

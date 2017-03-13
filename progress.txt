@@ -10,6 +10,7 @@
 7. Rename variabel dan class
 8. startTour
 9. Menu
+10. VZ02
 ===========================
 |   TO DO LIST SOFTCOPY   |
 ===========================
@@ -28,3 +29,16 @@
 3. Skenario test(?)
 4. Log activity
 5. Rancangan & penjelasan
+
+
+CellID
+11 = LandHabitat
+12 = AirHabitat
+13 = WaterHabitat
+
+21 = Road
+210 = Entrance
+211 = Exit
+
+22 = Resto
+23 = Park
