@@ -1,0 +1,30 @@
+============================
+| TO DO LIST SOFTWARE VZ02 | 
+============================
+1. Inisialisasi (hardcode/file) --> MIKE
+2. Tameable
+3. Nampilin status (jumlah makanan) 							- done -
+4. Integrasi hewan (20 kelas) 									- done -
+5. Bug : AddAnimal di cage.cpp belom ngecek jenis habitat 		- done -
+6. Maximum hewan di cage belom diimplement 						- done -
+7. Rename variabel dan class
+8. startTour
+
+===========================
+|   TO DO LIST SOFTCOPY   |
+===========================
+1. Class Diagram 												- done -
+2. Sourcecode & makefile
+3. Testcase
+4. Document doxygen 
+5. Unit Testing(?)
+6. Pemeriksaan whitecode(?)
+
+===========================
+|   TO DO LIST HARDCOPY   |
+===========================
+1. Laporam VZ02&VZ03
+2. Diagram kelas coret2 awal									- done -
+3. Skenario test(?)
+4. Log activity
+5. Rancangan & penjelasan
