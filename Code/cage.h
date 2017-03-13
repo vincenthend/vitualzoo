@@ -20,7 +20,7 @@ class Cage{
 
 		/** @brief Menambahkan habitat ke dalam cage
 		*/
-		void addHabitat(Habitat* H);
+		void addHabitat(Cell* H);
 
 		/** @brief Menambahkan animal ke dalam cage, jika cageType 
 		* sesuai dengan kebutuhan animal, maka ditambahkan; cageType pasti != 0
@@ -70,7 +70,7 @@ class Cage{
 		int n_cell;
 		int cageType;
 		Animal ** a;
-		Habitat ** c;	
+		Cell ** c;	
 };
 
 #endif

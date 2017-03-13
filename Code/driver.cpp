@@ -1,6 +1,7 @@
 #include "driver.h"
 #include <time.h>
 #include <random>
+#include <string>
 
 Driver::Driver(string Input)
 {
@@ -9,10 +10,11 @@ Driver::Driver(string Input)
 	string S;
 	int i, j, w, h, temp;
 	getline(myfile,S);
+
+	C = NULL;
+	temp = 0;
 	i = 0;
-	cout << S[i] << endl;
 	while ((S[i] >= '0') && (S[i] <= '9')) {
-		cout << i << endl;
 		temp = (temp * 10) + (S[i] - '0');
 		i++;
 	}
@@ -27,7 +29,6 @@ Driver::Driver(string Input)
 	Z = new Zoo(w, h);
 	for (i = 0; i < Z->getHeight(); i++) {
 		for (j = 0; j <= Z->getWidth(); j++) {
-			cout << "Cek " << i << "," << j << endl;
 			getline(myfile,S);
 			if (S[j] == 'L'){
 				C = new LandHabitat(i, j);
@@ -70,6 +71,7 @@ Driver::Driver(string Input)
 			Z->addCell(i, j, C);
 		}
 	}
+	myfile.close();
 }
 
 Driver::~Driver() {
