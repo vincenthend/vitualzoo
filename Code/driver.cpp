@@ -116,7 +116,7 @@ void Driver::startTour()
 				}
 			}
 		}
-		if (((i + 1) >= 0) && (move != 2)){
+		if (((i + 1) < Z->getHeight()) && (move != 2)) {
 			C = Z->getCell(i + 1, j);
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
@@ -129,7 +129,7 @@ void Driver::startTour()
 				}
 			}
 		}
-		if (((j + 1) >= 0) && (move != 3)){
+		if (((j + 1) < Z->getWidth()) && (move != 3)) {
 			C = Z->getCell(i, j + 1);
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
