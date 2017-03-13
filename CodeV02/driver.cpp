@@ -8,8 +8,11 @@ Driver::Driver(string Input)
 	ifstream myfile(Input);
 	string S;
 	int i, j, w, h, temp;
+
 	getline(myfile,S);
 	i = 0;
+	temp = 0;
+	C = NULL;
 	cout << S[i] << endl;
 	while ((S[i] >= '0') && (S[i] <= '9')) {
 		cout << i << endl;
@@ -19,6 +22,7 @@ Driver::Driver(string Input)
 	h = temp;
 	getline(myfile,S);
 	i = 0;
+	temp = 0;
 	while ((S[i] >= '0') && (S[i] <= '9')) {
 		temp = (temp * 10) + (S[i] - '0');
 		i++;
@@ -26,9 +30,9 @@ Driver::Driver(string Input)
 	w = temp;
 	Z = new Zoo(w, h);
 	for (i = 0; i < Z->getHeight(); i++) {
+		getline(myfile, S);
 		for (j = 0; j <= Z->getWidth(); j++) {
 			cout << "Cek " << i << "," << j << endl;
-			getline(myfile,S);
 			if (S[j] == 'L'){
 				C = new Cell(i, j, 11);
 			}
@@ -70,6 +74,7 @@ Driver::Driver(string Input)
 			Z->addCell(i, j, C);
 		}
 	}
+	myfile.close();
 }
 
 void Driver::startTour()
@@ -89,7 +94,7 @@ void Driver::startTour()
 		for (j = 0; j < Z->getHeight(); j++) {
 			C = Z->getCell(i, j);
 			if (C != NULL) {
-				if (C->getCageID() == 210) {
+				if (C->getCellID() == 210) {
 					Tx[Tc] = i;
 					Ty[Tc] = j;
 					Tc++;
@@ -98,11 +103,14 @@ void Driver::startTour()
 		}
 	}
 	move = 0;
-	while (C->getCageID() != 211) {
+	while (C->getCellID() != 211) {
 		//Random entrance yang dipake, simpen  x y di i j
+		Tc = rand() % (Tc);
+		i = Tx[Tc];
+		j = Ty[Tc];
 		if (((j - 1) >= 0) && (move != 1)) {
 			C = Z->getCell(i, j - 1);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
@@ -115,7 +123,7 @@ void Driver::startTour()
 		}
 		if (((i + 1) >= 0) && (move != 2)) {
 			C = Z->getCell(i + 1, j);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
@@ -128,7 +136,7 @@ void Driver::startTour()
 		}
 		if (((j + 1) >= 0) && (move != 3)) {
 			C = Z->getCell(i, j + 1);
-			if ((C->getCageID() >= 11) && (C->getCageID() <= 13)) {
+			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
 						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);

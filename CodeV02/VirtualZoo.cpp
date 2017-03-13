@@ -25,5 +25,7 @@ int main()
 	D.printZoo();
 	D.printStatus();
 
+	D.startTour();
+
     return 0;
 }
