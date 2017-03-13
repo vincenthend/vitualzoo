@@ -154,12 +154,12 @@
     <ClInclude Include="..\..\cell.h" />
     <ClInclude Include="..\..\driver.h" />
     <ClInclude Include="..\..\facility.h" />
+    <ClInclude Include="..\..\gui.h" />
     <ClInclude Include="..\..\habitat.h" />
     <ClInclude Include="..\..\landanimal.h" />
     <ClInclude Include="..\..\renderable.h" />
     <ClInclude Include="..\..\wateranimal.h" />
     <ClInclude Include="..\..\zoo.h" />
-    <ClInclude Include="gui.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\airanimal.cpp" />

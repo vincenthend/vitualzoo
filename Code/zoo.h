@@ -33,7 +33,7 @@ class Zoo{
 
 		//Getter dan Setter
 
-		/** @brief Melakukan penambahan cage, cage sudah dialokasi di luar
+		/** @brief Melakukan penambahan cage,
 		*/
 		void addCage();
 
@@ -62,7 +62,7 @@ class Zoo{
 		Cage* getCage(int n);
 
 		/** @brief getter untuk cage ke-n
-		* @return Alamat cage ke-n dalam memory
+		* @return jumlah cage pada saat ini
 		*/
 		int getNCage();
 

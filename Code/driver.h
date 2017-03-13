@@ -11,6 +11,7 @@
 #include "habitat.h"
 #include "Renderable.h"
 #include "zoo.h"
+#include "gui.h"
 
 #ifndef DRIVER_H
 #define DRIVER_H
@@ -38,6 +39,8 @@ public:
 	/** @brief Mencetak zoo dari titik (x1,y1) hingga (x2,y2)
 	*/
 	void printZoo(int x1, int y1, int x2, int y2);
+
+	void printLegend();
 
 private:
 	Zoo Z;

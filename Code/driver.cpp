@@ -26,8 +26,14 @@ void Driver::startTour()
 {
 	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
 	Cell *C;
+	Animal * A;
 	Tc = 0;
 	C = Z.getCell(0, 0); //Visstud error without this
+	
+	ClearScreen();
+	printZoo();
+	printLegend();
+
 	srand((unsigned int)time(NULL));
 	for (i = 0; i < Z.getWidth(); i++) {
 		for (j = 0; j < Z.getHeight(); j++) {

@@ -13,4 +13,36 @@ public:
 	
 private:
 };
+
+class Pelikan: public AirAnimal {
+	public :
+	void interact();
+}; 
+class Capung: public AirAnimal {
+	public :
+	void interact();
+}; 
+class Kunang-kunang": public AirAnimal {
+	public :
+	void interact();
+}; 
+class Nyamuk: public AirAnimal {
+	public :
+	void interact();
+}; 
+class Puyuh: public AirAnimal {
+	public :
+	void interact();
+}; 
+class Gagak: public AirAnimal {
+	public :
+	void interact();
+}; 
+class Kepik: public AirAnimal {
+	public :
+	void interact();
+}; 
+
+
+
 #endif
