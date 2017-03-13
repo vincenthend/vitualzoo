@@ -9,21 +9,21 @@
 6. Maximum hewan di cage belom diimplement 						- done -
 7. Rename variabel dan class
 8. startTour
-
+9. Menu
 ===========================
 |   TO DO LIST SOFTCOPY   |
 ===========================
 1. Class Diagram 												- done -
-2. Sourcecode & makefile
+2. Sourcecode & makefile										- makefile-
 3. Testcase
-4. Document doxygen 
+4. Document doxygen
 5. Unit Testing(?)
 6. Pemeriksaan whitecode(?)
 
 ===========================
 |   TO DO LIST HARDCOPY   |
 ===========================
-1. Laporam VZ02&VZ03
+1. Laporan VZ02&VZ03
 2. Diagram kelas coret2 awal									- done -
 3. Skenario test(?)
 4. Log activity
