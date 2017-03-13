@@ -4,7 +4,7 @@ Cage::Cage()
 {
 	n_animal = 0;
 	a = new Animal*[999];
-	c = new Habitat*[999];
+	c = new Cell*[999];
 	cageID = -1;
 	cageType = 0;
 }
@@ -102,19 +102,21 @@ int Cage::CountFoodOmnivore()
 	return sum;
 }
 
-void Cage::addHabitat(Habitat* H)
+void Cage::addHabitat(Cell* H)
 {	
 	//Cek apakah sudah ada isi
 	if (n_cell == 0) {
 		cageType = H->getCellID();
 		c[n_cell] = H;
 		n_cell += 1;
+		H->setCageID(cageID);
 	}
 	else {
 		//Cek apakah tipe habitat sama
 		if (cageType == H->getCellID()){
 			c[n_cell] = H;
 			n_cell += 1;
+			H->setCageID(cageID);
 		}
 	}
 }
