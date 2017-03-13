@@ -8,13 +8,10 @@ void ClearScreen()
 	system("cls");
 }
 
-void Delay(int x)
+void Delay(unsigned int x)
 {
-	int c = 1, d = 1;
-	for (c = 1; c <= x * 10; c++)
-		for (d = 1; d <= x * 10; d++)
-		{
-		}
+	clock_t goal = x + clock();
+	while (goal > clock());
 }
 #elif __linux__
 #include <unistd.h>

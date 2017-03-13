@@ -1,17 +1,20 @@
-============================
+	============================
 | TO DO LIST SOFTWARE VZ02 | 
 ============================
 1. Inisialisasi (hardcode/file) --> MIKE						- done -
-2. Tameable
-3. Nampilin status (jumlah makanan) 							- done -
-4. Integrasi hewan (20 kelas) 									- done -
-5. Bug : AddAnimal di cage.cpp belom ngecek jenis habitat 		- done -
-6. Maximum hewan di cage belom diimplement 						- done -
-7. Rename variabel dan class									
-8. startTour --> MIKE?
-9. Menu
-10. VZ02														- done?-
-11. Animal code di VZ03											
+2. Nampilin status (jumlah makanan) 							- done -
+3. Integrasi hewan (20 kelas) 									- done -
+4. Bug : AddAnimal di cage.cpp belom ngecek jenis habitat 		- done -
+5. Maximum hewan di cage belom diimplement 						- done -
+6. VZ02															- done?-
+7. startTour --> MIKE?											- done -
+8. Rename variabel dan class									
+9. Tameable
+10. Menu														- done -
+11. Animal code di VZ03										
+12. Implementasi carnivore
+13. Inisialisasi cage & animal
+14. Review isi doxygen
 ===========================
 |   TO DO LIST SOFTCOPY   |
 ===========================

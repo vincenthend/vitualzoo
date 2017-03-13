@@ -23,6 +23,10 @@ public:
 	/** @brief Membuat driver yang membuat Zoo sesuai file Input
 	*/
 	Driver(string Input);
+	
+	/** @brief Mencetak menu dan memfasilitasi input menu
+	*/
+	void printMenu();
 
 	/** @brief Menjalankan Tour
 	*/
@@ -31,6 +35,12 @@ public:
 	/** @brief Mencetak keseluruhan zoo
 	*/
 	void printZoo();
+	
+	/** @brief Mencetak zoo dengan x,y adalah posisi player
+	* @param x posisi absis player
+	* @param y posisi ordinat player
+	*/
+	void printZoo(int x, int y);
 
 	/** @brief Mencetak zoo dari titik (x1,y1) hingga (x2,y2)
 	*/

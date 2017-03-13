@@ -76,9 +76,64 @@ Driver::~Driver() {
 	delete Z;
 }
 
+void Driver::printMenu()
+{
+	int choice, x1, y1, x2, y2;
+
+	choice = 0;
+	do {
+		
+		cout << "=========================================" << endl;
+		cout << "|               VIRTUAL ZOO             |" << endl;
+		cout << "=========================================" << endl;
+		cout << "Menu :" << endl << "1. Tampilkan Zoo" << endl << "2. Mulai Tour";
+		cout << endl << "9. Keluar" << endl << "Pilihan : ";
+		cin >> choice;
+
+
+		if (choice == 1) {
+			ClearScreen();
+			do {				
+				cout << "=========================================" << endl;
+				cout << "|               VIRTUAL ZOO             |" << endl;
+				cout << "=========================================" << endl;
+				cout << "1. Tampilkan seluruhnya" << endl << "2. Tampilkan sebagian";
+				cout << endl << "9. Keluar" << endl << "Pilihan : ";
+				cin >> choice;
+				if (choice == 1) {
+					ClearScreen();
+					printZoo();
+				}
+				else if (choice == 2) {
+					ClearScreen();
+					cout << "Masukkan ukuran" << endl;
+					cout << "X(0 - " << Z->getWidth() - 1<<")"<<endl;
+					cout << "Y(0 - " << Z->getHeight() - 1 << ")"<<endl;
+					cout << "X1 :";
+					cin >> x1;
+					cout << "Y1 :";
+					cin >> y1;
+					cout << "X2 :";
+					cin >> x2;
+					cout << "Y2 :";
+					cin >> y2;
+					printZoo(x1, y1, x2, y2);
+					cout << endl;
+				}
+			} while (choice != 9);
+		}
+		else if (choice == 2) {
+			startTour();
+			ClearScreen();
+		}
+
+	} while (choice != 9);
+}
+
 void Driver::startTour()
 {
 	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
+	int temp;
 	Cell *C;
 	Animal * A;
 	Tc = 0;
@@ -86,7 +141,7 @@ void Driver::startTour()
 	
 	ClearScreen();
 	printZoo();
-	//printLegend();
+	printStatus();
 
 	srand((unsigned int)time(NULL));
 	for (i = 0; i < Z->getWidth(); i++) {
@@ -101,13 +156,22 @@ void Driver::startTour()
 			}
 		}
 	}
+	
+	//Random entrance yang dipake, simpen  x y di i j
+	temp = rand() % (Tc);
+	i = Tx[temp];
+	j = Ty[temp];
+	
 	move = 0;
+	
 	while (C->getCellID() != 211){
-		//Random entrance yang dipake, simpen  x y di i j
-		Tc = rand() % (Tc);
-		i = Tx[Tc];
-		j = Ty[Tc];
-		if (((j - 1) >= 0) && (move != 1)){
+		//ClearScreen();
+		//printZoo(j,i);
+		//printStatus();
+		cout << "(" << i << "," << j << ")" << C->getCellID()<< endl;
+		
+		//interact
+		if (((j - 1) >= 0) && (move != 3)){
 			C = Z->getCell(i, j - 1);
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
@@ -120,7 +184,7 @@ void Driver::startTour()
 				}
 			}
 		}
-		if (((i + 1) < Z->getHeight()) && (move != 2)) {
+		if (((i + 1) < Z->getHeight()) && (move != 4)) {
 			C = Z->getCell(i + 1, j);
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
@@ -133,7 +197,7 @@ void Driver::startTour()
 				}
 			}
 		}
-		if (((j + 1) < Z->getWidth()) && (move != 3)) {
+		if (((j + 1) < Z->getWidth()) && (move != 1)) {
 			C = Z->getCell(i, j + 1);
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
@@ -146,7 +210,7 @@ void Driver::startTour()
 				}
 			}
 		}
-		if (((i - 1) >= 0) && (move != 4)){
+		if (((i - 1) >= 0) && (move != 2)){
 			C = Z->getCell(i - 1, j);
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
@@ -160,42 +224,47 @@ void Driver::startTour()
 			}
 		}
 		/*Metode gerak: 
-		atas (y - 1): 1
-		kanan (x + 1): 2
-		bawah (y + 1): 3
-		kiri (x - 1): 4
+		atas (x - 1): 1
+		kanan (y + 1): 2
+		bawah (x + 1): 3
+		kiri (y - 1): 4
 		*/
 		cmove = 0;
-		if (((j - 1) >= 0) && (move != 1)){
+		if (((j - 1) >= 0) && (move != 3)){
 			C = Z->getCell(i, j - 1);
-			if (C->getCellID() == 21){
+			if (C->getCellID() == 21 || C->getCellID() == 211){
 				Tmove[cmove] = 1;
 				cmove++;
 			}
 		}
-		if (((i + 1) < Z->getHeight()) && (move != 2)){
+		if (((i + 1) < Z->getHeight()) && (move != 4)){
 			C = Z->getCell(i + 1, j);
-			if (C->getCellID() == 21){
+			if (C->getCellID() == 21 || C->getCellID() == 211){
 				Tmove[cmove] = 2;
 				cmove++;
 			}
 		}
-		if (((j + 1) <= Z->getWidth()) && (move != 3)){
+		if (((j + 1) <= Z->getWidth()) && (move != 1)){
 			C = Z->getCell(i, j + 1);
-			if (C->getCellID() == 21){
+			if (C->getCellID() == 21 || C->getCellID() == 211){
 				Tmove[cmove] = 3;
 				cmove++;
 			}
 		}
-		if (((i - 1) >= 0) && (move != 4)){
+		if (((i - 1) >= 0) && (move != 2)){
 			C = Z->getCell(i - 1, j);
-			if (C->getCellID() == 21){
+			if (C->getCellID() == 21 || C->getCellID() == 211){
 				Tmove[cmove] = 4;
 				cmove++;
 			}
 		}
 		//Random jalan yang mungkin pake mod cmove, simpen di move
-		move = Tmove[(rand() % cmove) + 1];
+		if (cmove > 0) {
+			move = Tmove[(rand() % cmove)];
+		}
+		else {
+			move = (move + 2) % 4;
+		}
 
 		if (move == 1) {
 			j--;

@@ -21,6 +21,10 @@ public:
 	*/
 	Driver(string Input);
 
+	/** @brief Mencetak menu dan memfasilitasi input menu
+	*/
+	void printMenu();
+
 	/** @brief Menjalankan Tour
 	*/
 	void startTour();
@@ -29,7 +33,17 @@ public:
 	*/
 	void printZoo();
 
+	/** @brief Mencetak zoo dengan x,y adalah posisi player
+	* @param x posisi absis player
+	* @param y posisi ordinat player
+	*/
+	void printZoo(int x, int y);
+
 	/** @brief Mencetak zoo dari titik (x1,y1) hingga (x2,y2)
+	* @param x1 posisi absis awal
+	* @param y1 posisi ordinat awal
+	* @param x2 posisi absis akhir
+	* @param y2 posisi ordinat akhir
 	*/
 	void printZoo(int x1, int y1, int x2, int y2);
 
