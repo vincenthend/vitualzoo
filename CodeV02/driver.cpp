@@ -8,6 +8,7 @@ Driver::Driver(string Input)
 	ifstream myfile(Input);
 	string S;
 	int i, j, w, h, temp;
+	bool found;
 
 	getline(myfile,S);
 	i = 0;
@@ -75,6 +76,28 @@ Driver::Driver(string Input)
 		}
 	}
 	myfile.close();
+	for (i = 0; i < Z->getHeight(); i++) {
+		for (j = 0; j <= Z->getWidth(); j++) {
+			found = false;
+			C = Z->getCell(i, j);
+			if (((j - 1) >= 0) && (!(found))) {
+				if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i, j - 1)->getCellID()))) {
+					Z->getCage(Z->getCell(i, j - 1)->getCageID())->addHabitat(Z->getCell(i, j));
+					found = true;
+				}
+			}
+			if (((i - 1) >= 0) && (!(found))) {
+				if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i - 1, j)->getCellID()))) {
+					Z->getCage(Z->getCell(i - 1, j)->getCageID())->addHabitat(Z->getCell(i, j));
+					found = true;
+				}
+			}
+			if (!(found)){
+				Z->addCage();
+				Z->getCage(Z->getNCage())->addHabitat(Z->getCell(i, j));
+			}
+		}
+	}	
 }
 
 void Driver::startTour()
