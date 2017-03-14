@@ -6,20 +6,20 @@ OBJS = animal.o cage.o cell.o driver.o gui.o VirtualZoo.o  zoo.o
 
 main: $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o main
-animal.o: animal.cpp animal.h
-	$(CC) $(CFLAGS) animal.cpp
-cage.o: cage.cpp cage.h animal.h cell.h
-	$(CC) $(CFLAGS) cage.cpp
-cell.o: cell.cpp cell.h animal.h
-	$(CC) $(CFLAGS) cell.cpp
-driver.o: driver.cpp driver.h animal.h cage.h cell.h zoo.h gui.h
-	$(CC) $(CFLAGS) driver.cpp
-gui.o: gui.cpp gui.h
-	$(CC) $(CFLAGS) gui.cpp
-VirtualZoo.o: VirtualZoo.cpp driver.h animal.h cage.h cell.h zoo.h gui.h
-	$(CC) $(CFLAGS) VirtualZoo.cpp
-zoo.o: zoo.cpp zoo.h cell.h animal.h cage.h
-	$(CC) $(CFLAGS) zoo.cpp
+animal.o: ./animal/animal.cpp ./animal/animal.h
+	$(CC) $(CFLAGS) ./animal/animal.cpp
+cage.o: ./cage/cage.cpp ./cage/cage.h ./animal/animal.h ./cell/cell.h
+	$(CC) $(CFLAGS) ./cage/cage.cpp
+cell.o: ./cell/cell.cpp ./cell/cell.h ./animal/animal.h
+	$(CC) $(CFLAGS) ./cell/cell.cpp
+driver.o: ./driver/driver.cpp ./driver/driver.h ./animal/animal.h ./cage/cage.h ./cell/cell.h ./zoo/zoo.h ./gui/gui.h
+	$(CC) $(CFLAGS) ./driver/driver.cpp
+gui.o: ./gui/gui.cpp ./gui/gui.h
+	$(CC) $(CFLAGS) ./gui/gui.cpp
+VirtualZoo.o: ./VirtualZoo/VirtualZoo.cpp ./driver/driver.h ./animal/animal.h ./cage/cage.h ./cell/cell.h ./zoo/zoo.h ./gui/gui.h
+	$(CC) $(CFLAGS) ./VirtualZoo/VirtualZoo.cpp
+zoo.o: ./zoo/zoo.cpp ./zoo/zoo.h ./cell/cell.h ./animal/animal.h ./cage/cage.h
+	$(CC) $(CFLAGS) ./zoo/zoo.cpp
 clean:
 	rm *.o *~ main
 exec:
