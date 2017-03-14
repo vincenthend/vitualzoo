@@ -54,6 +54,9 @@
     <ClInclude Include="..\..\water_animal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\amphibian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\animal.cpp">
@@ -90,6 +93,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\air_animal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\amphibian.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

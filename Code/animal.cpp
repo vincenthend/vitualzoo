@@ -1,10 +1,4 @@
 #include "animal.h"
-Animal::Animal()
-{
-	locX = -99;
-	locY = -99;
-}
-
 int Animal::getFoodQuantity (){
 	return (food_Weight * weight);
 }

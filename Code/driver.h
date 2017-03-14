@@ -8,11 +8,12 @@
 #include "air_animal.h"
 #include "land_animal.h"
 #include "water_animal.h"
+#include "amphibian.h"
 #include "cage.h"
 #include "cell.h"
 #include "facility.h"
 #include "habitat.h"
-#include "Renderable.h"
+#include "renderable.h"
 #include "zoo.h"
 #include "gui.h"
 
@@ -21,8 +22,7 @@
 
 class Driver
 {
-public:
-	
+public:	
 	/** @brief Membuat driver yang membuat Zoo sesuai file Input
 	*/
 	Driver(string Input);

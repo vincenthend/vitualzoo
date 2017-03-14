@@ -7,6 +7,7 @@ Chicken::Chicken() {
 	food_Weight = 1;
 	foodType = 3;
 	tame = true;
+	type = 8;
 }
 void Chicken::interact() {
 	cout << "Cock-a-doodle-doo!";
@@ -19,6 +20,7 @@ Cat::Cat() {
 	food_Weight = 1;
 	foodType = 2;
 	tame = true;
+	type = 9;
 }
 void Cat::interact() {
 	cout << "Meow";
@@ -31,6 +33,7 @@ Cow::Cow() {
 	food_Weight = 2;
 	foodType = 1;
 	tame = true;
+	type = 10;
 }
 void Cow::interact() {
 	cout << "Mooo...";
@@ -43,6 +46,7 @@ Mouse::Mouse() {
 	food_Weight = 1;
 	foodType = 1;
 	tame = false;
+	type = 11;
 }
 void Mouse::interact() {
 	cout << "Squeak-squeak";
@@ -55,6 +59,7 @@ Goat::Goat() {
 	food_Weight = 2;
 	foodType = 1;
 	tame = true;
+	type = 12;
 }
 void Goat::interact() {
 	cout << "Beeeeeek";
@@ -67,6 +72,7 @@ Llama::Llama() {
 	food_Weight = 2;
 	foodType = 1;
 	tame = true;
+	type = 13;
 }
 void Llama::interact() {
 	cout << "Neiigh!";
@@ -79,6 +85,7 @@ Snake::Snake() {
 	food_Weight = 1;
 	foodType = 2;
 	tame = true;
+	type = 14;
 }
 void Snake::interact() {
 	cout << "Hsssss...";
@@ -91,6 +98,7 @@ Sheep::Sheep() {
 	food_Weight = 1;
 	foodType = 1;
 	tame = true;
+	type = 15;
 }
 void Sheep::interact() {
 	cout << "Baaaaaaaaaa";
@@ -103,6 +111,7 @@ Chameleon::Chameleon() {
 	food_Weight = 1;
 	foodType = 2;
 	tame = true;
+	type = 16;
 }
 void Chameleon::interact() {
 	cout << "Scrook...";

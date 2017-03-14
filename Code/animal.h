@@ -12,9 +12,6 @@ using namespace std;
   */
 class Animal : public Renderable {
 public:	
-	/** @brief ctor class hewan
-	*/
-	Animal();
    /** @brief Menuliskan interaksi dengan hewan ke layar.
      */
 	virtual void interact() = 0;
@@ -69,6 +66,7 @@ public:
 	void setLocationY(int y);
 	
 protected:
+	int type;
 	bool habitat[3] = {false, false, false};
 	int weight;
 	int food_Weight;

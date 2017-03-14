@@ -2,6 +2,7 @@
 #define GUI_H
 
 #include <stdlib.h>
+#include <time.h>
 
 void ClearScreen();
 

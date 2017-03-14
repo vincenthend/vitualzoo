@@ -1,4 +1,5 @@
 #include "gui.h"
+#include <iostream>
 
 //CLS METHOD
 #ifdef _WIN32
@@ -10,11 +11,8 @@ void ClearScreen()
 
 void Delay(int x)
 {
-	int c = 1, d = 1;
-	for (c = 1; c <= x * 10; c++)
-		for (d = 1; d <= x * 10; d++)
-		{
-		}
+	clock_t goal = x + clock();
+	while (goal > clock());
 }
 #elif __linux__
 #include <unistd.h>
@@ -25,7 +23,7 @@ void ClearScreen()
 void Delay(int x)
 {
 	usleep(x * 1000);
-	fflush(stdout);
+	std::cout<<std::endl;
 }
 
 #endif

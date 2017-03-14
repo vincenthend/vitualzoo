@@ -195,6 +195,9 @@ Driver::Driver(string Input)
 			else if (aid == 23) {
 				A = new Dolphin;
 			}
+			else if (aid == 24) {
+				A = new Penguin;
+			}
 			
 			found = false;
 			while ((!(found)) && (k < Z->getNCage())) {
