@@ -80,8 +80,10 @@ Zoo::Zoo(const Zoo& Z){
 void Zoo::addCage()
 {
 	cg[n_cage] = new Cage;
+	cout << "Cage ID diset jadi " << n_cage << endl;
 	cg[n_cage]->setCageID(n_cage);
-	n_cage += 1;	
+	n_cage += 1;
+	cout << "ncage jadi " << n_cage << endl;
 }
 
 void Zoo::addCell(int x, int y, Cell* C)

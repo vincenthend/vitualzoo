@@ -4,6 +4,7 @@
 
 Driver::Driver(string Input)
 {
+	cout << "Ceks 1" << endl;
 	Cell* C;
 	ifstream myfile(Input);
 	string S;
@@ -95,6 +96,7 @@ Driver::Driver(string Input)
 			}
 		}
 	}
+	getline(myfile,S);
 	i = 0;
 	temp = 0;
 	while ((S[i] >= '0') && (S[i] <= '9')) {
@@ -102,27 +104,37 @@ Driver::Driver(string Input)
 		i++;
 	}
 	for (i = 0; i < temp; i++) {
+		getline(myfile,S);
+		cout << "String S = " << S << endl;
 		aid = 0;
-		while ((S[i] >= '0') && (S[i] <= '9')) {
-			aid = (aid * 10) + (S[i] - '0');
-			i++;
+		j = 0;
+		while ((S[j] >= '0') && (S[j] <= '9')) {
+			aid = (aid * 10) + (S[j] - '0');
+			j++;
 		}
-		i++;
+		j++;
 		acount = 0;
-		while ((S[i] >= '0') && (S[i] <= '9')) {
-			acount = (acount * 10) + (S[i] - '0');
-			i++;
+		while ((S[j] >= '0') && (S[j] <= '9')) {
+			acount = (acount * 10) + (S[j] - '0');
+			j++;
 		}
 		cout << "Animal " << aid << " ada " << acount << endl; /*TBD*/
+		getchar();
 		for (j = 0; j < acount; j++) {
+			cout << "Cek" << endl;
 			A = new Animal(aid);
 			found = false;
 			k = 0;
+			cout << "Cek 1" << endl;
 			while ((!(found)) && (k < Z->getNCage())) {
+				cout << "Cek 1.1" << endl;
 				if (A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) {
 					found = true;
+					cout << "Cek 1.2" << endl;
 					Z->getCage(k)->addAnimal(A);
+					cout << "Cek 1.3" << endl;
 				}
+				cout << "Cek 1.4" << endl;
 				k++;
 			}
 		}
