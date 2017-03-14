@@ -23,34 +23,34 @@ class Cell{
 		* nilai cellID (tetap)
 		*/
 		Cell(int x, int y, int ID);
-		/** @brief Melakukan render (mencetak Code)
+		/** @brief Melakukan Render (mencetak Code)
 		*/
-		void render();
+		void Render();
 		/** @brief Mencetak code
 		*/
-		void setCode(char c);
-		/** @brief Mengatur nilai cageID
+		void SetCode(char c);
+		/** @brief Mengatur nilai cage_id
 		*/
-		void setCageID(int n);
-		/** @brief Mengembalikan nilai cageID
+		void SetCageID(int n);
+		/** @brief Mengembalikan nilai cage_id
 		*/
-		int getCageID();
-		/** @brief Mengembalikan nilai cellID
+		int GetCageID();
+		/** @brief Mengembalikan nilai cell_id
 		*/
-		int getCellID();
+		int GetCellID();
 		/** @brief Mengembalikan posisi absis hewan.
 	     * @return Posisi absis cell.
 	     */
-		int getLocationX();
+		int GetLocationX();
 		/** @brief Mengembalikan posisi ordinat hewan.
 	     * @return Posisi ordinat cell.
 	     */
-		int getLocationY();
+		int GetLocationY();
 	protected:
-		const int cellID = 0;
-		int locX;
-		int locY;
-		int cageID = -1;
+		const int cell_id = 0;
+		int loc_x;
+		int loc_y;
+		int cage_id = -1;
 
 	private:
 		char code;

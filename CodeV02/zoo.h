@@ -35,34 +35,34 @@ class Zoo{
 
 		/** @brief Melakukan penambahan cage,
 		*/
-		void addCage();
+		void AddCage();
 		/** @brief Melakukan penambahan cell dengan cell C yang sudah dictor di tempat lain
 		*/
-		void addCell(int x, int y, Cell* C);
+		void AddCell(int x, int y, Cell* C);
 		/** @brief Mengembalikan nilai width pada zoo
 		* @return Nilai Width Zoo
 		*/
-		int getWidth();
+		int GetWidth();
 
 		/** @brief Mengembalikan nilai height pada zoo
 		* @return Nilai Height Zoo
 		*/
-		int getHeight();
+		int GetHeight();
 
 		/** @brief getter untuk cell dengan posisi x dan y
 		* @return Alamat cell pada (x,y) dalam memory
 		*/
-		Cell* getCell(int x, int y);
+		Cell* GetCell(int x, int y);
 
 		/** @brief getter untuk cage ke-n
 		* @return Alamat cage ke-n dalam memory
 		*/
-		Cage* getCage(int n);
+		Cage* GetCage(int n);
 
 		/** @brief getter untuk cage ke-n
 		* @return jumlah cage pada saat ini
 		*/
-		int getNCage();
+		int GetNCage();
 
 		//Fungsi lain
 

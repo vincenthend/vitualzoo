@@ -17,73 +17,73 @@ public:
 
    /** @brief Menuliskan interaksi dengan hewan ke layar.
      */
-	virtual void interact();
+	virtual void Interact();
 
 	//Setter dan Getter
 	
    /** @brief Menghitung jumlah makanan yang dibutuhkan hewan setiap harinya.
      * @return Jumlah makanan yang dibutuhkan hewan setiap harinya.
      */
-	int getFoodQuantity ();
+	int GetFoodQuantity();
 
    /** @brief Mengembalikan jenis makanan yang dibutuhkan hewan.
      * @return Kode makanan yang dibutuhkan hewan, 1 untuk herbivora, 2 untuk karnivora dan 3 untuk omnivora.
      */
-	int getFoodType();
+	int GetFoodType();
 	
    /** @brief Mengembalikan posisi absis hewan.
      * @return Posisi absis hewan.
      */
-	int getLocationX();
+	int GetLocationX();
 	
    /** @brief Mengembalikan posisi ordinat hewan.
      * @return Posisi ordinat hewan.
      */
-	int getLocationY();
+	int GetLocationY();
 
 	/** @brief Mengatur nilai X hewan
 	* @param x lokasi X hewan
 	*/
-	void setLocationX(int x);
+	void SetLocationX(int x);
 
 	/** @brief Mengatur nilai y hewan
 	* @param x lokasi y hewan
 	*/
-	void setLocationY(int y);
+	void SetLocationY(int y);
 
 	/** @brief Mengembalikan nilai type hewan.
 	* @return Nilai type hewan.
 	*/
-	int getType();
+	int GetType();
 
 	/** @brief Mengembalikan nilai habitat hewan.
 	* @return habitat yang dapat ditinggali hewan
 	*/
-	bool* getHabitat();
+	bool* GetHabitat();
 
 	//Fungsi Lain
 
 	/** @brief Memindahkan hewan sejauh x, y
 	*/
-	void move(int x, int y);	
+	void Move(int x, int y);	
 	
 	/** @brief Melakukan pencetakan terhadap code
 	*/
-	void render();
-	int getCEnemy();
-	int* getEnemyList();
+	void Render();
+	int GetCEnemy();
+	int* GetEnemyList();
 	
 private:
 	bool habitat[3] = {false, false, false};
 	int type;
-	int locX;
-	int locY;
+	int loc_x;
+	int loc_y;
 	int weight;
-	int food_Weight;
-	int foodType;
+	int food_weight;
+	int food_type;
 	char code;
 	string sound;
-	int* EnemyID;
-	int cenemy;
+	int* enemy_id;
+	int c_enemy;
 };
 #endif

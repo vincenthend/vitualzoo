@@ -22,33 +22,33 @@ class Cage{
 
 		/** @brief Menambahkan habitat ke dalam cage
 		*/
-		void addHabitat(Cell* H);
+		void AddHabitat(Cell* H);
 
-		/** @brief Menambahkan animal ke dalam cage, jika cageType 
-		* sesuai dengan kebutuhan animal, maka ditambahkan; cageType pasti != 0
+		/** @brief Menambahkan animal ke dalam cage, jika cage_type 
+		* sesuai dengan kebutuhan animal, maka ditambahkan; cage_type pasti != 0
 		*/
-		void addAnimal(Animal* A);
+		void AddAnimal(Animal* A);
 
 		//Setter and Getter
 
-		/** @brief cageID diubah menjadi n
+		/** @brief cage_id diubah menjadi n
 		*/
-		void setCageID(int n);
+		void SetCageID(int n);
 
-		/** @brief mengembalikan nilai cageID
-		* @return nilai cageID
+		/** @brief mengembalikan nilai cage_id
+		* @return nilai cage_id
 		*/
-		int getCageID();
+		int GetCageID();
 
-		/** @brief mengembalikan nilai cageType
-		* @return nilai cageType
+		/** @brief mengembalikan nilai cage_type
+		* @return nilai cage_type
 		*/
-		int getCageType();
+		int GetCageType();
 
 		/** @brief mengembalikan nilai alamat animal apakah x dan y dipakai, jika tidak maka null
 		* @return pointer menuju animal
 		*/
-		Animal* isSpaceOccupied(int x, int y);
+		Animal* IsSpaceOccupied(int x, int y);
 
 		//Fungsi lain
 
@@ -64,17 +64,16 @@ class Cage{
 		* @return nilai total makanan omnivore
 		*/
 		int CountFoodOmnivore();
-		bool isExist(int ID);
+		bool IsExist(int ID);
 
 
 	private:
-		int cageID;
+		int cage_id;
 		int n_animal;
 		int n_cell;
-		int cageType;
+		int cage_type;
 		Animal ** a;
-		Cell ** c;	
-		bool* AList;
+		Cell ** c;
 };
 
 #endif

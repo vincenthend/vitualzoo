@@ -23,21 +23,21 @@ public:
 
 	/** @brief Mencetak menu dan memfasilitasi input menu
 	*/
-	void printMenu();
+	void PrintMenu();
 
 	/** @brief Menjalankan Tour
 	*/
-	void startTour();
+	void StartTour();
 
 	/** @brief Mencetak keseluruhan zoo
 	*/
-	void printZoo();
+	void PrintZoo();
 
 	/** @brief Mencetak zoo dengan x,y adalah posisi player
 	* @param x posisi absis player
 	* @param y posisi ordinat player
 	*/
-	void printZoo(int x, int y);
+	void PrintZoo(int x, int y);
 
 	/** @brief Mencetak zoo dari titik (x1,y1) hingga (x2,y2)
 	* @param x1 posisi absis awal
@@ -45,13 +45,13 @@ public:
 	* @param x2 posisi absis akhir
 	* @param y2 posisi ordinat akhir
 	*/
-	void printZoo(int x1, int y1, int x2, int y2);
+	void PrintZoo(int x1, int y1, int x2, int y2);
 
 	//void printLegend();
 
 	/** @brief Mencetak zoo dari titik (x1,y1) hingga (x2,y2)
 	*/
-	void printStatus();
+	void PrintZoo();
 
 private:
 	Zoo* Z;

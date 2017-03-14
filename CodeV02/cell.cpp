@@ -1,19 +1,19 @@
 #include "cell.h"
 Cell::Cell():cellID(0) {
-	locX = 0;
-	locY = 0;
-	cageID = -1;
+	loc_x = 0;
+	loc_y = 0;
+	cage_id = -1;
 }
 
-void Cell::setCageID(int n)
+void Cell::SetCageID(int n)
 {
-	cageID = n;
+	cage_id = n;
 }
 
 Cell::Cell(int x, int y, int ID):cellID(ID)
 {
-	locX = x;
-	locY = y;
+	loc_x = x;
+	loc_y = y;
 	if (cellID == 11) {
 		code = 'L'; //Code Land Habitat
 	}
@@ -34,24 +34,24 @@ Cell::Cell(int x, int y, int ID):cellID(ID)
 	}
 }
 
-void Cell::render() {
+void Cell::Render() {
 	cout << code;
 }
 
-int Cell::getCageID()
+int Cell::GetCageID()
 {
-	return cageID;
+	return cage_id;
 }
 
-int Cell::getCellID()
+int Cell::GetCellID()
 {
 	return cellID;
 }
 
-int Cell::getLocationX(){
-	return (locX);
+int Cell::GetLocationX(){
+	return (loc_x);
 }
 
-int Cell::getLocationY(){
-	return (locY);
+int Cell::GetLocationY(){
+	return (loc_y);
 }

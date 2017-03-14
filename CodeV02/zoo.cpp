@@ -77,39 +77,39 @@ Zoo::Zoo(const Zoo& Z){
 	}	
 }
 
-void Zoo::addCage()
+void Zoo::AddCage()
 {
 	cg[n_cage] = new Cage;
-	cg[n_cage]->setCageID(n_cage);
+	cg[n_cage]->SetCageID(n_cage);
 	n_cage += 1;
 }
 
-void Zoo::addCell(int x, int y, Cell* C)
+void Zoo::AddCell(int x, int y, Cell* C)
 {
 	c[x][y] = C;
 }
 
-int Zoo::getWidth()
+int Zoo::GetWidth()
 {
 	return width;
 }
 
-int Zoo::getHeight()
+int Zoo::GetHeight()
 {
 	return height;
 }
 
-Cell* Zoo::getCell(int x, int y)
+Cell* Zoo::GetCell(int x, int y)
 {
 	return c[x][y];
 }
 
-Cage * Zoo::getCage(int n)
+Cage * Zoo::GetCage(int n)
 {
 	return cg[n];
 }
 
-int Zoo::getNCage()
+int Zoo::GetNCage()
 {
 	return n_cage;
 }
