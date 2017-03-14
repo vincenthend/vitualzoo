@@ -3,6 +3,7 @@
 Cage::Cage()
 {
 	n_animal = 0;
+	n_cell = 0;
 	a = new Animal*[999];
 	c = new Cell*[999];
 	cageID = -1;
@@ -15,9 +16,6 @@ bool Cage::IsFull() {
 
 void Cage::addAnimal(Animal* A)
 {
-	bool habitable=false;
-	int i;
-
 	//indeks 
 	//Harus diubah, gak ngecek habitable lagi, jadiin I.S. udah pasti habitable
 	//Harus ngeset X Y animal berdasarkan habitat yang available, kayaknya perlu gethabitat
