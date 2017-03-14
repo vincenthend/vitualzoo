@@ -128,7 +128,7 @@ Driver::Driver(string Input)
 			cout << "Cek 1" << endl;
 			while ((!(found)) && (k < Z->getNCage())) {
 				cout << "Cek 1.1" << endl;
-				if (A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) {
+				if ((A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) && (Z->getCage(k)->IsFull())) {
 					found = true;
 					cout << "Cek 1.2" << endl;
 					Z->getCage(k)->addAnimal(A);
