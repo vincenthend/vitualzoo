@@ -4,7 +4,6 @@
 
 Driver::Driver(string Input)
 {
-	cout << "Ceks 1" << endl;
 	Cell* C;
 	ifstream myfile(Input);
 	string S;
@@ -78,24 +77,27 @@ Driver::Driver(string Input)
 		for (j = 0; j <= Z->getWidth(); j++) {
 			found = false;
 			C = Z->getCell(i, j);
-			if (((j - 1) >= 0) && (!(found))) {
-				if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i, j - 1)->getCellID()))) {
-					Z->getCage(Z->getCell(i, j - 1)->getCageID())->addHabitat(Z->getCell(i, j));
-					found = true;
+			if ((C->getCellID()>= 11) && (C->getCellID() <= 13)) {
+				if (((j - 1) >= 0) && (!(found))) {
+					if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i, j - 1)->getCellID()))) {
+						Z->getCage(Z->getCell(i, j - 1)->getCageID())->addHabitat(Z->getCell(i, j));
+						found = true;
+					}
 				}
-			}
-			if (((i - 1) >= 0) && (!(found))) {
-				if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i - 1, j)->getCellID()))) {
-					Z->getCage(Z->getCell(i - 1, j)->getCageID())->addHabitat(Z->getCell(i, j));
-					found = true;
+				if (((i - 1) >= 0) && (!(found))) {
+					if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i - 1, j)->getCellID()))) {
+						Z->getCage(Z->getCell(i - 1, j)->getCageID())->addHabitat(Z->getCell(i, j));
+						found = true;
+					}
 				}
-			}
-			if (!(found)){
-				Z->addCage();
-				Z->getCage(Z->getNCage()-1)->addHabitat(Z->getCell(i, j));
+				if (!(found)) {
+					Z->addCage();
+					Z->getCage(Z->getNCage() - 1)->addHabitat(Z->getCell(i, j));
+				}
 			}
 		}
 	}
+
 	getline(myfile,S);
 	i = 0;
 	temp = 0;
@@ -105,7 +107,6 @@ Driver::Driver(string Input)
 	}
 	for (i = 0; i < temp; i++) {
 		getline(myfile,S);
-		cout << "String S = " << S << endl;
 		aid = 0;
 		j = 0;
 		while ((S[j] >= '0') && (S[j] <= '9')) {
@@ -120,21 +121,15 @@ Driver::Driver(string Input)
 		}
 		cout << "Animal " << aid << " ada " << acount << endl; /*TBD*/
 		//getchar();
+		k = 0;
 		for (j = 0; j < acount; j++) {
-			cout << "Cek" << endl;
 			A = new Animal(aid);
 			found = false;
-			k = 0;
-			cout << "Cek 1" << endl;
 			while ((!(found)) && (k < Z->getNCage())) {
-				cout << "Cek 1.1" << endl;
-				if ((A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) && (Z->getCage(k)->IsFull())) {
+				if ((A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) && !(Z->getCage(k)->IsFull())) {
 					found = true;
-					cout << "Cek 1.2" << endl;
 					(Z->getCage(k))->addAnimal(A);
-					cout << "Cek 1.3" << endl;
 				}
-				cout << "Cek 1.4" << endl;
 				k++;
 			}
 		}
@@ -185,6 +180,8 @@ void Driver::printMenu()
 					cin >> y2;
 					printZoo(x1, y1, x2, y2);
 					cout << endl;
+					
+		choice = 0;
 				}
 			} while (choice != 9);
 		}
@@ -229,7 +226,6 @@ void Driver::startTour()
 	j = Ty[temp];
 
 	while (C->getCellID() != 211) {
-
 		//Print Zoo
 		ClearScreen();
 		printZoo(j,i);
@@ -242,7 +238,7 @@ void Driver::startTour()
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
+						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j-1);
 						if (A != NULL) {
 							A->interact();
 						}
@@ -255,7 +251,7 @@ void Driver::startTour()
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
+						A = Z->getCage(C->getCageID())->isSpaceOccupied(i+1, j);
 						if (A != NULL) {
 							A->interact();
 						}
@@ -268,7 +264,7 @@ void Driver::startTour()
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
+						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j+1);
 						if (A != NULL) {
 							A->interact();
 						}
@@ -281,7 +277,7 @@ void Driver::startTour()
 			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
 				if (C != NULL) {
 					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
+						A = Z->getCage(C->getCageID())->isSpaceOccupied(i-1, j);
 						if (A != NULL) {
 							A->interact();
 						}

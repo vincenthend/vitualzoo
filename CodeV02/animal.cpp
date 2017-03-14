@@ -14,43 +14,43 @@ Animal::Animal(int id)
 		type = 1;
 		sound = "Kraoooo";
 		code = '!';
-		habitat[2] = true;
+		habitat[1] = true;
 	}
 	else if (id == 2) {
 		type = 2;
 		sound = "*flies around*";
 		code = '@';
-		habitat[2] = true;
+		habitat[1] = true;
 	}
 	else if (id == 3) {
 		type = 3;
 		sound = "*flickers*";
 			code = '#';
-		habitat[2] = true;
+		habitat[1] = true;
 	}
 	else if (id == 4) {
 		type = 4;
 		sound = "Bzzzz";
 		code = '$';
-		habitat[2] = true;
+		habitat[1] = true;
 	}
 	else if (id == 5) {
 		type = 5;
 		sound = "Chip Whirp Whirp!";
 		code = '%';
-		habitat[2] = true;
+		habitat[1] = true;
 	}
 	else if (id == 6) {
 		type = 6;
 		sound = "Squawk!";
 		code = '^';
-		habitat[2] = true;
+		habitat[1] = true;
 	}
 	else if (id == 7) {
 		type = 7;
 		sound = "*fly away*";
 		code = '&';
-		habitat[2] = true;
+		habitat[1] = true;
 	}
 	else if (id == 8) {
 		type = 8;
@@ -110,43 +110,43 @@ Animal::Animal(int id)
 		type = 17;
 		sound = "blub blub";
 		code = ':';
-		habitat[1] = true;
+		habitat[2] = true;
 	}
 	else if (id == 18) {
 		type = 18;
 		sound = "splash";
 		code = '<';
-		habitat[1] = true;
+		habitat[2] = true;
 	}
 	else if (id == 19) {
 		type = 19;
 		sound = "sluhb.;sluhb..";
 		code = '>';
-		habitat[1] = true;
+		habitat[2] = true;
 	}
 	else if (id == 20) {
 		type = 20;
 		sound = "*glub glub*";
 		code = '/';
-		habitat[1] = true;
+		habitat[2] = true;
 	}
 	else if (id == 21) {
 		type = 21;
 		sound = "swoosh";
 		code = '=';
-		habitat[1] = true;
+		habitat[2] = true;
 	}
 	else if (id == 22) {
 		type = 22;
 		sound = "Bawrk Bawrk!";
 		code = ';';
-		habitat[1] = true;
+		habitat[2] = true;
 	}
 	else if (id == 23) {
 		type = 23;
 		sound = "*swims slowly*";
 		code = '0';
-		habitat[1] = true;
+		habitat[2] = true;
 	}
 }
 void Animal::interact()
