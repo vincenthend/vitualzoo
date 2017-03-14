@@ -119,7 +119,7 @@ Driver::Driver(string Input)
 			j++;
 		}
 		cout << "Animal " << aid << " ada " << acount << endl; /*TBD*/
-		getchar();
+		//getchar();
 		for (j = 0; j < acount; j++) {
 			cout << "Cek" << endl;
 			A = new Animal(aid);
