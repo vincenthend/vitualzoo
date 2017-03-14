@@ -241,6 +241,7 @@ void Driver::printMenu()
 				if (choice == 1) {
 					ClearScreen();
 					printZoo();
+					printStatus();
 				}
 				else if (choice == 2) {
 					ClearScreen();

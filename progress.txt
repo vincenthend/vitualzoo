@@ -10,12 +10,13 @@
 7. startTour --> MIKE?											- done -
 8. Menu															- done -
 9. Rename variabel dan class									
-10. Tameable
-11. Animal render(VZ03)										
-12. Mailmerge Carnivore, Herbivore, Omnivore, jumlah makanan
-13. Cara set X,Y hewan?
-14. Inisialisasi cage & animal
+10. Tameable													- cg blm-
+11. Animal render(VZ03)											- done -
+12. Mailmerge Carnivore, Herbivore, Omnivore, jumlah makanan	- done -
+13. Cara set X,Y hewan?											- done -
+14. Inisialisasi cage & animal									- done -
 15. Review isi doxygen
+16. Check printStatus
 ===========================
 |   TO DO LIST SOFTCOPY   |
 ===========================
