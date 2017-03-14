@@ -38,7 +38,14 @@ class Cell{
 		/** @brief Mengembalikan nilai cellID
 		*/
 		int getCellID();
-
+		/** @brief Mengembalikan posisi absis hewan.
+	     * @return Posisi absis cell.
+	     */
+		int getLocationX();
+		/** @brief Mengembalikan posisi ordinat hewan.
+	     * @return Posisi ordinat cell.
+	     */
+		int getLocationY();
 	protected:
 		const int cellID = 0;
 		int locX;

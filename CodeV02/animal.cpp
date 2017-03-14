@@ -169,6 +169,14 @@ int Animal::getLocationY(){
 	return (locY);
 }
 
+void Animal::setLocationX(int x){
+	locX = x;
+}
+
+void Animal::setLocationY(int y){
+	locY = y;
+}
+
 int Animal::getTame(){
 	return (tame);
 }

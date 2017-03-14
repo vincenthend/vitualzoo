@@ -15,7 +15,7 @@ public:
 	//ctor dan cctor
 	Animal();
 
-	Animal(int x, int y, int id);
+	Animal(int id);
 
    /** @brief Menuliskan interaksi dengan hewan ke layar.
      */
@@ -42,6 +42,8 @@ public:
      * @return Posisi ordinat hewan.
      */
 	int getLocationY();
+	int setLocationX();
+	int setLocationY();
 	
    /** @brief Mengembalikan status jinak hewan.
      * @return True jika jinak dan false jika tidak jinak.

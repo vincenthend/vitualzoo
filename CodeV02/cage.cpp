@@ -9,6 +9,8 @@ Cage::Cage()
 	cageType = 0;
 }
 
+bool Cage::IsFull(); 
+
 void Cage::addAnimal(Animal* A)
 {
 	bool habitable=false;
@@ -17,20 +19,10 @@ void Cage::addAnimal(Animal* A)
 	//indeks 
 	//Harus diubah, gak ngecek habitable lagi, jadiin I.S. udah pasti habitable
 	//Harus ngeset X Y animal berdasarkan habitat yang available, kayaknya perlu gethabitat
-	if (n_animal < (n_cell / 10) * 3) {
-		i = (cageType % 10) - 1;
-		if ((A->getHabitat())[i]) {
-			habitable = true;
-		}
-
-		if (habitable) {
-			a[n_animal] = A;
-			n_animal += 1;
-		}
-	}
-	else {
-		cout << "class full";
-	}
+	A->setLocationX(c[n_animal].getLocationX());
+	A->setLocationY(c[n_animal].getLocationY());
+	a[n_animal] = A;
+	n_animal += 1;
 }
 
 
