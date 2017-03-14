@@ -13,7 +13,7 @@
 #include "cell.h"
 #include "facility.h"
 #include "habitat.h"
-#include "Renderable.h"
+#include "renderable.h"
 #include "zoo.h"
 #include "gui.h"
 
