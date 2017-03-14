@@ -64,6 +64,7 @@ class Cage{
 		* @return nilai total makanan omnivore
 		*/
 		int CountFoodOmnivore();
+		bool isExist(int ID);
 
 
 	private:
@@ -73,6 +74,7 @@ class Cage{
 		int cageType;
 		Animal ** a;
 		Cell ** c;	
+		bool* AList;
 };
 
 #endif

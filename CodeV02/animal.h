@@ -13,8 +13,6 @@ using namespace std;
 class Animal{
 public:	
 	//ctor dan cctor
-	Animal();
-
 	Animal(int id);
 
    /** @brief Menuliskan interaksi dengan hewan ke layar.
@@ -71,6 +69,8 @@ public:
 	/** @brief Melakukan pencetakan terhadap code
 	*/
 	void render();
+	int getCEnemy();
+	int* getEnemyList();
 protected:
 	bool habitat[3] = {false, false, false};
 	
@@ -84,5 +84,7 @@ private:
 	bool tame;
 	char code;
 	string sound;
+	int* EnemyID;
+	int cenemy;
 };
 #endif

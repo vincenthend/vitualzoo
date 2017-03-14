@@ -1,15 +1,10 @@
 #include "animal.h"
-Animal::Animal()
-{
-	locX = -99;
-	locY = -99;
-	type = 0;
-}
 Animal::Animal(int id)
 {
 	locX = -99;
 	locY = -99;
-
+	EnemyID = new int [99];
+	cenemy = 0;
 	if (id == 1) {
 		type = 1;
 		sound = "Kraoooo";
@@ -18,7 +13,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '!';
 		habitat[1] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 2) {
 		type = 2;
@@ -28,7 +23,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '@';
 		habitat[1] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 3) {
 		type = 3;
@@ -38,7 +33,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '#';
 		habitat[1] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 4) {
 		type = 4;
@@ -48,7 +43,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '$';
 		habitat[1] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 5) {
 		type = 5;
@@ -58,7 +53,10 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '%';
 		habitat[1] = true;
-		tame = false;
+		cenemy = 2;
+		EnemyID = new int [2];
+		EnemyID[0] = 2;
+		EnemyID[1] = 4;
 	}
 	else if (id == 6) {
 		type = 6;
@@ -68,7 +66,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '^';
 		habitat[1] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 7) {
 		type = 7;
@@ -78,7 +76,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '&';
 		habitat[1] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 8) {
 		type = 8;
@@ -88,7 +86,7 @@ Animal::Animal(int id)
 		foodType = 3;
 		code = '*';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 9) {
 		type = 9;
@@ -98,7 +96,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '-';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 10) {
 		type = 10;
@@ -108,7 +106,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '+';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 11) {
 		type = 11;
@@ -118,7 +116,9 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '~';
 		habitat[0] = true;
-		tame = false;
+		cenemy = 1;
+		EnemyID = new int [cenemy];
+		EnemyID[0] = 9;
 	}
 	else if (id == 12) {
 		type = 12;
@@ -128,7 +128,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '"';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 13) {
 		type = 13;
@@ -138,7 +138,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '[';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 14) {
 		type = 14;
@@ -148,7 +148,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = ']';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 15) {
 		type = 15;
@@ -158,7 +158,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '{';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 16) {
 		type = 16;
@@ -168,7 +168,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '}';
 		habitat[0] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 17) {
 		type = 17;
@@ -178,7 +178,10 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = ':';
 		habitat[2] = true;
-		tame = false;
+		cenemy = 2;
+		EnemyID = new int [cenemy];
+		EnemyID [0] = 19;
+		EnemyID [1] = 21;
 	}
 	else if (id == 18) {
 		type = 18;
@@ -188,7 +191,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '<';
 		habitat[2] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 19) {
 		type = 19;
@@ -198,7 +201,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '>';
 		habitat[2] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 20) {
 		type = 20;
@@ -208,7 +211,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '/';
 		habitat[2] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 21) {
 		type = 21;
@@ -218,7 +221,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '=';
 		habitat[2] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 22) {
 		type = 22;
@@ -230,7 +233,7 @@ Animal::Animal(int id)
 		foodType = 2;
 		code = '/';
 		habitat[2] = true;
-		tame = true;
+		cenemy = 0;
 	}
 	else if (id == 23) {
 		type = 23;
@@ -240,7 +243,7 @@ Animal::Animal(int id)
 		foodType = 1;
 		code = '0';
 		habitat[2] = true;
-		tame = true;
+		cenemy = 0;
 	}
 
 }
@@ -294,4 +297,14 @@ void Animal::render()
 bool * Animal::getHabitat()
 {
 	return habitat;
+}
+
+int* Animal::getEnemyList()
+{
+	return EnemyID;
+}
+
+int Animal::getCEnemy()
+{
+	return cenemy;
 }

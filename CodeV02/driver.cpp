@@ -7,8 +7,8 @@ Driver::Driver(string Input)
 	Cell* C;
 	ifstream myfile(Input);
 	string S;
-	int i, j, k, w, h, temp, aid, acount;
-	bool found;
+	int i, j, k, l, w, h, temp, aid, acount;
+	bool found, enemy;
 	Animal* A;
 
 	getline(myfile,S);
@@ -77,6 +77,7 @@ Driver::Driver(string Input)
 		for (j = 0; j <= Z->getWidth(); j++) {
 			found = false;
 			C = Z->getCell(i, j);
+			cout << "Cek " << (C->getCellID()) << endl;
 			if ((C->getCellID()>= 11) && (C->getCellID() <= 13)) {
 				if (((j - 1) >= 0) && (!(found))) {
 					if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i, j - 1)->getCellID()))) {
@@ -119,16 +120,24 @@ Driver::Driver(string Input)
 			acount = (acount * 10) + (S[j] - '0');
 			j++;
 		}
-		cout << "Animal " << aid << " ada " << acount << endl; /*TBD*/
-		//getchar();
 		k = 0;
 		for (j = 0; j < acount; j++) {
 			A = new Animal(aid);
 			found = false;
 			while ((!(found)) && (k < Z->getNCage())) {
 				if ((A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) && !(Z->getCage(k)->IsFull())) {
-					found = true;
-					(Z->getCage(k))->addAnimal(A);
+					l = 0;
+					enemy = false;
+					while (l < A->getCEnemy()){
+						if (Z->getCage(k)->isExist(A->getEnemyList()[l])){
+							enemy = true;
+						}
+						l++;
+					}
+					if (!(enemy)){
+						found = true;
+						(Z->getCage(k))->addAnimal(A);
+					}
 				}
 				k++;
 			}
