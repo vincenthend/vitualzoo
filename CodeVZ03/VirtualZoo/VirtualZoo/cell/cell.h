@@ -1,12 +1,12 @@
 #include <iostream>
-#include "../renderable/renderable.h"
+#include "../Renderable/Renderable.h"
 #include "../animal/animal.h"
 
 #ifndef CELL_H
 #define CELL_H
 
 /** @class 	Cell
- * Kelas Cell, cellID didefinisikan pada turunan Cell, default ID = 0
+ * Kelas Cell, cell_id didefinisikan pada turunan Cell, default ID = 0
  *
  */
 
@@ -14,34 +14,34 @@ class Cell: public Renderable{
 	public:
 		Cell();
 
-		void render();
-		void setCode(char c);
-		virtual void setCageID(int n) {
+		void Render();
+		void SetCode(char c);
+		virtual void SetCageID(int n) {
 		}
-		virtual int getCageID() {
-			return cageID;
+		virtual int GetCageID() {
+			return cage_id;
 		}
 
-		/** @brief Mengembalikan nilai cellID
+		/** @brief Mengembalikan nilai cell_id
 		*/
-		int getCellID();
+		int GetCellID();
 		/** @brief Mengembalikan nilai LocX
 		* @return Lokasi X hewan
 		*/
-		int getLocationX();
+		int GetLocationX();
 		/** @brief Mengembalikan nilai LocY 
 		* @return Lokasi Y hewan
 		*/
-		int getLocationY();
+		int GetLocationY();
 
 		
 
 
 	protected:
-		int cellID;
-		int locX;
-		int locY;
-		int cageID;
+		int cell_id;
+		int loc_x;
+		int loc_y;
+		int cage_id;
 
 	private:
 		char code;

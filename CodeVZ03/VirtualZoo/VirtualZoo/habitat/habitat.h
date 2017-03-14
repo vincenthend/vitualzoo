@@ -16,11 +16,11 @@ class Habitat: public Cell{
 	public:
 	/** @brief Mengubah nilai cageID menjadi n
 	*/
-	void setCageID(int n);
+	void SetCageID(int n);
 
 	/** @brief Mengembalikan nilai cageID
 	*/
-	int getCageID();
+	int GetCageID();
 };
 
 /**
@@ -39,7 +39,7 @@ class LandHabitat: public Habitat{
     	 */
 		LandHabitat(int x, int y);
 	private:
-		const char defaultCode = 'L';
+		const char default_code = 'L';
 	
 };
 
@@ -59,7 +59,7 @@ class WaterHabitat: public Habitat{
 		*/
 		WaterHabitat(int x, int y);
 	private:
-		const char defaultCode = 'W';
+		const char default_code = 'W';
 
 };
 
@@ -80,10 +80,10 @@ class AirHabitat : public Habitat {
 		*/
 		AirHabitat(int x, int y);
 
-		void render();
+		void Render();
 
 	private:
-		const char defaultCode = 'A';
+		const char default_code = 'A';
 
 };
 

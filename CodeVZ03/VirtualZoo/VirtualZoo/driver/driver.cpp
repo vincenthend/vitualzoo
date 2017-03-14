@@ -5,65 +5,65 @@
 
 Driver::Driver(string Input)
 {
-	Cell* C;
+	Cell* c;
 	ifstream myfile(Input);
-	string S;
-	int i, j, k, l, w, h, temp, aid, acount;
+	string s;
+	int i, j, k, l, w, h, temp, a_id, a_count;
 	bool found, enemy;
-	Animal* A;
+	Animal* a;
 
-	A = NULL;
-	getline(myfile,S);
+	a = NULL;
+	getline(myfile, s);
 	i = 0;
 	temp = 0;
-	C = NULL;
-	while ((S[i] >= '0') && (S[i] <= '9')) {
-		temp = (temp * 10) + (S[i] - '0');
+	c = NULL;
+	while ((s[i] >= '0') && (s[i] <= '9')) {
+		temp = (temp * 10) + (s[i] - '0');
 		i++;
 	}
 	h = temp;
-	getline(myfile,S);
+	getline(myfile, s);
 	i = 0;
 	temp = 0;
-	while ((S[i] >= '0') && (S[i] <= '9')) {
-		temp = (temp * 10) + (S[i] - '0');
+	while ((s[i] >= '0') && (s[i] <= '9')) {
+		temp = (temp * 10) + (s[i] - '0');
 		i++;
 	}
 	w = temp;
-	Z = new Zoo(w, h);
-	for (i = 0; i < Z->getHeight(); i++) {
-		getline(myfile, S);
-		for (j = 0; j < Z->getWidth(); j++) {
-			if (S[j] == 'L'){
-				C = new LandHabitat(i, j);
+	z = new Zoo(w, h);
+	for (i = 0; i < z->GetHeight(); i++) {
+		getline(myfile, s);
+		for (j = 0; j <= z->GetWidth(); j++) {
+			if (s[j] == 'L'){
+				c = new LandHabitat(i, j);
 			}
 			else {
-				if (S[j] == 'W'){
+				if (s[j] == 'W'){
 					C = new WaterHabitat(i, j);
 				}
 				else {
-					if (S[j] == 'A'){
+					if (s[j] == 'A'){
 						C = new AirHabitat(i, j);
 					}
 					else {
-						if (S[j] == 'S'){
-							C = new Road(i, j, true);
+						if (s[j] == 'S'){
+							c = new Road(i, j, true);
 						}
 						else {
-							if (S[j] == 'F'){
-								C = new Road(i, j, false);
+							if (s[j] == 'F'){
+								c = new Road(i, j, false);
 							}
 							else {
-								if (S[j] == 'X'){
-									C = new Road(i, j);
+								if (s[j] == 'X'){
+									c = new Road(i, j);
 								}
 								else {
-									if (S[j] == 'R'){
-										C = new Resto(i, j);
+									if (s[j] == 'R'){
+										c = new Resto(i, j);
 									}
 									else {
-										if (S[j] == 'P'){
-											C = new Park(i, j);
+										if (s[j] == 'P'){
+											c = new Park(i, j);
 										}
 									}
 								}
@@ -72,147 +72,145 @@ Driver::Driver(string Input)
 					}
 				}
 			}
-			Z->addCell(i, j, C);
+			z->AddCell(i, j, c);
 		}
 	}
-	for (i = 0; i < Z->getHeight(); i++) {
-		for (j = 0; j < Z->getWidth(); j++) {
+	for (i = 0; i < z->GetHeight(); i++) {
+		for (j = 0; j < z->GetWidth(); j++) {
 			found = false;
-			C = Z->getCell(i, j);
-			if ((C->getCellID()>= 11) && (C->getCellID() <= 13)) {
+			c = z->GetCell(i, j);
+			if ((c->GetCellID()>= 11) && (c->GetCellID() <= 13)) {
 				if (((j - 1) >= 0) && (!(found))) {
-					if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i, j - 1)->getCellID()))) {
-						Z->getCage(Z->getCell(i, j - 1)->getCageID())->addHabitat(Z->getCell(i, j));
+					if (((z->GetCell(i, j)->GetCellID()) == (z->GetCell(i, j - 1)->GetCellID()))) {
+						z->GetCage(z->GetCell(i, j - 1)->GetCageID())->AddHabitat(z->GetCell(i, j));
 						found = true;
 					}
 				}
 				if (((i - 1) >= 0) && (!(found))) {
-					if (((Z->getCell(i, j)->getCellID()) == (Z->getCell(i - 1, j)->getCellID()))) {
-						Z->getCage(Z->getCell(i - 1, j)->getCageID())->addHabitat(Z->getCell(i, j));
+					if (((z->GetCell(i, j)->GetCellID()) == (z->GetCell(i - 1, j)->GetCellID()))) {
+						z->GetCage(z->GetCell(i - 1, j)->GetCageID())->AddHabitat(z->GetCell(i, j));
 						found = true;
 					}
 				}
 				if (!(found)) {
-					Z->addCage();
-					Z->getCage(Z->getNCage() - 1)->addHabitat(Z->getCell(i, j));
+					z->AddCage();
+					z->GetCage(z->GetNCage() - 1)->AddHabitat(z->GetCell(i, j));
 				}
 			}
 		}
 	}
 
-	getline(myfile,S);
+	getline(myfile, s);
 	i = 0;
 	temp = 0;
-	while ((S[i] >= '0') && (S[i] <= '9')) {
-		temp = (temp * 10) + (S[i] - '0');
+	while ((s[i] >= '0') && (s[i] <= '9')) {
+		temp = (temp * 10) + (s[i] - '0');
 		i++;
 	}
 	for (i = 0; i < temp; i++) {
-		getline(myfile,S);
-		aid = 0;
+		getline(myfile, s);
+		a_id = 0;
 		j = 0;
-		while ((S[j] >= '0') && (S[j] <= '9')) {
-			aid = (aid * 10) + (S[j] - '0');
+		while ((s[j] >= '0') && (s[j] <= '9')) {
+			a_id = (a_id * 10) + (s[j] - '0');
 			j++;
 		}
 		j++;
-		acount = 0;
-		while ((S[j] >= '0') && (S[j] <= '9')) {
-			acount = (acount * 10) + (S[j] - '0');
+		a_count = 0;
+		while ((s[j] >= '0') && (s[j] <= '9')) {
+			a_count = (a_count * 10) + (s[j] - '0');
 			j++;
 		}
-		cout << "Animal " << aid << " ada " << acount << endl; /*TBD*/
-		//getchar();
 		k = 0;
-		for (j = 0; j < acount; j++) {
+		for (j = 0; j < a_count; j++) {
 			//NEW ANIMAL
-			if (aid == 1) {
-				A = new Pelican;
+			if (a_id == 1) {
+				a = new Pelican;
 			}
 			else if (aid == 2) {
-				A = new Owl;
+				a = new Owl;
 			}
 			else if (aid == 3) {
-				A = new Pigeon;
+				a = new Pigeon;
 			}
 			else if (aid == 4) {
-				A = new Canary;
+				a = new Canary;
 			}
 			else if (aid == 5) {
-				A = new Bat;
+				a = new Bat;
 			}
 			else if (aid == 6) {
-				A = new Eagle;
+				a = new Eagle;
 			}
 			else if (aid == 7) {
-				A = new Toucan;
+				a = new Toucan;
 			}
 			else if (aid == 8) {
-				A = new Chicken;
+				a = new Chicken;
 			}
 			else if (aid == 9) {
-				A = new Cat;
+				a = new Cat;
 			}
 			else if (aid == 10) {
-				A = new Cow;
+				a = new Cow;
 			}
 			else if (aid == 11) {
-				A = new Mouse;
+				a = new Mouse;
 			}
 			else if (aid == 12) {
-				A = new Goat;
+				a = new Goat;
 			}
 			else if (aid == 13) {
-				A = new Llama;
+				a = new Llama;
 			}
 			else if (aid == 14) {
-				A = new Snake;
+				a = new Snake;
 			}
 			else if (aid == 15) {
-				A = new Sheep;
+				a = new Sheep;
 			}
 			else if (aid == 16) {
-				A = new Chameleon;
+				a = new Chameleon;
 			}
 			else if (aid == 17) {
-				A = new Salmon;
+				a = new Salmon;
 			}
 			else if (aid == 18) {
-				A = new Whale;
+				a = new Whale;
 			}
 			else if (aid == 19) {
-				A = new Squid;
+				a = new Squid;
 			}
 			else if (aid == 20) {
-				A = new Goldfish;
+				a = new Goldfish;
 			}
 			else if (aid == 21) {
-				A = new Turtle;
+				a = new Turtle;
 			}
 			else if (aid == 22) {
-				A = new Seal;
+				a = new Seal;
 			}
 			else if (aid == 23) {
-				A = new Dolphin;
+				a = new Dolphin;
 			}
 			else if (aid == 24) {
-				A = new Penguin;
+				a = new Penguin;
 			}
 			
 			found = false;
-			while ((!(found)) && (k < Z->getNCage())) {
-				if ((A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) && !(Z->getCage(k)->IsFull())) {
+			while ((!(found)) && (k < z->GetNCage())) {
+				if ((a->GetHabitat()[(((z->GetCage(k))->GetCageType()) % 10) - 1]) && !(z->GetCage(k)->IsFull())) {
 					l = 0;
 					enemy = false;
-					while (l < A->getCEnemy()){
-						if (Z->getCage(k)->isExist(A->getEnemyList()[l])){
+					while (l < a->GetCEnemy()){
+						if (z->GetCage(k)->IsExist(a->GetEnemyList()[l])){
 							enemy = true;
 						}
 						l++;
 					}
 					if (!(enemy)){
 						found = true;
-						(Z->getCage(k))->addAnimal(A);
+						(z->GetCage(k))->AddAnimal(a);
 					}
 				}
 				k++;
@@ -259,8 +257,8 @@ void Driver::printMenu()
 				else if (choice == 2) {
 					ClearScreen();
 					cout << "Masukkan ukuran" << endl;
-					cout << "X(0 - " << Z->getWidth() - 1 <<")"<<endl;
-					cout << "Y(0 - " << Z->getHeight() - 1 << ")"<<endl;
+					cout << "X(0 - " << Z->GetWidth() - 1 <<")"<<endl;
+					cout << "Y(0 - " << Z->GetHeight() - 1 << ")"<<endl;
 					cout << "X1 :";
 					cin >> x1;
 					cout << "Y1 :";
@@ -276,102 +274,101 @@ void Driver::printMenu()
 			choice = 0;
 		}
 		else if (choice == 2) {
-			startTour();
+			StartTour();
 			ClearScreen();
 		}
 
 	} while (choice != 9);
 }
 
-void Driver::startTour()
+void Driver::StartTour()
 {
-	int i, j, Tx[10], Ty[10], Tc, move, Tmove[4], cmove;
+	int i, j, tx[10], ty[10], tc, move, t_move[4], c_move;
 	int temp;
-	Cell *C;
-	Animal * A;
+	Cell* c;
+	Animal* a;
 	bool walk = true;
-	Tc = 0;
-	C = Z->getCell(0, 0); //Visstud error without this
-	
+	tc = 0;
+	c = z->GetCell(0, 0); //Visstud error without this
 	
 	ClearScreen();
-	printZoo();
-	printStatus();
+	PrintZoo();
+	PrintStatus();
 
 	srand((unsigned int)time(NULL));
-	for (i = 0; i < Z->getWidth(); i++) {
-		for (j = 0; j < Z->getHeight(); j++) {
-			C = Z->getCell(i, j);
-			if (C != NULL) {
-				if (C->getCellID() == 210) {
-					Tx[Tc] = i;
-					Ty[Tc] = j;
-					Tc++;
+	for (i = 0; i < z->GetWidth(); i++) {
+		for (j = 0; j < z->GetHeight(); j++) {
+			c = z->GetCell(i, j);
+			if (c != NULL) {
+				if (c->GetCellID() == 210) {
+					tx[tc] = i;
+					ty[tc] = j;
+					tc++;
 				}
 			}
 		}
 	}
 	move = 0;
 	//Random entrance yang dipake, simpen  x y di i j
-	temp = (rand() % (Tc));
-	i = Tx[temp];
-	j = Ty[temp];
+	temp = (rand() % (tc));
+	i = tx[temp];
+	j = ty[temp];
 
-	while (C->getCellID() != 211 && walk) {
+	while (c->GetCellID() != 211 && walk) {
 		//Print Zoo
 		ClearScreen();
-		printZoo(j,i);
-		printStatus();
+		PrintZoo(j,i);
+		PrintStatus();
 
-		cout << "(" << i << "," << j << ")" << C->getCellID()<< endl;
+		cout << "(" << i << "," << j << ")" << c->GetCellID()<< endl;
 		//Interact
 		if (((j - 1) >= 0) && (move != 3)) {
-			C = Z->getCell(i, j - 1);
-			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
-				if (C != NULL) {
-					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j-1);
-						if (A != NULL) {
-							A->interact();
+			c = z->GetCell(i, j - 1);
+			if ((c->GetCellID() >= 11) && (c->GetCellID() <= 13)) {
+				if (c != NULL) {
+					if (c->GetCageID() > -1) {
+						a = z->GetCage(c->GetCageID())->IsSpaceOccupied(i, j-1);
+						if (a != NULL) {
+							a->Interact();
 						}
 					}
 				}
 			}
 		}
-		if (((i + 1) < Z->getHeight()) && (move != 4)) {
-			C = Z->getCell(i + 1, j);
-			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
-				if (C != NULL) {
-					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i+1, j);
-						if (A != NULL) {
-							A->interact();
+		if (((i + 1) < z->GetHeight()) && (move != 4)) {
+			c = z->GetCell(i + 1, j);
+			if ((c->GetCellID() >= 11) && (c->GetCellID() <= 13)) {
+				if (c != NULL) {
+					if (c->GetCageID() > -1) {
+						a = z->GetCage(c->GetCageID())->IsSpaceOccupied(i+1, j);
+						if (a != NULL) {
+							a->Interact();
 						}
 					}
 				}
 			}
 		}
-		if (((j + 1) < Z->getWidth()) && (move != 1)) {
-			C = Z->getCell(i, j + 1);
-			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
-				if (C != NULL) {
-					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j+1);
-						if (A != NULL) {
-							A->interact();
+		if (((j + 1) < z->GetWidth()) && (move != 1)) {
+			c = z->GetCell(i, j + 1);
+			if ((c->GetCellID() >= 11) && (c->GetCellID() <= 13)) {
+				if (c != NULL) {
+					if (c->GetCageID() > -1) {
+						a = z->GetCage(c->GetCageID())->IsSpaceOccupied(i, j+1);
+						if (a != NULL) {
+							a->Interact();
 						}
 					}
 				}
 			}
 		}
 		if (((i - 1) >= 0) && (move != 2)) {
-			C = Z->getCell(i - 1, j);
-			if ((C->getCellID() >= 11) && (C->getCellID() <= 13)) {
-				if (C != NULL) {
-					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i-1, j);
-						if (A != NULL) {
-							A->interact();
+			c = z->GetCell(i - 1, j);
+			if ((c->GetCellID() >= 11) && (c->GetCellID() <= 13)) {
+				if (c != NULL) {
+					if (c->GetCageID() > -1) {
+						a = z->GetCage(c->GetCageID())->IsSpaceOccupied(i-1, j);
+						if (a != NULL) {
+							a->Interact();
 						}
 					}
 				}
@@ -383,38 +380,39 @@ void Driver::startTour()
 		bawah (x + 1): 3
 		kiri (y - 1): 4
 		*/
-		cmove = 0;
+		c_move = 0;
 		if (((j - 1) >= 0) && (move != 3)){
-			C = Z->getCell(i, j - 1);
-			if (C->getCellID() == 21 || C->getCellID() == 211 ){
-				Tmove[cmove] = 1;
-				cmove++;
+			c = z->GetCell(i, j - 1);
+			if (c->GetCellID() == 21 || c->GetCellID() == 211 ){
+				t_move[c_move] = 1;
+				c_move++;
 			}
 		}
-		if (((i + 1) < Z->getHeight()) && (move != 4)){
-			C = Z->getCell(i + 1, j);
-			if (C->getCellID() == 21 || C->getCellID() == 211){
-				Tmove[cmove] = 2;
-				cmove++;
+		if (((i + 1) < z->GetHeight()) && (move != 4)){
+			c = z->GetCell(i + 1, j);
+			if (c->GetCellID() == 21 || c->GetCellID() == 211){
+				t_move[c_move] = 2;
+				c_move++;
 			}
 		}
-		if (((j + 1) < Z->getWidth()) && (move != 1)){
-			C = Z->getCell(i, j + 1);
-			if (C->getCellID() == 21 || C->getCellID() == 211){
-				Tmove[cmove] = 3;
-				cmove++;
+		if (((j + 1) < z->GetWidth()) && (move != 1)){
+			c = z->GetCell(i, j + 1);
+			if (c->GetCellID() == 21 || c->GetCellID() == 211){
+				t_move[c_move] = 3;
+				c_move++;
 			}
 		}
 		if (((i - 1) >= 0) && (move != 2)){
-			C = Z->getCell(i - 1, j);
-			if (C->getCellID() == 21 || C->getCellID() == 211){
-				Tmove[cmove] = 4;
-				cmove++;
+			c = z->GetCell(i - 1, j);
+			if (c->GetCellID() == 21 || c->GetCellID() == 211){
+				t_move[c_move] = 4;
+				c_move++;
 			}
 		}
+
 		//Random jalan yang mungkin pake mod cmove, simpen di move
-		if (cmove > 0) {
-			move = Tmove[(rand() % cmove)];
+		if (c_move > 0) {
+			move = t_move[(rand() % c_move)];
 			if (move == 1) {
 				j--;
 			}
@@ -431,14 +429,12 @@ void Driver::startTour()
 					}
 				}
 			}
-			C = Z->getCell(i, j);
-			Delay(500);
 		}
 		else {
 			walk = false;
-		}
-
-		
+		}		
+		c = z->GetCell(i, j);
+		Delay(500);
 	}
 	cout << "Tur selesai :D" << endl;
 }
@@ -446,25 +442,25 @@ void Driver::startTour()
 void Driver::printZoo()
 {
 	int i, j;
-	Cell* C;
-	Animal* A;
+	Cell* c;
+	Animal* a;
 
-	for (i = 0; i < Z->getWidth(); i++) {
+	for (i = 0; i < z->GetWidth(); i++) {
 		cout << "|";
-		for (j = 0; j < Z->getHeight(); j++) {
-			C = Z->getCell(i, j);
-			if (C != NULL) {
-				if (C->getCageID() > -1) {
-					A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
-					if (A != NULL) {
-						A->render();
+		for (j = 0; j < z->GetHeight(); j++) {
+			c = z->GetCell(i, j);
+			if (c != NULL) {
+				if (c->GetCageID() > -1) {
+					a = z->GetCage(c->GetCageID())->IsSpaceOccupied(i, j);
+					if (a != NULL) {
+						a->Render();
 					}
 					else {
-						C->render();
+						c->Render();
 					}
 				}
 				else {
-					C->render();
+					c->Render();
 				}
 			}
 			else {
@@ -479,29 +475,29 @@ void Driver::printZoo()
 void Driver::printZoo(int x, int y)
 {
 	int i, j;
-	Cell* C;
-	Animal* A;
+	Cell* c;
+	Animal* a;
 
-	for (i = 0; i < Z->getWidth(); i++) {
+	for (i = 0; i < z->GetWidth(); i++) {
 		cout << "|";
-		for (j = 0; j < Z->getHeight(); j++) {
+		for (j = 0; j < z->GetHeight(); j++) {
 			if (x == j && y == i) {
 				cout << "X";
 			}
 			else {
-				C = Z->getCell(i, j);
-				if (C != NULL) {
-					if (C->getCageID() > -1) {
-						A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
-						if (A != NULL) {
-							A->render();
+				c = z->GetCell(i, j);
+				if (c != NULL) {
+					if (c->GetCageID() > -1) {
+						a = z->GetCage(c->GetCageID())->IsSpaceOccupied(i, j);
+						if (a != NULL) {
+							a->Render();
 						}
 						else {
-							C->render();
+							c->Render();
 						}
 					}
 					else {
-						C->render();
+						c->Render();
 					}
 				}
 				else {
@@ -517,25 +513,25 @@ void Driver::printZoo(int x, int y)
 void Driver::printZoo(int x1, int y1, int x2, int y2)
 {
 	int i, j;
-	Cell* C;
-	Animal* A;
+	Cell* c;
+	Animal* a;
 
 	for (i = y1; i <= y2; i++) {
 		cout << "|";
 		for (j = x1; j <= x2; j++) {
-			C = Z->getCell(i, j);
-			if (C != NULL) {
-				if (C->getCageID() > -1) {
-					A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
-					if (A != NULL) {
-						A->render();
+			c = z->GetCell(i, j);
+			if (c != NULL) {
+				if (c->GetCageID() > -1) {
+					a = z->GetCage(c->GetCageID())->IsSpaceOccupied(i, j);
+					if (a != NULL) {
+						a->Render();
 					}
 					else {
-						C->render();
+						c->Render();
 					}
 				}
 				else {
-					C->render();
+					c->Render();
 				}
 			}
 			else {
@@ -551,8 +547,8 @@ void Driver::printStatus()
 {
 	cout << "========================================" << endl;
 	cout << "              - Food Count -" << endl;
-	cout << "   Herbivore : " << Z->CountFoodHerbivore() << endl;
-	cout << "   Carnivore : " << Z->CountFoodCarnivore() << endl;
-	cout << "   Omnivore  : " << Z->CountFoodOmnivore() << endl;
+	cout << "   Herbivore : " << z->CountFoodHerbivore() << endl;
+	cout << "   Carnivore : " << z->CountFoodCarnivore() << endl;
+	cout << "   Omnivore  : " << z->CountFoodOmnivore() << endl;
 	cout << "========================================" << endl;
 }

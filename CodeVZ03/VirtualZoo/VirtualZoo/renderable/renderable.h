@@ -10,7 +10,7 @@ class Renderable{
 	public:
 		/** @brief Melakukan print berdasarkan tipe
     	 */
-		virtual void render() = 0;	
+		virtual void Render() = 0;	
 };
 
 #endif

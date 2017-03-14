@@ -5,7 +5,7 @@ LandHabitat::LandHabitat()
 	locX = 0;
 	locY = 0;
 	cellID = 11;
-	Cell::setCode(defaultCode);
+	Cell::SetCageIDode(default_code);
 }
 
 LandHabitat::LandHabitat(int x, int y)
@@ -13,7 +13,7 @@ LandHabitat::LandHabitat(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 11;
-	Cell::setCode(defaultCode);
+	Cell::SetCageIDode(default_code);
 }
 
 WaterHabitat::WaterHabitat()
@@ -21,7 +21,7 @@ WaterHabitat::WaterHabitat()
 	locX = 0;
 	locY = 0;
 	cellID = 13;
-	Cell::setCode(defaultCode);
+	Cell::SetCageIDode(default_code);
 }
 
 WaterHabitat::WaterHabitat(int x, int y)
@@ -29,7 +29,7 @@ WaterHabitat::WaterHabitat(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 13;
-	Cell::setCode(defaultCode);
+	Cell::SetCageIDode(default_code);
 }
 
 AirHabitat::AirHabitat()
@@ -37,7 +37,7 @@ AirHabitat::AirHabitat()
 	locX = 0;
 	locY = 0;
 	cellID = 12;
-	Cell::setCode(defaultCode);
+	Cell::SetCageIDode(default_code);
 }
 
 AirHabitat::AirHabitat(int x, int y)
@@ -45,20 +45,20 @@ AirHabitat::AirHabitat(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 12;
-	Cell::setCode(defaultCode);
+	Cell::SetCageIDode(default_code);
 }
 
-void AirHabitat::render()
+void AirHabitat::Render()
 {
 	cout << "A";
 }
 
-void Habitat::setCageID(int n)
+void Habitat::SetCageID(int n)
 {
 	cageID = n;
 }
 
-int Habitat::getCageID()
+int Habitat::GetCageID()
 {
 	return cageID;
 }

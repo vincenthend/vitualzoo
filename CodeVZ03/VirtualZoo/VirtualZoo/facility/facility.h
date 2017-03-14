@@ -15,11 +15,11 @@ class Facility: public Cell{
 	public:
 	/** @brief Mengubah nilai cageID menjadi n
 	*/
-	void setCageID(int n);
+	void SetCageID(int n);
 
 	/** @brief Mengembalikan nilai cageID
 	*/
-	int getCageID();
+	int GetCageID();
 };
 
 
@@ -42,10 +42,10 @@ class Road: public Facility{
 		/** @brief Membuat road dengan X dan Y terdefinisi dan cellID sesuai tipe
 		* type 210 = entrance, type 211 = exit
 		*/
-		Road(int x, int y, bool isEntrance);
+		Road(int x, int y, bool IsEntrance);
 		
 	private:
-		const char defaultCode = ' ';
+		const char default_code = ' ';
 };
 
 /**
@@ -65,7 +65,7 @@ class Resto: public Facility{
 		*/
 		Resto(int x, int y);
 	private:
-		const char defaultCode = 'R';
+		const char default_code = 'R';
 };
 
 /**
@@ -86,7 +86,7 @@ class Park: public Facility{
 		*/
 		Park(int x, int y);
 	private:
-		const char defaultCode = 'P';
+		const char default_code = 'P';
 };
 
 #endif

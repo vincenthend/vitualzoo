@@ -1,26 +1,26 @@
 #include "animal.h"
 int Animal::GetFoodQuantity (){
-	return (food_Weight * weight);
+	return (food_weight * weight);
 }
 
 int Animal::GetFoodType(){
-	return (foodType);
+	return (food_type);
 }
 
 int Animal::GetLocationX(){
-	return (locX);
+	return (loc_x);
 }
 
 int Animal::GetLocationY(){
-	return (locY);
+	return (loc_y);
 }
 
 void Animal::SetLocationX(int x) {
-	locX = x;
+	loc_x = x;
 }
 
 void Animal::SetLocationY(int y) {
-	locY = y;
+	loc_y = y;
 }
 
 int Animal::GetType()
@@ -28,22 +28,22 @@ int Animal::GetType()
 	return type;
 }
 
-void Animal::move(int x, int y){
-	locX += x;
-	locY += y;
+void Animal::Move(int x, int y){
+	loc_x += x;
+	loc_y += y;
 }
 
-bool * Animal::getHabitat()
+bool * Animal::GetHabitat()
 {
 	return habitat;
 }
 
-int* Animal::getEnemyList()
+int* Animal::GetEnemyList()
 {
-	return EnemyID;
+	return enemy_id;
 }
 
-int Animal::getCEnemy()
+int Animal::GetCEnemy()
 {
-	return cenemy;
+	return c_enemy;
 }

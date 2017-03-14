@@ -1,29 +1,29 @@
 #include "cell.h"
 Cell::Cell() {
-	cellID = 0;
-	locX = 0;
-	locY = 0;
+	cell_id = 0;
+	loc_x = 0;
+	loc_y = 0;
 	code = 0;
-	cageID = -1;
+	cage_id = -1;
 }
 
-void Cell::setCode(char c) {
+void Cell::SetCageIDode(char c) {
 	code = c;
 }
 
-void Cell::render() {
+void Cell::Render() {
 	cout << code;
 }
 
-int Cell::getCellID()
+int Cell::GetCellID()
 {
-	return cellID;
+	return cell_id;
 }
 
-int Cell::getLocationX() {
-	return (locX);
+int Cell::GetLocationX() {
+	return (loc_x);
 }
 
-int Cell::getLocationY() {
-	return (locY);
+int Cell::GetLocationY() {
+	return (loc_y);
 }

@@ -6,48 +6,48 @@ Cage::Cage()
 	n_cell = 0;
 	a = new Animal*[999];
 	c = new Cell*[999];
-	cageID = -1;
-	cageType = 0;
+	cage_id = -1;
+	cage_type = 0;
 }
 
 bool Cage::IsFull() {
 	return (n_animal >= ((n_cell / 10) * 3));
 }
 
-void Cage::addAnimal(Animal* A)
+void Cage::AddAnimal(Animal* A)
 {
 	//indeks 
 	//Harus diubah, gak ngecek habitable lagi, jadiin I.S. udah pasti habitable
 	//Harus ngeset X Y animal berdasarkan habitat yang available, kayaknya perlu gethabitat
-	A->setLocationX(c[n_animal]->getLocationX());
-	A->setLocationY(c[n_animal]->getLocationY());
+	A->SetLocationX(c[n_animal]->GetLocationX());
+	A->SetLocationY(c[n_animal]->GetLocationY());
 	a[n_animal] = A;
 	n_animal += 1;
 }
 
 
-void Cage::setCageID(int n)
+void Cage::SetCageID(int n)
 {
-	cageID = n;
+	cage_id = n;
 }
 
-int Cage::getCageID()
+int Cage::GetCageID()
 {
-	return cageID;
+	return cage_id;
 }
 
-int Cage::getCageType()
+int Cage::GetCageType()
 {
-	return cageType;
+	return cage_type;
 }
 
-Animal* Cage::isSpaceOccupied(int x, int y)
+Animal* Cage::IsSpaceOccupied(int x, int y)
 {
 	Animal* ret = NULL;
 	int i = 0;
 
 	while (ret == NULL && i < n_animal)
-		if (a[i]->getLocationX() == x && a[i]->getLocationY() == y) {
+		if (a[i]->GetLocationX() == x && a[i]->GetLocationY() == y) {
 			ret = a[i];
 		}
 		else {
@@ -63,8 +63,8 @@ int Cage::CountFoodHerbivore()
 	int sum;
 	sum = 0;
 	for (i = 0; i < n_animal; i++) {
-		if (a[i]->getFoodType() == 1) {
-			sum += a[i]->getFoodQuantity();
+		if (a[i]->GetFoodType() == 1) {
+			sum += a[i]->GetFoodQuantity();
 		}
 	}
 	return sum;
@@ -76,8 +76,8 @@ int Cage::CountFoodCarnivore()
 	int sum;
 	sum = 0;
 	for (i = 0; i < n_animal; i++) {
-		if (a[i]->getFoodType() == 2) {
-			sum += a[i]->getFoodQuantity();
+		if (a[i]->GetFoodType() == 2) {
+			sum += a[i]->GetFoodQuantity();
 		}
 	}
 	return sum;
@@ -89,38 +89,38 @@ int Cage::CountFoodOmnivore()
 	int sum;
 	sum = 0;
 	for (i = 0; i < n_animal; i++) {
-		if (a[i]->getFoodType() == 3) {
-			sum += a[i]->getFoodQuantity();
+		if (a[i]->GetFoodType() == 3) {
+			sum += a[i]->GetFoodQuantity();
 		}
 	}
 	return sum;
 }
 
-void Cage::addHabitat(Cell* H)
+void Cage::AddHabitat(Cell* H)
 {
 	//Cek apakah sudah ada isi
 	if (n_cell == 0) {
-		cageType = H->getCellID();
+		cage_type = H->GetCellID();
 		c[n_cell] = H;
 		n_cell += 1;
-		H->setCageID(cageID);
+		H->SetCageID(cage_id);
 	}
 	else {
 		//Cek apakah tipe habitat sama
-		if (cageType == H->getCellID()) {
+		if (cage_type == H->GetCellID()) {
 			c[n_cell] = H;
 			n_cell += 1;
-			H->setCageID(cageID);
+			H->SetCageID(cage_id);
 		}
 	}
 }
 
-bool Cage::isExist(int ID)
+bool Cage::IsExist(int ID)
 {
 	bool found = false;
 	int i = 0; 
 	while (i < n_animal){
-		if (a[i]->getType() == ID){
+		if (a[i]->GetType() == ID){
 			found = true;
 		}
 		i++;
