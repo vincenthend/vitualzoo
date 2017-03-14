@@ -6,6 +6,6 @@
 
 void ClearScreen();
 
-void Delay(unsigned int x);
+void Delay(int x);
 
 #endif

@@ -210,6 +210,7 @@ void Driver::startTour()
 	int temp;
 	Cell *C;
 	Animal * A;
+	bool walk = true;
 	Tc = 0;
 	C = Z->getCell(0, 0); //Visstud error without this
 	
@@ -236,7 +237,7 @@ void Driver::startTour()
 	i = Tx[temp];
 	j = Ty[temp];
 
-	while (C->getCellID() != 211) {
+	while (C->getCellID() != 211 && walk) {
 		//Print Zoo
 		ClearScreen();
 		printZoo(j,i);
@@ -334,27 +335,28 @@ void Driver::startTour()
 		//Random jalan yang mungkin pake mod cmove, simpen di move
 		if (cmove > 0) {
 			move = Tmove[(rand() % cmove)];
-		}
-		else {
-			move = (move + 2) % 4;
-		}
-
-		if (move == 1) {
-			j--;
-		}
-		else {
-			if (move == 2) {
-				i++;
+			if (move == 1) {
+				j--;
 			}
 			else {
-				if (move == 3) {
-					j++;
+				if (move == 2) {
+					i++;
 				}
 				else {
-					i--;
+					if (move == 3) {
+						j++;
+					}
+					else {
+						i--;
+					}
 				}
 			}
 		}
+		else {
+			walk = false;
+		}
+
+		
 		C = Z->getCell(i, j);
 		Delay(500);
 	}
