@@ -9,7 +9,9 @@ Cage::Cage()
 	cageType = 0;
 }
 
-bool Cage::IsFull(); 
+bool Cage::IsFull() {
+	return (n_animal >= ((n_cell / 10) * 3));
+}
 
 void Cage::addAnimal(Animal* A)
 {
@@ -19,8 +21,8 @@ void Cage::addAnimal(Animal* A)
 	//indeks 
 	//Harus diubah, gak ngecek habitable lagi, jadiin I.S. udah pasti habitable
 	//Harus ngeset X Y animal berdasarkan habitat yang available, kayaknya perlu gethabitat
-	A->setLocationX(c[n_animal].getLocationX());
-	A->setLocationY(c[n_animal].getLocationY());
+	A->setLocationX(c[n_animal]->getLocationX());
+	A->setLocationY(c[n_animal]->getLocationY());
 	a[n_animal] = A;
 	n_animal += 1;
 }
@@ -110,7 +112,7 @@ void Cage::addHabitat(Cell* H)
 		if (cageType == H->getCellID()){
 			c[n_cell] = H;
 			n_cell += 1;
-			H->setCageID(cageID)
+			H->setCageID(cageID);
 		}
 	}
 }

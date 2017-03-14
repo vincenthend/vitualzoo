@@ -18,6 +18,8 @@ class Cage{
 		*/
 		Cage();
 
+		bool IsFull();
+
 		/** @brief Menambahkan habitat ke dalam cage
 		*/
 		void addHabitat(Cell* H);

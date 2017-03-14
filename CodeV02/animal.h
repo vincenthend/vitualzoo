@@ -42,8 +42,10 @@ public:
      * @return Posisi ordinat hewan.
      */
 	int getLocationY();
-	int setLocationX();
-	int setLocationY();
+
+
+	void setLocationX(int x);
+	void setLocationY(int y);
 	
    /** @brief Mengembalikan status jinak hewan.
      * @return True jika jinak dan false jika tidak jinak.

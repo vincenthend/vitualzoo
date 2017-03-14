@@ -3,7 +3,7 @@
 Zoo::Zoo(){
 	int i,j;
 	
-	n_cage = 0;
+	n_cage = -1;
 	width = 21;
 	height = 21;
 

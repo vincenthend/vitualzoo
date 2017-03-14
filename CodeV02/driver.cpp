@@ -7,7 +7,7 @@ Driver::Driver(string Input)
 	Cell* C;
 	ifstream myfile(Input);
 	string S;
-	int i, j, w, h, temp, aid, acount;
+	int i, j, k, w, h, temp, aid, acount;
 	bool found;
 	Animal* A;
 
@@ -91,7 +91,7 @@ Driver::Driver(string Input)
 			}
 			if (!(found)){
 				Z->addCage();
-				Z->getCage(Z->getNCage())->addHabitat(Z->getCell(i, j));
+				Z->getCage(Z->getNCage()-1)->addHabitat(Z->getCell(i, j));
 			}
 		}
 	}
@@ -119,7 +119,7 @@ Driver::Driver(string Input)
 			found = false;
 			k = 0;
 			while ((!(found)) && (k < Z->getNCage())) {
-				if ((((A->getHabitat())[Z->getCage(k)->getCageType()) % 10) - 1]) {
+				if (A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) {
 					found = true;
 					Z->getCage(k)->addAnimal(A);
 				}
@@ -358,6 +358,9 @@ void Driver::printZoo()
 					if (A != NULL) {
 						A->render();
 					}
+					else {
+						C->render();
+					}
 				}
 				else {
 					C->render();
@@ -392,6 +395,9 @@ void Driver::printZoo(int x, int y)
 						if (A != NULL) {
 							A->render();
 						}
+						else {
+							C->render();
+						}
 					}
 					else {
 						C->render();
@@ -422,6 +428,9 @@ void Driver::printZoo(int x1, int y1, int x2, int y2)
 					A = Z->getCage(C->getCageID())->isSpaceOccupied(i, j);
 					if (A != NULL) {
 						A->render();
+					}
+					else {
+						C->render();
 					}
 				}
 				else {
