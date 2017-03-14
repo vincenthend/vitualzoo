@@ -14,34 +14,47 @@ public:
 private:
 };
 
-class Salmon: public WaterAnimal {
-	public :
+class Salmon : public WaterAnimal {
+public:
+	Salmon();
 	void interact();
-}; 
-class Bushido: public WaterAnimal {
-	public :
+	void render();
+};
+class Whale : public WaterAnimal {
+public:
+	Whale();
 	void interact();
-}; 
-class CumiCumi: public WaterAnimal {
-	public :
+	void render();
+};
+class Squid : public WaterAnimal {
+public:
+	Squid();
 	void interact();
-}; 
-class Mas: public WaterAnimal {
-	public :
+	void render();
+};
+class Goldfish : public WaterAnimal {
+public:
+	Goldfish();
 	void interact();
-}; 
-class Penyu: public WaterAnimal {
-	public :
+	void render();
+};
+class Turtle : public WaterAnimal {
+public:
+	Turtle();
 	void interact();
-}; 
-class AnjingLaut: public WaterAnimal {
-	public :
+	void render();
+};
+class Seal : public WaterAnimal {
+public:
+	Seal();
 	void interact();
-}; 
-class KudaLaut: public WaterAnimal {
-	public :
+	void render();
+};
+class Dolphin : public WaterAnimal {
+public:
+	Dolphin();
 	void interact();
-}; 
-
+	void render();
+};
 
 #endif

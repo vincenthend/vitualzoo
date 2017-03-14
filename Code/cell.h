@@ -25,6 +25,17 @@ class Cell: public Renderable{
 		/** @brief Mengembalikan nilai cellID
 		*/
 		int getCellID();
+		/** @brief Mengembalikan nilai LocX
+		* @return Lokasi X hewan
+		*/
+		int getLocationX();
+		/** @brief Mengembalikan nilai LocY 
+		* @return Lokasi Y hewan
+		*/
+		int getLocationY();
+
+		
+
 
 	protected:
 		int cellID;

@@ -1,4 +1,10 @@
 #include "animal.h"
+Animal::Animal()
+{
+	locX = -99;
+	locY = -99;
+}
+
 int Animal::getFoodQuantity (){
 	return (food_Weight * weight);
 }
@@ -32,4 +38,12 @@ void Animal::move(int x, int y){
 bool * Animal::getHabitat()
 {
 	return habitat;
+}
+
+void Animal::setLocationX(int x) {
+	locX = x;
+}
+
+void Animal::setLocationY(int y) {
+	locY = y;
 }

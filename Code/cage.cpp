@@ -3,32 +3,26 @@
 Cage::Cage()
 {
 	n_animal = 0;
+	n_cell = 0;
 	a = new Animal*[999];
 	c = new Cell*[999];
 	cageID = -1;
 	cageType = 0;
 }
 
+bool Cage::IsFull() {
+	return (n_animal >= ((n_cell / 10) * 3));
+}
+
 void Cage::addAnimal(Animal* A)
 {
-	bool habitable=false;
-	int i;
-
 	//indeks 
-	if (n_animal < (n_cell / 10) * 3) {
-		i = (cageType % 10) - 1;
-		if ((A->getHabitat())[i]) {
-			habitable = true;
-		}
-
-		if (habitable) {
-			a[n_animal] = A;
-			n_animal += 1;
-		}
-	}
-	else {
-		cout << "class full";
-	}
+	//Harus diubah, gak ngecek habitable lagi, jadiin I.S. udah pasti habitable
+	//Harus ngeset X Y animal berdasarkan habitat yang available, kayaknya perlu gethabitat
+	A->setLocationX(c[n_animal]->getLocationX());
+	A->setLocationY(c[n_animal]->getLocationY());
+	a[n_animal] = A;
+	n_animal += 1;
 }
 
 
@@ -52,7 +46,7 @@ Animal* Cage::isSpaceOccupied(int x, int y)
 	Animal* ret = NULL;
 	int i = 0;
 
-	while(ret == NULL && i < n_animal)
+	while (ret == NULL && i < n_animal)
 		if (a[i]->getLocationX() == x && a[i]->getLocationY() == y) {
 			ret = a[i];
 		}
@@ -60,7 +54,7 @@ Animal* Cage::isSpaceOccupied(int x, int y)
 			i++;
 		}
 
-	return ret;
+		return ret;
 }
 
 int Cage::CountFoodHerbivore()
@@ -103,7 +97,7 @@ int Cage::CountFoodOmnivore()
 }
 
 void Cage::addHabitat(Cell* H)
-{	
+{
 	//Cek apakah sudah ada isi
 	if (n_cell == 0) {
 		cageType = H->getCellID();
@@ -113,7 +107,7 @@ void Cage::addHabitat(Cell* H)
 	}
 	else {
 		//Cek apakah tipe habitat sama
-		if (cageType == H->getCellID()){
+		if (cageType == H->getCellID()) {
 			c[n_cell] = H;
 			n_cell += 1;
 			H->setCageID(cageID);

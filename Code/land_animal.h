@@ -14,41 +14,58 @@ public:
 private:
 };
 
-class Ayam: public LandAnimal {
-	public :
+class Chicken : public LandAnimal {
+public:
+	Chicken();
 	void interact();
-}; 
-class Kucing: public LandAnimal {
-	public :
+	void render();
+};
+class Cat : public LandAnimal {
+public:
+	Cat();
 	void interact();
-}; 
-class Sapi: public LandAnimal {
-	public :
+	void render();
+};
+class Cow : public LandAnimal {
+public:
+	Cow();
 	void interact();
-}; 
-class Kelinci: public LandAnimal {
-	public :
+	void render();
+};
+class Mouse : public LandAnimal {
+public:
+	Mouse();
 	void interact();
-}; 
-class Kambing: public LandAnimal {
-	public :
+	void render();
+};
+class Goat : public LandAnimal {
+public:
+	Goat();
 	void interact();
-}; 
-class Kuda: public LandAnimal {
-	public :
+	void render();
+};
+class Llama : public LandAnimal {
+public:
+	Llama();
 	void interact();
-}; 
-class Ular: public LandAnimal {
-	public :
+	void render();
+};
+class Snake : public LandAnimal {
+public:
+	Snake();
 	void interact();
-}; 
-class Semut: public LandAnimal {
-	public :
+	void render();
+};
+class Sheep : public LandAnimal {
+public:
+	Sheep();
 	void interact();
-}; 
-class Bunglon: public LandAnimal {
-	public :
+	void render();
+};
+class Chameleon : public LandAnimal {
+public:
+	Chameleon();
 	void interact();
-}; 
-
+	void render();
+};
 #endif

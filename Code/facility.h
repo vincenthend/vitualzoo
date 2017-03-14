@@ -48,7 +48,7 @@ class Road: public Facility{
 		
 	private:
 		int type;
-		const char defaultCode = 'X';
+		const char defaultCode = ' ';
 };
 
 /**

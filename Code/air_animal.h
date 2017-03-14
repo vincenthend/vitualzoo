@@ -14,35 +14,47 @@ public:
 private:
 };
 
-class Pelikan: public AirAnimal {
-	public :
+class Pelican : public AirAnimal {
+public:
+	Pelican();
 	void interact();
-}; 
-class Capung: public AirAnimal {
-	public :
+	void render();
+};
+class Owl : public AirAnimal {
+public:
+	Owl();
 	void interact();
-}; 
-class KunangKunang: public AirAnimal {
-	public :
+	void render();
+};
+class Pigeon : public AirAnimal {
+public:
+	Pigeon();
 	void interact();
-}; 
-class Nyamuk: public AirAnimal {
-	public :
+	void render();
+};
+class Canary : public AirAnimal {
+public:
+	Canary();
 	void interact();
-}; 
-class Puyuh: public AirAnimal {
-	public :
+	void render();
+};
+class Bat : public AirAnimal {
+public:
+	Bat();
 	void interact();
-}; 
-class Gagak: public AirAnimal {
-	public :
+	void render();
+};
+class Eagle : public AirAnimal {
+public:
+	Eagle();
 	void interact();
-}; 
-class Kepik: public AirAnimal {
-	public :
+	void render();
+};
+class Toucan : public AirAnimal {
+public:
+	Toucan();
 	void interact();
-}; 
-
-
+	void render();
+};
 
 #endif

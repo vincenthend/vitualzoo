@@ -228,7 +228,7 @@ Animal::Animal(int id)
 		weight = 25;
 		food_Weight = 1;
 		foodType = 2;
-		code = '\';
+		code = '/';
 		habitat[2] = true;
 		tame = true;
 	}

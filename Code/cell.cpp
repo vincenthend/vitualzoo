@@ -15,3 +15,11 @@ int Cell::getCellID()
 {
 	return cellID;
 }
+
+int Cell::getLocationX() {
+	return (locX);
+}
+
+int Cell::getLocationY() {
+	return (locY);
+}

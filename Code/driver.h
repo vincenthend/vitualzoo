@@ -5,6 +5,9 @@
 
 //Class Headers
 #include "animal.h"
+#include "air_animal.h"
+#include "land_animal.h"
+#include "water_animal.h"
 #include "cage.h"
 #include "cell.h"
 #include "facility.h"

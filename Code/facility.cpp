@@ -22,13 +22,13 @@ Road::Road(int x, int y, bool isEntrance)
 {	
 	locX = x;
 	locY = y;
-
 	if (isEntrance) {
-		Cell::setCode(210);
+		cellID = 210;
 	}
 	else {
-		Cell::setCode(211);
+		cellID = 211;
 	}
+	Cell::setCode(defaultCode);
 }
 
 Resto::Resto()

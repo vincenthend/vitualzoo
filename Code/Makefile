@@ -4,8 +4,8 @@ CFLAGS = -Wall -c -std=c++11 $(DEBUG)
 LFLAGS = -Wall -std=c++11 $(DEBUG)
 OBJS = air_animal.o animal.o cage.o cell.o driver.o facility.o gui.o habitat.o land_animal.o VirtualZoo.o water_animal.o zoo.o
 
-run: $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) -o run
+main: $(OBJS)
+	$(CC) $(LFLAGS) $(OBJS) -o main
 air_animal.o: air_animal.cpp air_animal.h animal.h renderable.h
 	$(CC) $(CFLAGS) air_animal.cpp
 animal.o: animal.cpp animal.h renderable.h

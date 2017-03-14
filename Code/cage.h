@@ -63,6 +63,11 @@ class Cage{
 		*/
 		int CountFoodOmnivore();
 
+		/** @brief menghitung total jumlah makanan omnivore
+		* @return apakah kandang penuh
+		*/
+		bool IsFull();
+
 
 	private:
 		int cageID;
