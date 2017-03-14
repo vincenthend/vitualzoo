@@ -1,26 +1,67 @@
 #include "water_animal.h"
 WaterAnimal::WaterAnimal(){
-	habitat[1] = true;
+	habitat[2] = true;
 }
-
+Salmon::Salmon(){
+	weight = 1;
+	food_Weight = 1;
+	foodType = 2;
+	tame = false;
+}
 void Salmon::interact(){
 	cout<<"blub blub";
-} 
-void Bushido::interact(){
-	cout<<"splash";
-} 
-void CumiCumi::interact(){
+}
+Whale::Whale(){
+	weight = 1;
+	food_Weight = 1;
+	foodType = 2;
+	tame = true;
+}
+void Whale::interact(){
+	cout<<"wooooooooooooo";
+}
+Squid::Squid(){
+	weight = 300;
+	food_Weight = 2;
+	foodType = 2;
+	tame = true;
+}
+void Squid::interact(){
 	cout<<"sluhb..sluhb..";
-} 
-void Mas::interact(){
+}
+Goldfish::Goldfish(){
+	weight = 1;
+	food_Weight = 1;
+	foodType = 2;
+	tame = true;
+}
+void Goldfish::interact(){
 	cout<<"*glub glub*";
-} 
-void Penyu::interact(){
+}
+Turtle::Turtle(){
+	weight = 100;
+	food_Weight = 1;
+	foodType = 2;
+	tame = true;
+}
+void Turtle::interact(){
 	cout<<"swoosh";
-} 
-void AnjingLaut::interact(){
+}
+Seal::Seal(){
+	weight = 25;
+	food_Weight = 1;
+	foodType = 2;
+	tame = true;
+}
+void Seal::interact(){
 	cout<<"Bawrk Bawrk!";
-} 
-void KudaLaut::interact(){
+}
+Dolphin::Dolphin(){
+	weight = 1;
+	food_Weight = 1;
+	foodType = 1;
+	tame = true;
+}
+void Dolphin::interact(){
 	cout<<"*swims slowly*";
 }

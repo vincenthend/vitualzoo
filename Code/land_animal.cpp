@@ -2,31 +2,84 @@
 LandAnimal::LandAnimal(){
 	habitat[0] = true;
 }
-
-void Ayam::interact(){
+Chicken::Chicken(){
+	weight = 2;
+	food_Weight = 1;
+	foodType = 3;
+	tame = true;
+}
+void Chicken::interact(){
 	cout<<"Cock-a-doodle-doo!";
-} 
-void Kucing::interact(){
+}
+Cat::Cat(){
+	weight = 4;
+	food_Weight = 1;
+	foodType = 2;
+	tame = true;
+}
+void Cat::interact(){
 	cout<<"Meow";
-} 
-void Sapi::interact(){
+}
+Cow::Cow(){
+	weight = 1000;
+	food_Weight = 2;
+	foodType = 1;
+	tame = true;
+}
+void Cow::interact(){
 	cout<<"Mooo...";
-} 
-void Kelinci::interact(){
+}
+Mouse::Mouse(){
+	weight = 2;
+	food_Weight = 1;
+	foodType = 1;
+	tame = false;
+}
+void Mouse::interact(){
 	cout<<"Squeak-squeak";
-} 
-void Kambing::interact(){
-	cout<<"Baa..";
-} 
-void Kuda::interact(){
+}
+Goat::Goat(){
+	weight = 100;
+	food_Weight = 2;
+	foodType = 1;
+	tame = true;
+}
+void Goat::interact(){
+	cout<<"Beeeeeek";
+}
+Llama::Llama(){
+	weight = 500;
+	food_Weight = 2;
+	foodType = 1;
+	tame = true;
+}
+void Llama::interact(){
 	cout<<"Neiigh!";
-} 
-void Ular::interact(){
+}
+Snake::Snake(){
+	weight = 10;
+	food_Weight = 1;
+	foodType = 2;
+	tame = true;
+}
+void Snake::interact(){
 	cout<<"Hsssss...";
-} 
-void Semut::interact(){
-	cout<<".....";
-} 
-void Bunglon::interact(){
+}
+Sheep::Sheep(){
+	weight = 1;
+	food_Weight = 1;
+	foodType = 1;
+	tame = true;
+}
+void Sheep::interact(){
+	cout<<"Baaaaaaaaaa";
+}
+Chameleon::Chameleon(){
+	weight = 1;
+	food_Weight = 1;
+	foodType = 2;
+	tame = true;
+}
+void Chameleon::interact(){
 	cout<<"Scrook...";
-} 
+}

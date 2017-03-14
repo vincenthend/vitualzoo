@@ -57,14 +57,13 @@ public:
 	
 protected:
 	bool habitat[3] = {false, false, false};
-	
-private:
-	int type;
-	int locX;
-	int locY;
 	int weight;
 	int food_Weight;
 	int foodType;
 	bool tame;
+	
+private:
+	int locX;
+	int locY;
 };
 #endif
