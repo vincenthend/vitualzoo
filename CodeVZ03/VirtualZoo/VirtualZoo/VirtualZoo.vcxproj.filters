@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Project Files">
+      <UniqueIdentifier>{da573016-cada-415a-a88f-d7813d7442ac}</UniqueIdentifier>
+      <Extensions>cpp</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VirtualZoo.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zoo\zoo.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="air_animal\air_animal.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="amphibian\amphibian.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="animal\animal.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cage\cage.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cell\cell.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\driver.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="facility\facility.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\gui.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="habitat\habitat.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="land_animal\land_animal.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+    <ClCompile Include="water_animal\water_animal.cpp">
+      <Filter>Project Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="zoo\zoo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="air_animal\air_animal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="amphibian\amphibian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="animal\animal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cage\cage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cell\cell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="facility\facility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="habitat\habitat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="land_animal\land_animal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="renderable\renderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="water_animal\water_animal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
