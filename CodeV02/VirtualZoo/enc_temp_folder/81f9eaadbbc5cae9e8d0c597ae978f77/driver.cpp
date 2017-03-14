@@ -97,11 +97,13 @@ Driver::Driver(string Input)
 	}
 	i = 0;
 	temp = 0;
+	getline(myfile, S);
 	while ((S[i] >= '0') && (S[i] <= '9')) {
 		temp = (temp * 10) + (S[i] - '0');
 		i++;
 	}
 	for (i = 0; i < temp; i++) {
+		getline(myfile, S);
 		aid = 0;
 		while ((S[i] >= '0') && (S[i] <= '9')) {
 			aid = (aid * 10) + (S[i] - '0');
@@ -118,7 +120,7 @@ Driver::Driver(string Input)
 			A = new Animal(aid);
 			found = false;
 			k = 0;
-			while ((!(found)) && (k < Z->getNCage())) {
+			while ((!(found)) && (k <= Z->getNCage())) {
 				if (A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) {
 					found = true;
 					Z->getCage(k)->addAnimal(A);
@@ -421,7 +423,7 @@ void Driver::printZoo(int x1, int y1, int x2, int y2)
 
 	for (i = y1; i <= y2; i++) {
 		cout << "|";
-		for (j = x1; j <= x2; j++) {
+		for (j = y1; j <= y2; j++) {
 			C = Z->getCell(i, j);
 			if (C != NULL) {
 				if (C->getCageID() > -1) {
