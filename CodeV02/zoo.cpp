@@ -18,7 +18,7 @@ Zoo::Zoo(){
 	}
 
 	//Init cage
-	cg = new Cage*[width];
+	cg = new Cage*[999];
 }
 
 Zoo::Zoo(int w, int h){
@@ -39,7 +39,7 @@ Zoo::Zoo(int w, int h){
 	}
 
 	//Init cage
-	cg = new Cage*[width];
+	cg = new Cage*[999];
 }
 
 Zoo::~Zoo(){
@@ -65,7 +65,8 @@ Zoo::~Zoo(){
 
 Zoo::Zoo(const Zoo& Z){
 	int i,j;
-	
+	cg = new Cage*[999];
+	n_cage = Z.n_cage;
 	width = Z.width;
 	height = Z.height;
 	c = new Cell** [width];

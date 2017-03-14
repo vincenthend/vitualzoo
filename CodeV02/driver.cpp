@@ -210,6 +210,7 @@ void Driver::StartTour()
 	int temp;
 	Cell *C;
 	Animal * A;
+	bool walk = true;
 	Tc = 0;
 	C = Z->GetCell(0, 0); //Visstud error without this
 	
@@ -236,7 +237,11 @@ void Driver::StartTour()
 	i = Tx[temp];
 	j = Ty[temp];
 
+<<<<<<< HEAD
 	while (C->GetCellID() != 211) {
+=======
+	while (C->getCellID() != 211 && walk) {
+>>>>>>> a98f20e937916fdae2f4440129c5fe4e2fa2f88d
 		//Print Zoo
 		ClearScreen();
 		PrintZoo(j,i);
@@ -331,6 +336,7 @@ void Driver::StartTour()
 				cMove++;
 			}
 		}
+<<<<<<< HEAD
 		//Random jalan yang mungkin pake mod cMove, simpen di Move
 		if (cMove > 0) {
 			Move = TMove[(rand() % cMove)];
@@ -349,13 +355,38 @@ void Driver::StartTour()
 			else {
 				if (Move == 3) {
 					j++;
+=======
+		//Random jalan yang mungkin pake mod cmove, simpen di move
+		if (cmove > 0) {
+			move = Tmove[(rand() % cmove)];
+			if (move == 1) {
+				j--;
+			}
+			else {
+				if (move == 2) {
+					i++;
+>>>>>>> a98f20e937916fdae2f4440129c5fe4e2fa2f88d
 				}
 				else {
-					i--;
+					if (move == 3) {
+						j++;
+					}
+					else {
+						i--;
+					}
 				}
 			}
 		}
+<<<<<<< HEAD
 		C = Z->GetCell(i, j);
+=======
+		else {
+			walk = false;
+		}
+
+		
+		C = Z->getCell(i, j);
+>>>>>>> a98f20e937916fdae2f4440129c5fe4e2fa2f88d
 		Delay(500);
 	}
 	cout << "Tur selesai :D" << endl;
