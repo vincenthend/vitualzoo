@@ -119,7 +119,7 @@ Driver::Driver(string Input)
 			j++;
 		}
 		cout << "Animal " << aid << " ada " << acount << endl; /*TBD*/
-		getchar();
+		//getchar();
 		for (j = 0; j < acount; j++) {
 			cout << "Cek" << endl;
 			A = new Animal(aid);
@@ -131,7 +131,7 @@ Driver::Driver(string Input)
 				if ((A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) && (Z->getCage(k)->IsFull())) {
 					found = true;
 					cout << "Cek 1.2" << endl;
-					Z->getCage(k)->addAnimal(A);
+					(Z->getCage(k))->addAnimal(A);
 					cout << "Cek 1.3" << endl;
 				}
 				cout << "Cek 1.4" << endl;
@@ -431,9 +431,9 @@ void Driver::printZoo(int x1, int y1, int x2, int y2)
 	Cell* C;
 	Animal* A;
 
-	for (i = x1; i <= y1; i++) {
+	for (i = y1; i <= y2; i++) {
 		cout << "|";
-		for (j = x2; j <= y2; j++) {
+		for (j = x1; j <= x2; j++) {
 			C = Z->getCell(i, j);
 			if (C != NULL) {
 				if (C->getCageID() > -1) {
