@@ -11,8 +11,8 @@
 class Penguin : public WaterAnimal, public LandAnimal {
 public:
 	Penguin();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 
 #endif

@@ -103,14 +103,14 @@ void Cage::AddHabitat(Cell* H)
 		cage_type = H->GetCellID();
 		c[n_cell] = H;
 		n_cell += 1;
-		H->SetCageID(cageID);
+		H->SetCageID(cage_id);
 	}
 	else {
 		//Cek apakah tipe habitat sama
 		if (cage_type == H->GetCellID()){
 			c[n_cell] = H;
 			n_cell += 1;
-			H->SetCageID(cageID);
+			H->SetCageID(cage_id);
 		}
 	}
 }

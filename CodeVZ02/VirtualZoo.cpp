@@ -1,7 +1,7 @@
 //Header to include all files
 //Standard Headers
 #include <iostream>
-#include "../driver/driver.h"
+#include "./driver/driver.h"
 
 int main()
 {

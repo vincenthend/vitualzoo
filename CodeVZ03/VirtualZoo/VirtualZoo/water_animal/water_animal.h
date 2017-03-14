@@ -17,44 +17,44 @@ private:
 class Salmon : public WaterAnimal {
 public:
 	Salmon();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Whale : public WaterAnimal {
 public:
 	Whale();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Squid : public WaterAnimal {
 public:
 	Squid();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Goldfish : public WaterAnimal {
 public:
 	Goldfish();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Turtle : public WaterAnimal {
 public:
 	Turtle();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Seal : public WaterAnimal {
 public:
 	Seal();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Dolphin : public WaterAnimal {
 public:
 	Dolphin();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 
 #endif

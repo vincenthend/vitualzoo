@@ -4,120 +4,120 @@ LandAnimal::LandAnimal(){
 }
 Chicken::Chicken() {
 	weight = 2;
-	food_Weight = 1;
-	foodType = 3;
+	food_weight = 1;
+	food_type = 3;
 	type = 8;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Chicken::interact() {
+void Chicken::Interact() {
 	cout << "Cock-a-doodle-doo!";
 }
-void Chicken::render() {
+void Chicken::Render() {
 	cout << "*";
 }
 Cat::Cat() {
 	weight = 4;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 9;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Cat::interact() {
+void Cat::Interact() {
 	cout << "Meow";
 }
-void Cat::render() {
+void Cat::Render() {
 	cout << "-";
 }
 Cow::Cow() {
 	weight = 1000;
-	food_Weight = 2;
-	foodType = 1;
+	food_weight = 2;
+	food_type = 1;
 	type = 10;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Cow::interact() {
+void Cow::Interact() {
 	cout << "Mooo...";
 }
-void Cow::render() {
+void Cow::Render() {
 	cout << "+";
 }
 Mouse::Mouse() {
 	weight = 2;
-	food_Weight = 1;
-	foodType = 1;
+	food_weight = 1;
+	food_type = 1;
 	type = 11;
-	cenemy = 1;
-	EnemyID = new int [cenemy];
+	c_enemy = 1;
+	EnemyID = new int [c_enemy];
 	EnemyID[0] = 9;
 }
-void Mouse::interact() {
+void Mouse::Interact() {
 	cout << "Squeak-squeak";
 }
-void Mouse::render() {
+void Mouse::Render() {
 	cout << "~";
 }
 Goat::Goat() {
 	weight = 100;
-	food_Weight = 2;
-	foodType = 1;
+	food_weight = 2;
+	food_type = 1;
 	type = 12;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Goat::interact() {
+void Goat::Interact() {
 	cout << "Beeeeeek";
 }
-void Goat::render() {
+void Goat::Render() {
 	cout << ";";
 }
 Llama::Llama() {
 	weight = 500;
-	food_Weight = 2;
-	foodType = 1;
+	food_weight = 2;
+	food_type = 1;
 	type = 13;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Llama::interact() {
+void Llama::Interact() {
 	cout << "Neiigh!";
 }
-void Llama::render() {
+void Llama::Render() {
 	cout << "[";
 }
 Snake::Snake() {
 	weight = 10;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 14;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Snake::interact() {
+void Snake::Interact() {
 	cout << "Hsssss...";
 }
-void Snake::render() {
+void Snake::Render() {
 	cout << "]";
 }
 Sheep::Sheep() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 1;
+	food_weight = 1;
+	food_type = 1;
 	type = 15;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Sheep::interact() {
+void Sheep::Interact() {
 	cout << "Baaaaaaaaaa";
 }
-void Sheep::render() {
+void Sheep::Render() {
 	cout << "{";
 }
 Chameleon::Chameleon() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 16;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Chameleon::interact() {
+void Chameleon::Interact() {
 	cout << "Scrook...";
 }
-void Chameleon::render() {
+void Chameleon::Render() {
 	cout << "}";
 }

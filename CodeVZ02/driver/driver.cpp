@@ -126,7 +126,7 @@ Driver::Driver(string Input)
 			a = new Animal(a_id);
 			found = false;
 			while ((!(found)) && (k < z->GetNCage())) {
-				if ((a->GetHabitat()[(((z->GetCage(k))->GetCagetype()) % 10) - 1]) && !(z->GetCage(k)->IsFull())) {
+				if ((a->GetHabitat()[(((z->GetCage(k))->GetCageType()) % 10) - 1]) && !(z->GetCage(k)->IsFull())) {
 					l = 0;
 					enemy = false;
 					while (l < a->GetCEnemy()){
@@ -137,7 +137,7 @@ Driver::Driver(string Input)
 					}
 					if (!(enemy)){
 						found = true;
-						(z->GetCage(k))->AddAnimal(A);
+						(z->GetCage(k))->AddAnimal(a);
 					}
 				}
 				k++;
@@ -237,7 +237,7 @@ void Driver::StartTour()
 	i = tx[temp];
 	j = ty[temp];
 
-	while (c->getCellID() != 211 && walk) {
+	while (c->GetCellID() != 211 && walk) {
 		//Print Zoo
 		ClearScreen();
 		PrintZoo(j,i);
@@ -334,8 +334,8 @@ void Driver::StartTour()
 		}
 
 		//Random jalan yang mungkin pake mod cmove, simpen di move
-		if (cmove > 0) {
-			move = t_move[(rand() % cmove)];
+		if (c_move > 0) {
+			move = t_move[(rand() % c_move)];
 			if (move == 1) {
 				j--;
 			}
@@ -356,7 +356,7 @@ void Driver::StartTour()
 		else {
 			walk = false;
 		}		
-		c = z->getCell(i, j);
+		c = z->GetCell(i, j);
 		Delay(500);
 	}
 	cout << "Tur selesai :D" << endl;

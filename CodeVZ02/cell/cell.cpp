@@ -1,5 +1,5 @@
 #include "cell.h"
-Cell::Cell():cellID(0) {
+Cell::Cell():cell_id(0) {
 	loc_x = 0;
 	loc_y = 0;
 	cage_id = -1;
@@ -10,26 +10,26 @@ void Cell::SetCageID(int n)
 	cage_id = n;
 }
 
-Cell::Cell(int x, int y, int ID):cellID(ID)
+Cell::Cell(int x, int y, int ID):cell_id(ID)
 {
 	loc_x = x;
 	loc_y = y;
-	if (cellID == 11) {
+	if (cell_id == 11) {
 		code = 'L'; //Code Land Habitat
 	}
-	else if (cellID == 12) {
+	else if (cell_id == 12) {
 		code = 'A'; //Code Air Habitat
 	}
-	else if (cellID == 13) {
+	else if (cell_id == 13) {
 		code = 'W'; //Code Water Habitat
 	}
-	else if (cellID == 21 || cellID == 210 || cellID == 211) {
+	else if (cell_id == 21 || cell_id == 210 || cell_id == 211) {
 		code = ' '; //Code Road
 	}
-	else if (cellID == 22) {
+	else if (cell_id == 22) {
 		code = 'R'; //Code Resto
 	}
-	else if (cellID == 23) {
+	else if (cell_id == 23) {
 		code = 'P'; //Code Park
 	}
 }
@@ -45,7 +45,7 @@ int Cell::GetCageID()
 
 int Cell::GetCellID()
 {
-	return cellID;
+	return cell_id;
 }
 
 int Cell::GetLocationX(){

@@ -17,55 +17,55 @@ private:
 class Chicken : public LandAnimal {
 public:
 	Chicken();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Cat : public LandAnimal {
 public:
 	Cat();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Cow : public LandAnimal {
 public:
 	Cow();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Mouse : public LandAnimal {
 public:
 	Mouse();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Goat : public LandAnimal {
 public:
 	Goat();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Llama : public LandAnimal {
 public:
 	Llama();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Snake : public LandAnimal {
 public:
 	Snake();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Sheep : public LandAnimal {
 public:
 	Sheep();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 class Chameleon : public LandAnimal {
 public:
 	Chameleon();
-	void interact();
-	void render();
+	void Interact();
+	void Render();
 };
 #endif

@@ -4,95 +4,95 @@ AirAnimal::AirAnimal(){
 }
 Pelican::Pelican() {
 	weight = 5;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 1;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Pelican::interact() {
+void Pelican::Interact() {
 	cout << "Kraoooo";
 }
-void Pelican::render() {
+void Pelican::Render() {
 	cout << "!";
 }
 Owl::Owl() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 2;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Owl::interact() {
+void Owl::Interact() {
 	cout << "HootHoot";
 }
-void Owl::render() {
+void Owl::Render() {
 	cout << "@";
 }
 Pigeon::Pigeon() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 1;
+	food_weight = 1;
+	food_type = 1;
 	type = 3;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Pigeon::interact() {
+void Pigeon::Interact() {
 	cout << "Coo Coo";
 }
-void Pigeon::render() {
+void Pigeon::Render() {
 	cout << "#";
 }
 Canary::Canary() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 1;
+	food_weight = 1;
+	food_type = 1;
 	type = 4;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Canary::interact() {
+void Canary::Interact() {
 	cout << "Kweee";
 }
-void Canary::render() {
+void Canary::Render() {
 	cout << "$";
 }
 Bat::Bat() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 1;
+	food_weight = 1;
+	food_type = 1;
 	type = 5;
-	cenemy = 2;
-	EnemyID = new int [cenemy];
+	c_enemy = 2;
+	EnemyID = new int [c_enemy];
 	EnemyID[0] = 2;
 	EnemyID[1] = 4;
 }
-void Bat::interact() {
+void Bat::Interact() {
 	cout << "shriekkkkkk";
 }
-void Bat::render() {
+void Bat::Render() {
 	cout << "%";
 }
 Eagle::Eagle() {
 	weight = 2;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 6;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Eagle::interact() {
+void Eagle::Interact() {
 	cout << "Squawk!";
 }
-void Eagle::render() {
+void Eagle::Render() {
 	cout << "^";
 }
 Toucan::Toucan() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 1;
+	food_weight = 1;
+	food_type = 1;
 	type = 7;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Toucan::interact() {
+void Toucan::Interact() {
 	cout << "*flies away*";
 }
-void Toucan::render() {
+void Toucan::Render() {
 	cout << "&";
 }

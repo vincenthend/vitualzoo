@@ -1,29 +1,29 @@
 #include "animal.h"
-int Animal::getFoodQuantity (){
+int Animal::GetFoodQuantity (){
 	return (food_Weight * weight);
 }
 
-int Animal::getFoodType(){
+int Animal::GetFoodType(){
 	return (foodType);
 }
 
-int Animal::getLocationX(){
+int Animal::GetLocationX(){
 	return (locX);
 }
 
-int Animal::getLocationY(){
+int Animal::GetLocationY(){
 	return (locY);
 }
 
-void Animal::setLocationX(int x) {
+void Animal::SetLocationX(int x) {
 	locX = x;
 }
 
-void Animal::setLocationY(int y) {
+void Animal::SetLocationY(int y) {
 	locY = y;
 }
 
-int Animal::getType()
+int Animal::GetType()
 {
 	return type;
 }

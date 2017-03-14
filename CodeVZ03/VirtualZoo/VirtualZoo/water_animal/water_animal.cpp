@@ -4,95 +4,95 @@ WaterAnimal::WaterAnimal(){
 }
 Salmon::Salmon() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 17;
-	cenemy = 0;
-	EnemyID = new int [cenemy];
+	c_enemy = 0;
+	EnemyID = new int [c_enemy];
 	EnemyID [0] = 19;
 	EnemyID [1] = 21;
 }
-void Salmon::interact() {
+void Salmon::Interact() {
 	cout << "blub blub";
 }
-void Salmon::render() {
+void Salmon::Render() {
 	cout << ":";
 }
 Whale::Whale() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 18;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Whale::interact() {
+void Whale::Interact() {
 	cout << "wooooooooooooo";
 }
-void Whale::render() {
+void Whale::Render() {
 	cout << "<";
 }
 Squid::Squid() {
 	weight = 300;
-	food_Weight = 2;
-	foodType = 2;
+	food_weight = 2;
+	food_type = 2;
 	type = 19;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Squid::interact() {
+void Squid::Interact() {
 	cout << "sluhb..sluhb..";
 }
-void Squid::render() {
+void Squid::Render() {
 	cout << ">";
 }
 Goldfish::Goldfish() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 20;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Goldfish::interact() {
+void Goldfish::Interact() {
 	cout << "*glub glub*";
 }
-void Goldfish::render() {
+void Goldfish::Render() {
 	cout << "/";
 }
 Turtle::Turtle() {
 	weight = 100;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 21;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Turtle::interact() {
+void Turtle::Interact() {
 	cout << "swoosh";
 }
-void Turtle::render() {
+void Turtle::Render() {
 	cout << "=";
 }
 Seal::Seal() {
 	weight = 25;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 22;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Seal::interact() {
+void Seal::Interact() {
 	cout << "Bawrk Bawrk!";
 }
-void Seal::render() {
+void Seal::Render() {
 	cout << "/";
 }
 Dolphin::Dolphin() {
 	weight = 1;
-	food_Weight = 1;
-	foodType = 1;
+	food_weight = 1;
+	food_type = 1;
 	type = 23;
-	cenemy = 0;
+	c_enemy = 0;
 }
-void Dolphin::interact() {
+void Dolphin::Interact() {
 	cout << "*swims slowly*";
 }
-void Dolphin::render() {
+void Dolphin::Render() {
 	cout << "0";
 }

@@ -5,14 +5,14 @@
 #define CELL_H
 
 /** @class 	Cell
- * Kelas Cell, cellID didefinisikan pada turunan Cell
+ * Kelas Cell, cell_id didefinisikan pada turunan Cell
  */
 class Cell{	
 	public:
-		/** @brief Membuat cell dengan x dan y 0 dan cellID 0
+		/** @brief Membuat cell dengan x dan y 0 dan cell_id 0
 		*/
 		Cell();
-		/** @brief Mengembalikan nilai cellID 
+		/** @brief Mengembalikan nilai cell_id 
 		* 11 = LandHabitat; 12 = WaterHabitat; 13 = AirHabitat;
 		* 21 = Road; 210 = Entrance; 211 = Exit; 22 = Resto; 23 = Park;
 		* @param x
@@ -20,7 +20,7 @@ class Cell{
 		* @param y
 		* lokasi y
 		* @param ID
-		* nilai cellID (tetap)
+		* nilai cell_id (tetap)
 		*/
 		Cell(int x, int y, int ID);
 		/** @brief Melakukan Render (mencetak Code)

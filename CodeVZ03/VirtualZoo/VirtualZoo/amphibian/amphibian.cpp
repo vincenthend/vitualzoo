@@ -3,18 +3,18 @@
 Penguin::Penguin()
 {
 	weight = 5;
-	food_Weight = 1;
-	foodType = 2;
+	food_weight = 1;
+	food_type = 2;
 	type = 24;
-	cenemy = 0;
+	c_enemy = 0;
 }
 
-void Penguin::interact()
+void Penguin::Interact()
 {
 	cout << "Waaaaah";
 }
 
-void Penguin::render()
+void Penguin::Render()
 {
 	cout << "¥";
 }
