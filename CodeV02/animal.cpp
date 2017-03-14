@@ -242,6 +242,17 @@ Animal::Animal(int id)
 		habitat[2] = true;
 		tame = true;
 	}
+	else if (id == 24) {
+		type = 24;
+		sound = "Waaaah";
+		weight = 5;
+		food_Weight = 1;
+		foodType = 2;
+		code = '¥';
+		habitat[0] = true;
+		habitat[2] = true;
+		tame = true;
+	}
 
 }
 void Animal::interact()

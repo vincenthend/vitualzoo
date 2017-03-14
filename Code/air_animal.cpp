@@ -7,6 +7,7 @@ Pelican::Pelican() {
 	food_Weight = 1;
 	foodType = 2;
 	tame = true;
+	type = 1;
 }
 void Pelican::interact() {
 	cout << "Kraoooo";
@@ -19,6 +20,7 @@ Owl::Owl() {
 	food_Weight = 1;
 	foodType = 2;
 	tame = true;
+	type = 2;
 }
 void Owl::interact() {
 	cout << "HootHoot";
@@ -31,6 +33,7 @@ Pigeon::Pigeon() {
 	food_Weight = 1;
 	foodType = 1;
 	tame = true;
+	type = 3;
 }
 void Pigeon::interact() {
 	cout << "Coo Coo";
@@ -43,6 +46,7 @@ Canary::Canary() {
 	food_Weight = 1;
 	foodType = 1;
 	tame = true;
+	type = 4;
 }
 void Canary::interact() {
 	cout << "Kweee";
@@ -55,6 +59,7 @@ Bat::Bat() {
 	food_Weight = 1;
 	foodType = 1;
 	tame = false;
+	type = 5;
 }
 void Bat::interact() {
 	cout << "shriekkkkkk";
@@ -67,6 +72,7 @@ Eagle::Eagle() {
 	food_Weight = 1;
 	foodType = 2;
 	tame = true;
+	type = 6;
 }
 void Eagle::interact() {
 	cout << "Squawk!";
@@ -79,6 +85,7 @@ Toucan::Toucan() {
 	food_Weight = 1;
 	foodType = 1;
 	tame = true;
+	type = 7;
 }
 void Toucan::interact() {
 	cout << "*flies away*";

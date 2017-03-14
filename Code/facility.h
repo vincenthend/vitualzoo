@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Cell.h"
+#include "cell.h"
 
 #ifndef FACILITY_H
 #define FACILITY_H
