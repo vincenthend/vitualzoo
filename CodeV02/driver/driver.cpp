@@ -175,6 +175,7 @@ void Driver::PrintMenu()
 				if (choice == 1) {
 					ClearScreen();
 					PrintZoo();
+					PrintStatus();
 				}
 				else if (choice == 2) {
 					ClearScreen();
@@ -216,7 +217,7 @@ void Driver::StartTour()
 	
 	ClearScreen();
 	PrintZoo();
-	PrintZoo();
+	PrintStatus();
 
 	srand((unsigned int)time(NULL));
 	for (i = 0; i < Z->GetWidth(); i++) {
@@ -237,15 +238,11 @@ void Driver::StartTour()
 	i = Tx[temp];
 	j = Ty[temp];
 
-<<<<<<< HEAD
-	while (C->GetCellID() != 211) {
-=======
 	while (C->getCellID() != 211 && walk) {
->>>>>>> a98f20e937916fdae2f4440129c5fe4e2fa2f88d
 		//Print Zoo
 		ClearScreen();
 		PrintZoo(j,i);
-		PrintZoo();
+		PrintStatus();
 
 		cout << "(" << i << "," << j << ")" << C->GetCellID()<< endl;
 		//Interact
@@ -336,26 +333,7 @@ void Driver::StartTour()
 				cMove++;
 			}
 		}
-<<<<<<< HEAD
-		//Random jalan yang mungkin pake mod cMove, simpen di Move
-		if (cMove > 0) {
-			Move = TMove[(rand() % cMove)];
-		}
-		else {
-			Move = (Move + 2) % 4;
-		}
 
-		if (Move == 1) {
-			j--;
-		}
-		else {
-			if (Move == 2) {
-				i++;
-			}
-			else {
-				if (Move == 3) {
-					j++;
-=======
 		//Random jalan yang mungkin pake mod cmove, simpen di move
 		if (cmove > 0) {
 			move = Tmove[(rand() % cmove)];
@@ -365,7 +343,6 @@ void Driver::StartTour()
 			else {
 				if (move == 2) {
 					i++;
->>>>>>> a98f20e937916fdae2f4440129c5fe4e2fa2f88d
 				}
 				else {
 					if (move == 3) {
@@ -377,16 +354,10 @@ void Driver::StartTour()
 				}
 			}
 		}
-<<<<<<< HEAD
-		C = Z->GetCell(i, j);
-=======
 		else {
 			walk = false;
-		}
-
-		
+		}		
 		C = Z->getCell(i, j);
->>>>>>> a98f20e937916fdae2f4440129c5fe4e2fa2f88d
 		Delay(500);
 	}
 	cout << "Tur selesai :D" << endl;
@@ -496,7 +467,7 @@ void Driver::PrintZoo(int x1, int y1, int x2, int y2)
 	}
 }
 
-void Driver::PrintZoo()
+void Driver::PrintStatus()
 {
 	cout << "========================================" << endl;
 	cout << "              - Food Count -" << endl;

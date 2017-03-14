@@ -49,9 +49,9 @@ public:
 
 	//void printLegend();
 
-	/** @brief Mencetak zoo dari titik (x1,y1) hingga (x2,y2)
+	/** @brief Mencetak makanan yang dibutuhkan
 	*/
-	void PrintZoo();
+	void PrintStatus();
 
 private:
 	Zoo* Z;
