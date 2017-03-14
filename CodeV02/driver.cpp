@@ -7,8 +7,9 @@ Driver::Driver(string Input)
 	Cell* C;
 	ifstream myfile(Input);
 	string S;
-	int i, j, w, h, temp;
+	int i, j, w, h, temp, aid, acount;
 	bool found;
+	Animal* A;
 
 	getline(myfile,S);
 	i = 0;
@@ -72,7 +73,6 @@ Driver::Driver(string Input)
 			Z->addCell(i, j, C);
 		}
 	}
-	myfile.close();
 	for (i = 0; i < Z->getHeight(); i++) {
 		for (j = 0; j <= Z->getWidth(); j++) {
 			found = false;
@@ -94,7 +94,40 @@ Driver::Driver(string Input)
 				Z->getCage(Z->getNCage())->addHabitat(Z->getCell(i, j));
 			}
 		}
-	}	
+	}
+	i = 0;
+	temp = 0;
+	while ((S[i] >= '0') && (S[i] <= '9')) {
+		temp = (temp * 10) + (S[i] - '0');
+		i++;
+	}
+	for (i = 0; i < temp; i++) {
+		aid = 0;
+		while ((S[i] >= '0') && (S[i] <= '9')) {
+			aid = (aid * 10) + (S[i] - '0');
+			i++;
+		}
+		i++;
+		acount = 0;
+		while ((S[i] >= '0') && (S[i] <= '9')) {
+			acount = (acount * 10) + (S[i] - '0');
+			i++;
+		}
+		cout << "Animal " << aid << " ada " << acount << endl; /*TBD*/
+		for (j = 0; j < acount; j++) {
+			A = new Animal(aid);
+			found = false;
+			k = 0;
+			while ((!(found)) && (k < Z->getNCage())) {
+				if ((((A->getHabitat())[Z->getCage(k)->getCageType()) % 10) - 1]) {
+					found = true;
+					Z->getCage(k)->addAnimal(A);
+				}
+				k++;
+			}
+		}
+	}
+	myfile.close();
 }
 
 void Driver::printMenu()
@@ -128,7 +161,7 @@ void Driver::printMenu()
 				else if (choice == 2) {
 					ClearScreen();
 					cout << "Masukkan ukuran" << endl;
-					cout << "X(0 - " << Z->getWidth() - 1<<")"<<endl;
+					cout << "X(0 - " << Z->getWidth() - 1 <<")"<<endl;
 					cout << "Y(0 - " << Z->getHeight() - 1 << ")"<<endl;
 					cout << "X1 :";
 					cin >> x1;

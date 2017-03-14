@@ -1,14 +1,14 @@
 #include "animal.h"
 Animal::Animal()
 {
-	locX = 0;
-	locY = 0;
+	locX = -99;
+	locY = -99;
 	type = 0;
 }
-Animal::Animal(int x, int y, int id)
+Animal::Animal(int id)
 {
-	locX = x;
-	locY = y;
+	locX = -99;
+	locY = -99;
 
 	if (id == 1) {
 		type = 1;

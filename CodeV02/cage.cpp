@@ -15,6 +15,8 @@ void Cage::addAnimal(Animal* A)
 	int i;
 
 	//indeks 
+	//Harus diubah, gak ngecek habitable lagi, jadiin I.S. udah pasti habitable
+	//Harus ngeset X Y animal berdasarkan habitat yang available, kayaknya perlu gethabitat
 	if (n_animal < (n_cell / 10) * 3) {
 		i = (cageType % 10) - 1;
 		if ((A->getHabitat())[i]) {
