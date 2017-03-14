@@ -54,7 +54,7 @@ public:
 	void PrintStatus();
 
 private:
-	Zoo* Z;
+	Zoo* z;
 };
 
 #endif

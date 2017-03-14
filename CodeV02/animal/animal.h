@@ -70,7 +70,7 @@ public:
 	/** @brief Melakukan pencetakan terhadap code
 	*/
 	void Render();
-	int GetC_Enemy();
+	int GetCEnemy();
 	int* GetEnemyList();
 	
 private:

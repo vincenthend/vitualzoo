@@ -310,7 +310,7 @@ int* Animal::GetEnemyList()
 	return enemy_id;
 }
 
-int Animal::GetC_Enemy()
+int Animal::GetCEnemy()
 {
 	return c_enemy;
 }
