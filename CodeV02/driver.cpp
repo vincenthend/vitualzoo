@@ -131,7 +131,7 @@ Driver::Driver(string Input)
 				if (A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) {
 					found = true;
 					cout << "Cek 1.2" << endl;
-					Z->getCage(k)->addAnimal(A);
+					(Z->getCage(k))->addAnimal(A);
 					cout << "Cek 1.3" << endl;
 				}
 				cout << "Cek 1.4" << endl;
