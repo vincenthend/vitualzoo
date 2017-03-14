@@ -35,11 +35,16 @@ public:
      * @return Posisi ordinat hewan.
      */
 	int getLocationY();
-	
-   /** @brief Mengembalikan status jinak hewan.
-     * @return True jika jinak dan false jika tidak jinak.
-     */
-	int getTame();
+
+	/** @brief Mengatur nilai X hewan
+	* @param x lokasi X hewan
+	*/
+	void setLocationX(int x);
+
+	/** @brief Mengatur nilai y hewan
+	* @param x lokasi y hewan
+	*/
+	void setLocationY(int y);
 
 	/** @brief Mengembalikan nilai type hewan.
 	* @return Nilai type hewan.
@@ -54,16 +59,8 @@ public:
 	* @return habitat yang dapat ditinggali hewan
 	*/
 	bool* getHabitat();
-
-	/** @brief Mengatur nilai X hewan
-	* @param x lokasi X hewan
-	*/
-	void setLocationX(int x);
-
-	/** @brief Mengatur nilai y hewan
-	* @param x lokasi y hewan
-	*/
-	void setLocationY(int y);
+	int getCEnemy();
+	int* getEnemyList();
 	
 protected:
 	int type;
@@ -72,6 +69,8 @@ protected:
 	int food_Weight;
 	int foodType;
 	bool tame;
+	int* EnemyID;
+	int cenemy;
 	
 private:
 	int locX;

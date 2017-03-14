@@ -1,5 +1,5 @@
 #include "animal.h"
-#include "habitat.h"
+#include "cell.h"
 
 #ifndef CAGE_H
 #define CAGE_H
@@ -17,6 +17,8 @@ class Cage{
 		* membuat array a dan c sebanyak 999 buah
 		*/
 		Cage();
+
+		bool IsFull();
 
 		/** @brief Menambahkan habitat ke dalam cage
 		*/
@@ -62,11 +64,7 @@ class Cage{
 		* @return nilai total makanan omnivore
 		*/
 		int CountFoodOmnivore();
-
-		/** @brief menghitung total jumlah makanan omnivore
-		* @return apakah kandang penuh
-		*/
-		bool IsFull();
+		bool isExist(int ID);
 
 
 	private:
@@ -76,6 +74,7 @@ class Cage{
 		int cageType;
 		Animal ** a;
 		Cell ** c;	
+		bool* AList;
 };
 
 #endif

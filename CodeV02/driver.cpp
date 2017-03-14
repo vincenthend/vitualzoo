@@ -1,6 +1,7 @@
 #include "driver.h"
 #include <time.h>
 #include <random>
+#include <string>
 
 Driver::Driver(string Input)
 {
@@ -11,6 +12,7 @@ Driver::Driver(string Input)
 	bool found, enemy;
 	Animal* A;
 
+	A = NULL;
 	getline(myfile,S);
 	i = 0;
 	temp = 0;
@@ -74,7 +76,7 @@ Driver::Driver(string Input)
 		}
 	}
 	for (i = 0; i < Z->getHeight(); i++) {
-		for (j = 0; j <= Z->getWidth(); j++) {
+		for (j = 0; j < Z->getWidth(); j++) {
 			found = false;
 			C = Z->getCell(i, j);
 			cout << "Cek " << (C->getCellID()) << endl;

@@ -54,7 +54,7 @@ Animal::Animal(int id)
 		code = '%';
 		habitat[1] = true;
 		cenemy = 2;
-		EnemyID = new int [2];
+		EnemyID = new int [cenemy];
 		EnemyID[0] = 2;
 		EnemyID[1] = 4;
 	}
@@ -251,12 +251,11 @@ Animal::Animal(int id)
 		weight = 5;
 		food_Weight = 1;
 		foodType = 2;
-		code = 'Â¥';
+		code = '¥';
 		habitat[0] = true;
 		habitat[2] = true;
-		tame = true;
+		cenemy = 0;
 	}
-
 }
 void Animal::interact()
 {
@@ -286,13 +285,9 @@ void Animal::setLocationY(int y){
 	locY = y;
 }
 
-int Animal::getTame(){
-	return (tame);
-}
-
 int Animal::getType()
 {
-	return 0;
+	return type;
 }
 
 void Animal::move(int x, int y){

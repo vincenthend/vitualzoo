@@ -6,8 +6,11 @@ Salmon::Salmon() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 2;
-	tame = false;
 	type = 17;
+	cenemy = 0;
+	EnemyID = new int [cenemy];
+	EnemyID [0] = 19;
+	EnemyID [1] = 21;
 }
 void Salmon::interact() {
 	cout << "blub blub";
@@ -19,8 +22,8 @@ Whale::Whale() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 18;
+	cenemy = 0;
 }
 void Whale::interact() {
 	cout << "wooooooooooooo";
@@ -32,8 +35,8 @@ Squid::Squid() {
 	weight = 300;
 	food_Weight = 2;
 	foodType = 2;
-	tame = true;
 	type = 19;
+	cenemy = 0;
 }
 void Squid::interact() {
 	cout << "sluhb..sluhb..";
@@ -45,8 +48,8 @@ Goldfish::Goldfish() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 20;
+	cenemy = 0;
 }
 void Goldfish::interact() {
 	cout << "*glub glub*";
@@ -58,8 +61,8 @@ Turtle::Turtle() {
 	weight = 100;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 21;
+	cenemy = 0;
 }
 void Turtle::interact() {
 	cout << "swoosh";
@@ -71,8 +74,8 @@ Seal::Seal() {
 	weight = 25;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 22;
+	cenemy = 0;
 }
 void Seal::interact() {
 	cout << "Bawrk Bawrk!";
@@ -84,8 +87,8 @@ Dolphin::Dolphin() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 1;
-	tame = true;
 	type = 23;
+	cenemy = 0;
 }
 void Dolphin::interact() {
 	cout << "*swims slowly*";

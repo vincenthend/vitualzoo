@@ -114,3 +114,16 @@ void Cage::addHabitat(Cell* H)
 		}
 	}
 }
+
+bool Cage::isExist(int ID)
+{
+	bool found = false;
+	int i = 0; 
+	while (i < n_animal){
+		if (a[i]->getType() == ID){
+			found = true;
+		}
+		i++;
+	}
+	return (found);
+}

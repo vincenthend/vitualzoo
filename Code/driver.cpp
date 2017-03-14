@@ -8,8 +8,8 @@ Driver::Driver(string Input)
 	Cell* C;
 	ifstream myfile(Input);
 	string S;
-	int i, j, k, w, h, temp, aid, acount;
-	bool found;
+	int i, j, k, l, w, h, temp, aid, acount;
+	bool found, enemy;
 	Animal* A;
 
 	A = NULL;
@@ -202,8 +202,18 @@ Driver::Driver(string Input)
 			found = false;
 			while ((!(found)) && (k < Z->getNCage())) {
 				if ((A->getHabitat()[(((Z->getCage(k))->getCageType()) % 10) - 1]) && !(Z->getCage(k)->IsFull())) {
-					found = true;
-					(Z->getCage(k))->addAnimal(A);
+					l = 0;
+					enemy = false;
+					while (l < A->getCEnemy()){
+						if (Z->getCage(k)->isExist(A->getEnemyList()[l])){
+							enemy = true;
+						}
+						l++;
+					}
+					if (!(enemy)){
+						found = true;
+						(Z->getCage(k))->addAnimal(A);
+					}
 				}
 				k++;
 			}

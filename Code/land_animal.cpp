@@ -6,8 +6,8 @@ Chicken::Chicken() {
 	weight = 2;
 	food_Weight = 1;
 	foodType = 3;
-	tame = true;
 	type = 8;
+	cenemy = 0;
 }
 void Chicken::interact() {
 	cout << "Cock-a-doodle-doo!";
@@ -19,8 +19,8 @@ Cat::Cat() {
 	weight = 4;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 9;
+	cenemy = 0;
 }
 void Cat::interact() {
 	cout << "Meow";
@@ -32,8 +32,8 @@ Cow::Cow() {
 	weight = 1000;
 	food_Weight = 2;
 	foodType = 1;
-	tame = true;
 	type = 10;
+	cenemy = 0;
 }
 void Cow::interact() {
 	cout << "Mooo...";
@@ -45,8 +45,10 @@ Mouse::Mouse() {
 	weight = 2;
 	food_Weight = 1;
 	foodType = 1;
-	tame = false;
 	type = 11;
+	cenemy = 1;
+	EnemyID = new int [cenemy];
+	EnemyID[0] = 9;
 }
 void Mouse::interact() {
 	cout << "Squeak-squeak";
@@ -58,8 +60,8 @@ Goat::Goat() {
 	weight = 100;
 	food_Weight = 2;
 	foodType = 1;
-	tame = true;
 	type = 12;
+	cenemy = 0;
 }
 void Goat::interact() {
 	cout << "Beeeeeek";
@@ -71,8 +73,8 @@ Llama::Llama() {
 	weight = 500;
 	food_Weight = 2;
 	foodType = 1;
-	tame = true;
 	type = 13;
+	cenemy = 0;
 }
 void Llama::interact() {
 	cout << "Neiigh!";
@@ -84,8 +86,8 @@ Snake::Snake() {
 	weight = 10;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 14;
+	cenemy = 0;
 }
 void Snake::interact() {
 	cout << "Hsssss...";
@@ -97,8 +99,8 @@ Sheep::Sheep() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 1;
-	tame = true;
 	type = 15;
+	cenemy = 0;
 }
 void Sheep::interact() {
 	cout << "Baaaaaaaaaa";
@@ -110,8 +112,8 @@ Chameleon::Chameleon() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 16;
+	cenemy = 0;
 }
 void Chameleon::interact() {
 	cout << "Scrook...";

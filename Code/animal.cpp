@@ -15,13 +15,17 @@ int Animal::getLocationY(){
 	return (locY);
 }
 
-int Animal::getTame(){
-	return (tame);
+void Animal::setLocationX(int x) {
+	locX = x;
+}
+
+void Animal::setLocationY(int y) {
+	locY = y;
 }
 
 int Animal::getType()
 {
-	return 0;
+	return type;
 }
 
 void Animal::move(int x, int y){
@@ -34,10 +38,12 @@ bool * Animal::getHabitat()
 	return habitat;
 }
 
-void Animal::setLocationX(int x) {
-	locX = x;
+int* Animal::getEnemyList()
+{
+	return EnemyID;
 }
 
-void Animal::setLocationY(int y) {
-	locY = y;
+int Animal::getCEnemy()
+{
+	return cenemy;
 }

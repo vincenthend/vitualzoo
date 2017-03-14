@@ -41,14 +41,15 @@ public:
      */
 	int getLocationY();
 
-
+	/** @brief Mengatur nilai X hewan
+	* @param x lokasi X hewan
+	*/
 	void setLocationX(int x);
+
+	/** @brief Mengatur nilai y hewan
+	* @param x lokasi y hewan
+	*/
 	void setLocationY(int y);
-	
-   /** @brief Mengembalikan status jinak hewan.
-     * @return True jika jinak dan false jika tidak jinak.
-     */
-	int getTame();
 
 	/** @brief Mengembalikan nilai type hewan.
 	* @return Nilai type hewan.
@@ -71,17 +72,15 @@ public:
 	void render();
 	int getCEnemy();
 	int* getEnemyList();
-protected:
-	bool habitat[3] = {false, false, false};
 	
 private:
+	bool habitat[3] = {false, false, false};
 	int type;
 	int locX;
 	int locY;
 	int weight;
 	int food_Weight;
 	int foodType;
-	bool tame;
 	char code;
 	string sound;
 	int* EnemyID;

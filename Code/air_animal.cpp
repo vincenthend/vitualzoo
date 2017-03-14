@@ -6,8 +6,8 @@ Pelican::Pelican() {
 	weight = 5;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 1;
+	cenemy = 0;
 }
 void Pelican::interact() {
 	cout << "Kraoooo";
@@ -19,8 +19,8 @@ Owl::Owl() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 2;
+	cenemy = 0;
 }
 void Owl::interact() {
 	cout << "HootHoot";
@@ -32,8 +32,8 @@ Pigeon::Pigeon() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 1;
-	tame = true;
 	type = 3;
+	cenemy = 0;
 }
 void Pigeon::interact() {
 	cout << "Coo Coo";
@@ -45,8 +45,8 @@ Canary::Canary() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 1;
-	tame = true;
 	type = 4;
+	cenemy = 0;
 }
 void Canary::interact() {
 	cout << "Kweee";
@@ -58,8 +58,11 @@ Bat::Bat() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 1;
-	tame = false;
 	type = 5;
+	cenemy = 2;
+	EnemyID = new int [cenemy];
+	EnemyID[0] = 2;
+	EnemyID[1] = 4;
 }
 void Bat::interact() {
 	cout << "shriekkkkkk";
@@ -71,8 +74,8 @@ Eagle::Eagle() {
 	weight = 2;
 	food_Weight = 1;
 	foodType = 2;
-	tame = true;
 	type = 6;
+	cenemy = 0;
 }
 void Eagle::interact() {
 	cout << "Squawk!";
@@ -84,8 +87,8 @@ Toucan::Toucan() {
 	weight = 1;
 	food_Weight = 1;
 	foodType = 1;
-	tame = true;
 	type = 7;
+	cenemy = 0;
 }
 void Toucan::interact() {
 	cout << "*flies away*";
