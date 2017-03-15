@@ -13,7 +13,6 @@
 #include "../cell/cell.h"
 #include "../facility/facility.h"
 #include "../habitat/habitat.h"
-#include "../Renderable/Renderable.h"
 #include "../zoo/zoo.h"
 #include "../gui/gui.h"
 
