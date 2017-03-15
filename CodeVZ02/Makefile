@@ -2,7 +2,7 @@ CC = g++
 DEBUG = -g
 CFLAGS = -Wall -c -std=c++11 $(DEBUG)
 LFLAGS = -Wall -std=c++11 $(DEBUG)
-OBJS = animal.o cage.o cell.o driver.o gui.o VirtualZoo.o  zoo.o
+OBJS = animal.o cage.o cell.o driver.o VirtualZoo.o  zoo.o
 
 main: $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o main
