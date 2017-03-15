@@ -1,98 +1,98 @@
 #include "air_animal.h"
 AirAnimal::AirAnimal(){
-	habitat[1] = true;
+  habitat[1] = true;
 }
 Pelican::Pelican() {
-	weight = 5;
-	food_weight = 1;
-	food_type = 2;
-	type = 1;
-	c_enemy = 0;
+  weight = 5;
+  food_weight = 1;
+  food_type = 2;
+  type = 1;
+  c_enemy = 0;
 }
 void Pelican::Interact() {
-	cout << "Kraoooo";
+  cout << "Kraoooo";
 }
 void Pelican::Render() {
-	cout << "!";
+  cout << "!";
 }
 Owl::Owl() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 2;
-	type = 2;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 2;
+  type = 2;
+  c_enemy = 0;
 }
 void Owl::Interact() {
-	cout << "HootHoot";
+  cout << "HootHoot";
 }
 void Owl::Render() {
-	cout << "@";
+  cout << "@";
 }
 Pigeon::Pigeon() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 1;
-	type = 3;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 1;
+  type = 3;
+  c_enemy = 0;
 }
 void Pigeon::Interact() {
-	cout << "Coo Coo";
+  cout << "Coo Coo";
 }
 void Pigeon::Render() {
-	cout << "#";
+  cout << "#";
 }
 Canary::Canary() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 1;
-	type = 4;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 1;
+  type = 4;
+  c_enemy = 0;
 }
 void Canary::Interact() {
-	cout << "Kweee";
+  cout << "Kweee";
 }
 void Canary::Render() {
-	cout << "$";
+  cout << "$";
 }
 Bat::Bat() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 1;
-	type = 5;
-	c_enemy = 2;
-	EnemyID = new int [c_enemy];
-	EnemyID[0] = 2;
-	EnemyID[1] = 4;
+  weight = 1;
+  food_weight = 1;
+  food_type = 1;
+  type = 5;
+  c_enemy = 2;
+  EnemyID = new int [c_enemy];
+  EnemyID[0] = 2;
+  EnemyID[1] = 4;
 }
 void Bat::Interact() {
-	cout << "shriekkkkkk";
+  cout << "shriekkkkkk";
 }
 void Bat::Render() {
-	cout << "%";
+  cout << "%";
 }
 Eagle::Eagle() {
-	weight = 2;
-	food_weight = 1;
-	food_type = 2;
-	type = 6;
-	c_enemy = 0;
+  weight = 2;
+  food_weight = 1;
+  food_type = 2;
+  type = 6;
+  c_enemy = 0;
 }
 void Eagle::Interact() {
-	cout << "Squawk!";
+  cout << "Squawk!";
 }
 void Eagle::Render() {
-	cout << "^";
+  cout << "^";
 }
 Toucan::Toucan() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 1;
-	type = 7;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 1;
+  type = 7;
+  c_enemy = 0;
 }
 void Toucan::Interact() {
-	cout << "*flies away*";
+  cout << "*flies away*";
 }
 void Toucan::Render() {
-	cout << "&";
+  cout << "&";
 }

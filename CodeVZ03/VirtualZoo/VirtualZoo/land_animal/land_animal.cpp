@@ -1,123 +1,123 @@
 #include "land_animal.h"
 LandAnimal::LandAnimal(){
-	habitat[0] = true;
+  habitat[0] = true;
 }
 Chicken::Chicken() {
-	weight = 2;
-	food_weight = 1;
-	food_type = 3;
-	type = 8;
-	c_enemy = 0;
+  weight = 2;
+  food_weight = 1;
+  food_type = 3;
+  type = 8;
+  c_enemy = 0;
 }
 void Chicken::Interact() {
-	cout << "Cock-a-doodle-doo!";
+  cout << "Cock-a-doodle-doo!";
 }
 void Chicken::Render() {
-	cout << "*";
+  cout << "*";
 }
 Cat::Cat() {
-	weight = 4;
-	food_weight = 1;
-	food_type = 2;
-	type = 9;
-	c_enemy = 0;
+  weight = 4;
+  food_weight = 1;
+  food_type = 2;
+  type = 9;
+  c_enemy = 0;
 }
 void Cat::Interact() {
-	cout << "Meow";
+  cout << "Meow";
 }
 void Cat::Render() {
-	cout << "-";
+  cout << "-";
 }
 Cow::Cow() {
-	weight = 1000;
-	food_weight = 2;
-	food_type = 1;
-	type = 10;
-	c_enemy = 0;
+  weight = 1000;
+  food_weight = 2;
+  food_type = 1;
+  type = 10;
+  c_enemy = 0;
 }
 void Cow::Interact() {
-	cout << "Mooo...";
+  cout << "Mooo...";
 }
 void Cow::Render() {
-	cout << "+";
+  cout << "+";
 }
 Mouse::Mouse() {
-	weight = 2;
-	food_weight = 1;
-	food_type = 1;
-	type = 11;
-	c_enemy = 1;
-	EnemyID = new int [c_enemy];
-	EnemyID[0] = 9;
+  weight = 2;
+  food_weight = 1;
+  food_type = 1;
+  type = 11;
+  c_enemy = 1;
+  EnemyID = new int [c_enemy];
+  EnemyID[0] = 9;
 }
 void Mouse::Interact() {
-	cout << "Squeak-squeak";
+  cout << "Squeak-squeak";
 }
 void Mouse::Render() {
-	cout << "~";
+  cout << "~";
 }
 Goat::Goat() {
-	weight = 100;
-	food_weight = 2;
-	food_type = 1;
-	type = 12;
-	c_enemy = 0;
+  weight = 100;
+  food_weight = 2;
+  food_type = 1;
+  type = 12;
+  c_enemy = 0;
 }
 void Goat::Interact() {
-	cout << "Beeeeeek";
+  cout << "Beeeeeek";
 }
 void Goat::Render() {
-	cout << ";";
+  cout << ";";
 }
 Llama::Llama() {
-	weight = 500;
-	food_weight = 2;
-	food_type = 1;
-	type = 13;
-	c_enemy = 0;
+  weight = 500;
+  food_weight = 2;
+  food_type = 1;
+  type = 13;
+  c_enemy = 0;
 }
 void Llama::Interact() {
-	cout << "Neiigh!";
+  cout << "Neiigh!";
 }
 void Llama::Render() {
-	cout << "[";
+  cout << "[";
 }
 Snake::Snake() {
-	weight = 10;
-	food_weight = 1;
-	food_type = 2;
-	type = 14;
-	c_enemy = 0;
+  weight = 10;
+  food_weight = 1;
+  food_type = 2;
+  type = 14;
+  c_enemy = 0;
 }
 void Snake::Interact() {
-	cout << "Hsssss...";
+  cout << "Hsssss...";
 }
 void Snake::Render() {
-	cout << "]";
+  cout << "]";
 }
 Sheep::Sheep() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 1;
-	type = 15;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 1;
+  type = 15;
+  c_enemy = 0;
 }
 void Sheep::Interact() {
-	cout << "Baaaaaaaaaa";
+  cout << "Baaaaaaaaaa";
 }
 void Sheep::Render() {
-	cout << "{";
+  cout << "{";
 }
 Chameleon::Chameleon() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 2;
-	type = 16;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 2;
+  type = 16;
+  c_enemy = 0;
 }
 void Chameleon::Interact() {
-	cout << "Scrook...";
+  cout << "Scrook...";
 }
 void Chameleon::Render() {
-	cout << "}";
+  cout << "}";
 }

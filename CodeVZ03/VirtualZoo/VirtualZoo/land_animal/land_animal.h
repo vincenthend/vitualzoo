@@ -6,63 +6,63 @@
   * Kelas landAnimal 
   */
 class LandAnimal : virtual public Animal {
-	public:	
-	   /** @brief Konstruktor, menginisiasi.
-	     */
-	    LandAnimal();
+  public:  
+     /** @brief Konstruktor, menginisiasi.
+       */
+      LandAnimal();
 };
 class Chicken : public LandAnimal {
-	public:
-		Chicken();
-		void Interact();
-		void Render();
+  public:
+    Chicken();
+    void Interact();
+    void Render();
 };
 class Cat : public LandAnimal {
-	public:
-		Cat();
-		void Interact();
-		void Render();
+  public:
+    Cat();
+    void Interact();
+    void Render();
 };
 class Cow : public LandAnimal {
-	public:
-		Cow();
-		void Interact();
-		void Render();
+  public:
+    Cow();
+    void Interact();
+    void Render();
 };
 class Mouse : public LandAnimal {
-	public:
-		Mouse();
-		void Interact();
-		void Render();
+  public:
+    Mouse();
+    void Interact();
+    void Render();
 };
 class Goat : public LandAnimal {
-	public:
-		Goat();
-		void Interact();
-		void Render();
+  public:
+    Goat();
+    void Interact();
+    void Render();
 };
 class Llama : public LandAnimal {
-	public:
-		Llama();
-		void Interact();
-		void Render();
+  public:
+    Llama();
+    void Interact();
+    void Render();
 };
 class Snake : public LandAnimal {
-	public:
-		Snake();
-		void Interact();
-		void Render();
+  public:
+    Snake();
+    void Interact();
+    void Render();
 };
 class Sheep : public LandAnimal {
-	public:
-		Sheep();
-		void Interact();
-		void Render();
+  public:
+    Sheep();
+    void Interact();
+    void Render();
 };
 class Chameleon : public LandAnimal {
-	public:
-		Chameleon();
-		void Interact();
-		void Render();
+  public:
+    Chameleon();
+    void Interact();
+    void Render();
 };
 #endif

@@ -1,98 +1,98 @@
 #include "water_animal.h"
 WaterAnimal::WaterAnimal(){
-	habitat[2] = true;
+  habitat[2] = true;
 }
 Salmon::Salmon() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 2;
-	type = 17;
-	c_enemy = 0;
-	EnemyID = new int [c_enemy];
-	EnemyID [0] = 19;
-	EnemyID [1] = 21;
+  weight = 1;
+  food_weight = 1;
+  food_type = 2;
+  type = 17;
+  c_enemy = 0;
+  EnemyID = new int [c_enemy];
+  EnemyID [0] = 19;
+  EnemyID [1] = 21;
 }
 void Salmon::Interact() {
-	cout << "blub blub";
+  cout << "blub blub";
 }
 void Salmon::Render() {
-	cout << ":";
+  cout << ":";
 }
 Whale::Whale() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 2;
-	type = 18;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 2;
+  type = 18;
+  c_enemy = 0;
 }
 void Whale::Interact() {
-	cout << "wooooooooooooo";
+  cout << "wooooooooooooo";
 }
 void Whale::Render() {
-	cout << "<";
+  cout << "<";
 }
 Squid::Squid() {
-	weight = 300;
-	food_weight = 2;
-	food_type = 2;
-	type = 19;
-	c_enemy = 0;
+  weight = 300;
+  food_weight = 2;
+  food_type = 2;
+  type = 19;
+  c_enemy = 0;
 }
 void Squid::Interact() {
-	cout << "sluhb..sluhb..";
+  cout << "sluhb..sluhb..";
 }
 void Squid::Render() {
-	cout << ">";
+  cout << ">";
 }
 Goldfish::Goldfish() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 2;
-	type = 20;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 2;
+  type = 20;
+  c_enemy = 0;
 }
 void Goldfish::Interact() {
-	cout << "*glub glub*";
+  cout << "*glub glub*";
 }
 void Goldfish::Render() {
-	cout << "/";
+  cout << "/";
 }
 Turtle::Turtle() {
-	weight = 100;
-	food_weight = 1;
-	food_type = 2;
-	type = 21;
-	c_enemy = 0;
+  weight = 100;
+  food_weight = 1;
+  food_type = 2;
+  type = 21;
+  c_enemy = 0;
 }
 void Turtle::Interact() {
-	cout << "swoosh";
+  cout << "swoosh";
 }
 void Turtle::Render() {
-	cout << "=";
+  cout << "=";
 }
 Seal::Seal() {
-	weight = 25;
-	food_weight = 1;
-	food_type = 2;
-	type = 22;
-	c_enemy = 0;
+  weight = 25;
+  food_weight = 1;
+  food_type = 2;
+  type = 22;
+  c_enemy = 0;
 }
 void Seal::Interact() {
-	cout << "Bawrk Bawrk!";
+  cout << "Bawrk Bawrk!";
 }
 void Seal::Render() {
-	cout << "/";
+  cout << "/";
 }
 Dolphin::Dolphin() {
-	weight = 1;
-	food_weight = 1;
-	food_type = 1;
-	type = 23;
-	c_enemy = 0;
+  weight = 1;
+  food_weight = 1;
+  food_type = 1;
+  type = 23;
+  c_enemy = 0;
 }
 void Dolphin::Interact() {
-	cout << "*swims slowly*";
+  cout << "*swims slowly*";
 }
 void Dolphin::Render() {
-	cout << "0";
+  cout << "0";
 }

@@ -9,8 +9,8 @@
   */
 class Penguin : public WaterAnimal, public LandAnimal {
 public:
-	Penguin();
-	void Interact();
-	void Render();
+  Penguin();
+  void Interact();
+  void Render();
 };
 #endif

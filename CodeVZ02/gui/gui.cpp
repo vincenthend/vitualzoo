@@ -5,19 +5,19 @@
 #ifdef _WIN32
 #include <windows.h>
 void ClearScreen() {
-	system("cls");
+  system("cls");
 }
 void Delay(int x) {
-	clock_t goal = x + clock();
-	while (goal > clock());
+  clock_t goal = x + clock();
+  while (goal > clock());
 }
 #elif __linux__
 #include <unistd.h>
 void ClearScreen() {
-	system("clear");
+  system("clear");
 }
 void Delay(int x) {
-	usleep(x * 1000);
-	std::cout<<std::endl;
+  usleep(x * 1000);
+  std::cout<<std::endl;
 }
 #endif
