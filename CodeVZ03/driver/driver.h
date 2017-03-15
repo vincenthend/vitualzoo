@@ -14,7 +14,6 @@
 #include "../facility/facility.h"
 #include "../habitat/habitat.h"
 #include "../zoo/zoo.h"
-#include "../gui/gui.h"
 
 #ifndef DRIVER_H
 #define DRIVER_H

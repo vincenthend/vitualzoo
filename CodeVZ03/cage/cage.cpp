@@ -26,10 +26,7 @@ void Cage::AddAnimal(Animal* A)
 }
 
 Cage::~Cage(){
-	int i;
-	for(i = 0; i<n_animal;i++){
-		delete a[i];
-	}
+	delete a;
 }
 
 

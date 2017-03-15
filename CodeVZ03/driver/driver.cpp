@@ -412,7 +412,6 @@ void Driver::StartTour()
       walk = false;
     }    
     c = z->GetCell(i, j);
-    Delay(500);
   }
 }
 void Driver::PrintZoo() {
