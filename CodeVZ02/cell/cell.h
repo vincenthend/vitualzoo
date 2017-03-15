@@ -25,9 +25,6 @@ class Cell {
     Cell(int x, int y, int ID);
     /** @brief Melakukan Render (mencetak Code)
     */
-	/** @brief dtor cell
-    */
-	~Cell();
     void Render();
     /** @brief Mengatur code
     * @param c Code yang diinginkan

@@ -145,7 +145,7 @@ Driver::Driver(string Input) {
 }
 
 Driver::~Driver(){
-	delete Z;
+	delete z;
 }
 
 void Driver::PrintMenu()
