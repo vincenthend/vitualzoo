@@ -14,6 +14,9 @@ class Cage{
     /** @brief Inisialisasi cage dengan n_animal 0 dan n_cell 0
     * membuat array a dan c sebanyak 999 buah
     */
+    ~Cage();
+    /** @brief Destructor cage
+    */
     Cage();
     /** @brief Mengembalikan kondisi penuh cage
     * @return true jika penuh dan false jika belum penuh
