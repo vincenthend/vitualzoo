@@ -21,10 +21,13 @@ class Cell {
     * lokasi y
     * @param ID
     * nilai cell_id (tetap)
-    */
+    */ 
     Cell(int x, int y, int ID);
     /** @brief Melakukan Render (mencetak Code)
     */
+	/** @brief dtor cell
+    */
+	~Cell();
     void Render();
     /** @brief Mengatur code
     * @param c Code yang diinginkan
@@ -49,7 +52,7 @@ class Cell {
        */
     int GetLocationY();
   private:
-    const int cell_id;
+    int cell_id;
     int loc_x;
     int loc_y;
     int cage_id;

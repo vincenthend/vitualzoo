@@ -12,11 +12,9 @@ cage.o: ./cage/cage.cpp ./cage/cage.h ./animal/animal.h ./cell/cell.h
 	$(CC) $(CFLAGS) ./cage/cage.cpp
 cell.o: ./cell/cell.cpp ./cell/cell.h ./animal/animal.h
 	$(CC) $(CFLAGS) ./cell/cell.cpp
-driver.o: ./driver/driver.cpp ./driver/driver.h ./animal/animal.h ./cage/cage.h ./cell/cell.h ./zoo/zoo.h ./gui/gui.h
+driver.o: ./driver/driver.cpp ./driver/driver.h ./animal/animal.h ./cage/cage.h ./cell/cell.h ./zoo/zoo.h
 	$(CC) $(CFLAGS) ./driver/driver.cpp
-gui.o: ./gui/gui.cpp ./gui/gui.h
-	$(CC) $(CFLAGS) ./gui/gui.cpp
-VirtualZoo.o: ./VirtualZoo.cpp ./driver/driver.h ./animal/animal.h ./cage/cage.h ./cell/cell.h ./zoo/zoo.h ./gui/gui.h
+VirtualZoo.o: ./VirtualZoo.cpp ./driver/driver.h ./animal/animal.h ./cage/cage.h ./cell/cell.h ./zoo/zoo.h
 	$(CC) $(CFLAGS) ./VirtualZoo.cpp
 zoo.o: ./zoo/zoo.cpp ./zoo/zoo.h ./cell/cell.h ./animal/animal.h ./cage/cage.h
 	$(CC) $(CFLAGS) ./zoo/zoo.cpp

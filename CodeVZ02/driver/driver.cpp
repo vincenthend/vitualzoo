@@ -143,6 +143,11 @@ Driver::Driver(string Input) {
   }
   myfile.close();
 }
+
+Driver::~Driver(){
+	delete Z;
+}
+
 void Driver::PrintMenu()
 {
   int choice, x1, y1, x2, y2;
@@ -155,7 +160,7 @@ void Driver::PrintMenu()
     cout << endl << "9. Keluar" << endl << "Pilihan : ";
     cin >> choice;
     if (choice == 1) {
-      ClearScreen();
+      
       do {        
         cout << "=========================================" << endl;
         cout << "|               VIRTUAL ZOO             |" << endl;
@@ -164,12 +169,12 @@ void Driver::PrintMenu()
         cout << endl << "9. Keluar" << endl << "Pilihan : ";
         cin >> choice;
         if (choice == 1) {
-          ClearScreen();
+          
           PrintZoo();
           PrintStatus();
         }
         else if (choice == 2) {
-          ClearScreen();
+          
           cout << "Masukkan ukuran" << endl;
           cout << "X(0 - " << z->GetWidth() - 1 <<")"<<endl;
           cout << "Y(0 - " << z->GetHeight() - 1 << ")"<<endl;
@@ -189,7 +194,7 @@ void Driver::PrintMenu()
     }
     else if (choice == 2) {
       StartTour();
-      ClearScreen();
+      
     }
   } while (choice != 9);
 }
@@ -201,7 +206,7 @@ void Driver::StartTour() {
   bool walk = true;
   tc = 0;
   c = z->GetCell(0, 0); //Visstud error without this
-  ClearScreen();
+  
   PrintZoo();
   PrintStatus();
   srand((unsigned int)time(NULL));
@@ -223,7 +228,7 @@ void Driver::StartTour() {
   j = ty[temp];
   while (c->GetCellID() != 211 && walk) {
     //Print Zoo
-    ClearScreen();
+    
     PrintZoo(j,i);
     PrintStatus();
     cout << "(" << i << "," << j << ")" << c->GetCellID()<< endl;
@@ -332,7 +337,6 @@ void Driver::StartTour() {
       walk = false;
     }    
     c = z->GetCell(i, j);
-    Delay(500);
   }
 }
 void Driver::PrintZoo() {

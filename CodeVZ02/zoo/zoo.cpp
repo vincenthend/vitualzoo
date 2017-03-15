@@ -43,14 +43,11 @@ Zoo::~Zoo(){
         delete c[i][j];
       }
     }
-    delete[] c[i];
   }
-  delete[] c;
   //Delete cage & cage data
   for (i = 0; i < n_cage; i++) {
     delete cg[i];
   }
-  delete[] cg;
 }
 Zoo::Zoo(const Zoo& Z){
   int i,j;

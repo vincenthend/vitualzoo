@@ -15,6 +15,9 @@ class Cage{
     * membuat array a dan c sebanyak 999 buah
     */
     Cage();
+	/** @brief dtor cage
+    */
+    ~Cage();
     /** @brief Mengembalikan kondisi penuh cage
     * @return true jika penuh dan false jika belum penuh
     */

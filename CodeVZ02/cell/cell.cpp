@@ -7,7 +7,8 @@ Cell::Cell():cell_id(0) {
 void Cell::SetCageID(int n) {
   cage_id = n;
 }
-Cell::Cell(int x, int y, int ID):cell_id(ID) {
+Cell::Cell(int x, int y, int ID){
+  cell_id = ID;
   loc_x = x;
   loc_y = y;
   if (cell_id == 11) {

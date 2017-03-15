@@ -8,7 +8,6 @@
 #include "../cage/cage.h"
 #include "../cell/cell.h"
 #include "../zoo/zoo.h"
-#include "../gui/gui.h"
 
 #ifndef DRIVER_H
 #define DRIVER_H
@@ -18,6 +17,9 @@ class Driver {
     /** @brief Membuat driver yang membuat Zoo sesuai file Input
     */
     Driver(string Input);
+	/** @brief Dtor driver
+    */
+    ~Driver();
     /** @brief Mencetak menu dan memfasilitasi input menu
     */
     void PrintMenu();

@@ -7,6 +7,12 @@ Cage::Cage() {
   cage_id = -1;
   cage_type = 0;
 }
+Cage::~Cage(){
+  int i;
+  for(i=0; i<n_animal; i++){
+	  delete a[i];
+  }
+}
 bool Cage::IsFull() {
   return (n_animal >= ((n_cell / 10) * 3));
 }
