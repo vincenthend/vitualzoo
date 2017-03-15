@@ -12,9 +12,16 @@ void Cell::SetCode(char c) {
 void Cell::Render() {
   cout << code;
 }
+void Cell::SetCageID(int n){
+	cage_id = n;
+}
+int Cell::GetCageID(){
+	return cage_id;
+}
 int Cell::GetCellID() {
   return cell_id;
 }
+
 int Cell::GetLocationX() {
   return (loc_x);
 }

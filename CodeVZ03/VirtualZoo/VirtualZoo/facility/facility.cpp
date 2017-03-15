@@ -2,61 +2,61 @@
 
 Road::Road()
 {
-  locX = 0;
-  locY = 0;
-  cellID = 21;
+  loc_x = 0;
+  loc_y = 0;
+  cell_id = 21;
   Cell::SetCode(default_code);
 }
 
 Road::Road(int x, int y)
 {
-  locX = x;
-  locY = y;
-  cellID = 21;
+  loc_x = x;
+  loc_y = y;
+  cell_id = 21;
   Cell::SetCode(default_code);
 }
 
 Road::Road(int x, int y, bool IsEntrance)
 {  
-  locX = x;
-  locY = y;
+  loc_x = x;
+  loc_y = y;
   if (IsEntrance) {
-    cellID = 210;
+    cell_id = 210;
   }
   else {
-    cellID = 211;
+    cell_id = 211;
   }
   Cell::SetCode(default_code);
 }
 
 Resto::Resto()
 {
-  locX = 0;
-  locY = 0;
-  cellID = 22;
+  loc_x = 0;
+  loc_y = 0;
+  cell_id = 22;
   Cell::SetCode(default_code);
 }
 
 Resto::Resto(int x, int y)
 {
-  locX = x;
-  locY = y;
-  cellID = 22;
+  loc_x = x;
+  loc_y = y;
+  cell_id = 22;
   Cell::SetCode(default_code);
 }
 
 Park::Park()
 {
-  locX = 0;
-  locY = 0;
-  cellID = 23;
+  loc_x = 0;
+  loc_y = 0;
+  cell_id = 23;
   Cell::SetCode(default_code);
 }
 
 Park::Park(int x, int y)
 {
-  locX = x;
-  locY = y;
-  cellID = 23;
+  loc_x = x;
+  loc_y = y;
+  cell_id = 23;
   Cell::SetCode(default_code);
 }

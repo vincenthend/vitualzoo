@@ -50,9 +50,6 @@ class Animal : public Renderable {
     /** @brief Memindahkan hewan sejauh x, y
     */
     void Move(int x, int y);  
-    /** @brief Melakukan pencetakan terhadap code
-    */
-    void Render();
     /** @brief Mengambil jumlah musuh hewan
     */
     int GetCEnemy();

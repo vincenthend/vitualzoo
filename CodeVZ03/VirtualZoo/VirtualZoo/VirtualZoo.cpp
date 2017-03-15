@@ -9,7 +9,7 @@ int main()
 
 	//Inisialisasi Zoo disini
 	Driver D("map.txt");
-	D.printMenu();
+	D.PrintMenu();
 
     return 0;
 }

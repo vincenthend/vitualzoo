@@ -47,8 +47,8 @@ Mouse::Mouse() {
   food_type = 1;
   type = 11;
   c_enemy = 1;
-  EnemyID = new int [c_enemy];
-  EnemyID[0] = 9;
+  enemy_id = new int [c_enemy];
+  enemy_id[0] = 9;
 }
 void Mouse::Interact() {
   cout << "Squeak-squeak";

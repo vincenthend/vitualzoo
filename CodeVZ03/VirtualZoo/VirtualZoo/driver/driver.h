@@ -25,6 +25,9 @@ class Driver {
     /** @brief Membuat driver yang membuat Zoo sesuai file Input
     */
     Driver(string Input);
+	/** @brief Destructor dari driver
+    */
+    ~Driver();
     /** @brief Mencetak menu dan memfasilitasi input menu
     */
     void PrintMenu();

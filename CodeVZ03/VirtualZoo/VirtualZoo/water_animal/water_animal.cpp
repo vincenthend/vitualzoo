@@ -8,9 +8,9 @@ Salmon::Salmon() {
   food_type = 2;
   type = 17;
   c_enemy = 0;
-  EnemyID = new int [c_enemy];
-  EnemyID [0] = 19;
-  EnemyID [1] = 21;
+  enemy_id = new int [c_enemy];
+  enemy_id [0] = 19;
+  enemy_id [1] = 21;
 }
 void Salmon::Interact() {
   cout << "blub blub";

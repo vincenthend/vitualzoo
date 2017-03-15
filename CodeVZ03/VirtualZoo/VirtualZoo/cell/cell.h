@@ -20,8 +20,16 @@ class Cell: public Renderable{
     * @param c Code yang diinginkan
     */
     void SetCode(char c);
-    /** @brief Mengatur nilai cage_id
+	/** @brief Mengatur nilai cage_id
     * @param n Nilai cage_id yang diinginkan
+    */
+    virtual void SetCageID(int n);
+	/** @brief Mengambil nilai cage_id
+    * @return nilai cage_id
+    */
+    int GetCageID();
+    /** @brief Mengambil nilai cell_id
+    * @return nilai cell_id
     */
     int GetCellID();
     /** @brief Mengembalikan posisi absis hewan.

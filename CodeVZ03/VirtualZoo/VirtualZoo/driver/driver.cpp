@@ -37,11 +37,11 @@ Driver::Driver(string Input) {
       }
       else {
         if (s[j] == 'W'){
-          C = new WaterHabitat(i, j);
+          c = new WaterHabitat(i, j);
         }
         else {
           if (s[j] == 'A'){
-            C = new AirHabitat(i, j);
+            c = new AirHabitat(i, j);
           }
           else {
             if (s[j] == 'S'){
@@ -124,73 +124,73 @@ Driver::Driver(string Input) {
       if (a_id == 1) {
         a = new Pelican;
       }
-      else if (aid == 2) {
+      else if (a_id == 2) {
         a = new Owl;
       }
-      else if (aid == 3) {
+      else if (a_id == 3) {
         a = new Pigeon;
       }
-      else if (aid == 4) {
+      else if (a_id == 4) {
         a = new Canary;
       }
-      else if (aid == 5) {
+      else if (a_id == 5) {
         a = new Bat;
       }
-      else if (aid == 6) {
+      else if (a_id == 6) {
         a = new Eagle;
       }
-      else if (aid == 7) {
+      else if (a_id == 7) {
         a = new Toucan;
       }
-      else if (aid == 8) {
+      else if (a_id == 8) {
         a = new Chicken;
       }
-      else if (aid == 9) {
+      else if (a_id == 9) {
         a = new Cat;
       }
-      else if (aid == 10) {
+      else if (a_id == 10) {
         a = new Cow;
       }
-      else if (aid == 11) {
+      else if (a_id == 11) {
         a = new Mouse;
       }
-      else if (aid == 12) {
+      else if (a_id == 12) {
         a = new Goat;
       }
-      else if (aid == 13) {
+      else if (a_id == 13) {
         a = new Llama;
       }
-      else if (aid == 14) {
+      else if (a_id == 14) {
         a = new Snake;
       }
-      else if (aid == 15) {
+      else if (a_id == 15) {
         a = new Sheep;
       }
-      else if (aid == 16) {
+      else if (a_id == 16) {
         a = new Chameleon;
       }
-      else if (aid == 17) {
+      else if (a_id == 17) {
         a = new Salmon;
       }
-      else if (aid == 18) {
+      else if (a_id == 18) {
         a = new Whale;
       }
-      else if (aid == 19) {
+      else if (a_id == 19) {
         a = new Squid;
       }
-      else if (aid == 20) {
+      else if (a_id == 20) {
         a = new Goldfish;
       }
-      else if (aid == 21) {
+      else if (a_id == 21) {
         a = new Turtle;
       }
-      else if (aid == 22) {
+      else if (a_id == 22) {
         a = new Seal;
       }
-      else if (aid == 23) {
+      else if (a_id == 23) {
         a = new Dolphin;
       }
-      else if (aid == 24) {
+      else if (a_id == 24) {
         a = new Penguin;
       }
       found = false;
@@ -215,9 +215,11 @@ Driver::Driver(string Input) {
   }
   myfile.close();
 }
+
 Driver::~Driver() {
-  delete Z;
+  delete z;
 }
+
 void Driver::PrintMenu() {
   int choice, x1, y1, x2, y2;
   choice = 0;
@@ -239,14 +241,14 @@ void Driver::PrintMenu() {
         cin >> choice;
         if (choice == 1) {
           ClearScreen();
-          PrintZoooo();
-          Printstatus();
+          PrintZoo();
+          PrintStatus();
         }
         else if (choice == 2) {
           ClearScreen();
           cout << "Masukkan ukuran" << endl;
-          cout << "X(0 - " << Z->GetWidth() - 1 <<")"<<endl;
-          cout << "Y(0 - " << Z->GetHeight() - 1 << ")"<<endl;
+          cout << "X(0 - " << z->GetWidth() - 1 <<")"<<endl;
+          cout << "Y(0 - " << z->GetHeight() - 1 << ")"<<endl;
           cout << "X1 :";
           cin >> x1;
           cout << "Y1 :";
@@ -255,7 +257,7 @@ void Driver::PrintMenu() {
           cin >> x2;
           cout << "Y2 :";
           cin >> y2;
-          PrintZoooo(x1, y1, x2, y2);
+          PrintZoo(x1, y1, x2, y2);
           cout << endl;
         }
       } while (choice != 9);
@@ -413,7 +415,7 @@ void Driver::StartTour()
     Delay(500);
   }
 }
-void Driver::PrintZoooo() {
+void Driver::PrintZoo() {
   int i, j;
   Cell* c;
   Animal* a;
@@ -443,7 +445,7 @@ void Driver::PrintZoooo() {
     cout << endl;
   }
 }
-void Driver::PrintZoooo(int x, int y) {
+void Driver::PrintZoo(int x, int y) {
   int i, j;
   Cell* c;
   Animal* a;
@@ -478,7 +480,7 @@ void Driver::PrintZoooo(int x, int y) {
     cout << endl;
   }
 }
-void Driver::PrintZoooo(int x1, int y1, int x2, int y2) {
+void Driver::PrintZoo(int x1, int y1, int x2, int y2) {
   int i, j;
   Cell* c;
   Animal* a;
@@ -508,7 +510,7 @@ void Driver::PrintZoooo(int x1, int y1, int x2, int y2) {
     cout << endl;
   }
 }
-void Driver::Printstatus() {
+void Driver::PrintStatus() {
   cout << "========================================" << endl;
   cout << "              - Food Count -" << endl;
   cout << "   Herbivore : " << z->CountFoodHerbivore() << endl;

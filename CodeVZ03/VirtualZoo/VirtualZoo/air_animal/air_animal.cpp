@@ -60,9 +60,9 @@ Bat::Bat() {
   food_type = 1;
   type = 5;
   c_enemy = 2;
-  EnemyID = new int [c_enemy];
-  EnemyID[0] = 2;
-  EnemyID[1] = 4;
+  enemy_id = new int [c_enemy];
+  enemy_id[0] = 2;
+  enemy_id[1] = 4;
 }
 void Bat::Interact() {
   cout << "shriekkkkkk";
