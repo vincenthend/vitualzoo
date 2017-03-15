@@ -7,12 +7,10 @@
 /** @class airAnimal
   * Kelas airAnimal 
   */
-
 class Penguin : public WaterAnimal, public LandAnimal {
 public:
 	Penguin();
 	void Interact();
 	void Render();
 };
-
 #endif

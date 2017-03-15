@@ -4,14 +4,10 @@ Cell::Cell():cell_id(0) {
 	loc_y = 0;
 	cage_id = -1;
 }
-
-void Cell::SetCageID(int n)
-{
+void Cell::SetCageID(int n) {
 	cage_id = n;
 }
-
-Cell::Cell(int x, int y, int ID):cell_id(ID)
-{
+Cell::Cell(int x, int y, int ID):cell_id(ID) {
 	loc_x = x;
 	loc_y = y;
 	if (cell_id == 11) {
@@ -32,26 +28,20 @@ Cell::Cell(int x, int y, int ID):cell_id(ID)
 	else if (cell_id == 23) {
 		code = 'P'; //Code Park
 	}
+	cage_id = -1;
 }
-
 void Cell::Render() {
 	cout << code;
 }
-
-int Cell::GetCageID()
-{
+int Cell::GetCageID() {
 	return cage_id;
 }
-
-int Cell::GetCellID()
-{
+int Cell::GetCellID() {
 	return cell_id;
 }
-
-int Cell::GetLocationX(){
+int Cell::GetLocationX() {
 	return (loc_x);
 }
-
-int Cell::GetLocationY(){
+int Cell::GetLocationY() {
 	return (loc_y);
 }

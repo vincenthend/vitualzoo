@@ -5,7 +5,7 @@ Road::Road()
 	locX = 0;
 	locY = 0;
 	cellID = 21;
-	Cell::SetCageIDode(default_code);
+	Cell::SetCode(default_code);
 }
 
 Road::Road(int x, int y)
@@ -13,7 +13,7 @@ Road::Road(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 21;
-	Cell::SetCageIDode(default_code);
+	Cell::SetCode(default_code);
 }
 
 Road::Road(int x, int y, bool IsEntrance)
@@ -26,7 +26,7 @@ Road::Road(int x, int y, bool IsEntrance)
 	else {
 		cellID = 211;
 	}
-	Cell::SetCageIDode(default_code);
+	Cell::SetCode(default_code);
 }
 
 Resto::Resto()
@@ -34,7 +34,7 @@ Resto::Resto()
 	locX = 0;
 	locY = 0;
 	cellID = 22;
-	Cell::SetCageIDode(default_code);
+	Cell::SetCode(default_code);
 }
 
 Resto::Resto(int x, int y)
@@ -42,7 +42,7 @@ Resto::Resto(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 22;
-	Cell::SetCageIDode(default_code);
+	Cell::SetCode(default_code);
 }
 
 Park::Park()
@@ -50,7 +50,7 @@ Park::Park()
 	locX = 0;
 	locY = 0;
 	cellID = 23;
-	Cell::SetCageIDode(default_code);
+	Cell::SetCode(default_code);
 }
 
 Park::Park(int x, int y)
@@ -58,15 +58,5 @@ Park::Park(int x, int y)
 	locX = x;
 	locY = y;
 	cellID = 23;
-	Cell::SetCageIDode(default_code);
-}
-
-void Facility::SetCageID(int n)
-{
-	cageID = n;
-}
-
-int Facility::GetCageID()
-{
-	return cageID;
+	Cell::SetCode(default_code);
 }

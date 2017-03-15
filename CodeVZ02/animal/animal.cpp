@@ -257,60 +257,43 @@ Animal::Animal(int id)
 		c_enemy = 0;
 	}
 }
-void Animal::Interact()
-{
+void Animal::Interact() {
 	cout << sound << endl;
 }
-int Animal::GetFoodQuantity (){
+int Animal::GetFoodQuantity () {
 	return (food_weight * weight);
 }
-
-int Animal::GetFoodType(){
+int Animal::GetFoodType() {
 	return (food_type);
 }
-
 int Animal::GetLocationX(){
 	return (loc_x);
 }
-
 int Animal::GetLocationY(){
 	return (loc_y);
 }
-
 void Animal::SetLocationX(int x){
 	loc_x = x;
 }
-
 void Animal::SetLocationY(int y){
 	loc_y = y;
 }
-
-int Animal::GetType()
-{
+int Animal::GetType(){
 	return type;
 }
-
 void Animal::Move(int x, int y){
 	loc_x += x;
 	loc_y += y;
 }
-
-void Animal::Render()
-{
+void Animal::Render(){
 	cout << code;
 }
-
-bool * Animal::GetHabitat()
-{
+bool * Animal::GetHabitat(){
 	return habitat;
 }
-
-int* Animal::GetEnemyList()
-{
+int* Animal::GetEnemyList(){
 	return enemy_id;
 }
-
-int Animal::GetCEnemy()
-{
+int Animal::GetCEnemy(){
 	return c_enemy;
 }

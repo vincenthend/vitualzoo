@@ -5,14 +5,14 @@
 #define CELL_H
 
 /** @class 	Cell
- * Kelas Cell, cell_id didefinisikan pada turunan Cell
+ * Kelas Cell, cell_id didefinisikan pada turunan Cell, default ID = 0
  */
-class Cell{	
+class Cell {	
 	public:
-		/** @brief Membuat cell dengan x dan y 0 dan cell_id 0
+		/** @brief Membuat cell dengan loc_x 0, loc_y 0, cell_id 0 dan cage_id -1
 		*/
 		Cell();
-		/** @brief Mengembalikan nilai cell_id 
+		/** @brief Membuat cell dengan loc_x = x, loc_y = y, cell_id ID dan cage_id -1
 		* 11 = LandHabitat; 12 = WaterHabitat; 13 = AirHabitat;
 		* 21 = Road; 210 = Entrance; 211 = Exit; 22 = Resto; 23 = Park;
 		* @param x
@@ -26,10 +26,12 @@ class Cell{
 		/** @brief Melakukan Render (mencetak Code)
 		*/
 		void Render();
-		/** @brief Mencetak code
+		/** @brief Mengatur code
+		* @param c Code yang diinginkan
 		*/
 		void SetCode(char c);
 		/** @brief Mengatur nilai cage_id
+		* @param n Nilai cage_id yang diinginkan
 		*/
 		void SetCageID(int n);
 		/** @brief Mengembalikan nilai cage_id
@@ -46,14 +48,11 @@ class Cell{
 	     * @return Posisi ordinat cell.
 	     */
 		int GetLocationY();
-	protected:
-		const int cell_id = 0;
+	private:
+		const int cell_id;
 		int loc_x;
 		int loc_y;
-		int cage_id = -1;
-
-	private:
+		int cage_id;
 		char code;
-		
 };
 #endif

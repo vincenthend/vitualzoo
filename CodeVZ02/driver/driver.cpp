@@ -3,15 +3,13 @@
 #include <random>
 #include <string>
 
-Driver::Driver(string Input)
-{
+Driver::Driver(string Input) {
 	Cell* c;
 	ifstream myfile(Input);
 	string s;
 	int i, j, k, l, w, h, temp, a_id, a_count;
 	bool found, enemy;
 	Animal* a;
-
 	a = NULL;
 	getline(myfile, s);
 	i = 0;
@@ -38,31 +36,31 @@ Driver::Driver(string Input)
 				c = new Cell(i, j, 11);
 			}
 			else {
-				if (s[j] == 'W'){
+				if (s[j] == 'W') {
 					c = new Cell(i, j, 12);
 				}
 				else {
-					if (s[j] == 'A'){
+					if (s[j] == 'A') {
 						c = new Cell(i, j, 13);
 					}
 					else {
-						if (s[j] == 'S'){
+						if (s[j] == 'S') {
 							c = new Cell(i, j, 210);
 						}
 						else {
-							if (s[j] == 'F'){
+							if (s[j] == 'F') {
 								c = new Cell(i, j, 211);
 							}
 							else {
-								if (s[j] == 'X'){
+								if (s[j] == 'X') {
 									c = new Cell(i, j, 21);
 								}
 								else {
-									if (s[j] == 'R'){
+									if (s[j] == 'R') {
 										c = new Cell(i, j, 22);
 									}
 									else {
-										if (s[j] == 'P'){
+										if (s[j] == 'P') {
 											c = new Cell(i, j, 23);
 										}
 									}
@@ -99,7 +97,6 @@ Driver::Driver(string Input)
 			}
 		}
 	}
-
 	getline(myfile, s);
 	i = 0;
 	temp = 0;
@@ -129,13 +126,13 @@ Driver::Driver(string Input)
 				if ((a->GetHabitat()[(((z->GetCage(k))->GetCageType()) % 10) - 1]) && !(z->GetCage(k)->IsFull())) {
 					l = 0;
 					enemy = false;
-					while (l < a->GetCEnemy()){
-						if (z->GetCage(k)->IsExist(a->GetEnemyList()[l])){
+					while (l < a->GetCEnemy()) {
+						if (z->GetCage(k)->IsExist(a->GetEnemyList()[l])) {
 							enemy = true;
 						}
 						l++;
 					}
-					if (!(enemy)){
+					if (!(enemy)) {
 						found = true;
 						(z->GetCage(k))->AddAnimal(a);
 					}
@@ -146,22 +143,17 @@ Driver::Driver(string Input)
 	}
 	myfile.close();
 }
-
 void Driver::PrintMenu()
 {
 	int choice, x1, y1, x2, y2;
-
 	choice = 0;
 	do {
-		
 		cout << "=========================================" << endl;
 		cout << "|               VIRTUAL ZOO             |" << endl;
 		cout << "=========================================" << endl;
 		cout << "Menu :" << endl << "1. Tampilkan Zoo" << endl << "2. Mulai Tour";
 		cout << endl << "9. Keluar" << endl << "Pilihan : ";
 		cin >> choice;
-
-
 		if (choice == 1) {
 			ClearScreen();
 			do {				
@@ -191,7 +183,6 @@ void Driver::PrintMenu()
 					cin >> y2;
 					PrintZoo(x1, y1, x2, y2);
 					cout << endl;
-					
 		choice = 0;
 				}
 			} while (choice != 9);
@@ -200,12 +191,9 @@ void Driver::PrintMenu()
 			StartTour();
 			ClearScreen();
 		}
-
 	} while (choice != 9);
 }
-
-void Driver::StartTour()
-{
+void Driver::StartTour() {
 	int i, j, tx[10], ty[10], tc, move, t_move[4], c_move;
 	int temp;
 	Cell* c;
@@ -213,11 +201,9 @@ void Driver::StartTour()
 	bool walk = true;
 	tc = 0;
 	c = z->GetCell(0, 0); //Visstud error without this
-	
 	ClearScreen();
 	PrintZoo();
 	PrintStatus();
-
 	srand((unsigned int)time(NULL));
 	for (i = 0; i < z->GetWidth(); i++) {
 		for (j = 0; j < z->GetHeight(); j++) {
@@ -232,17 +218,14 @@ void Driver::StartTour()
 		}
 	}
 	move = 0;
-	//Random entrance yang dipake, simpen  x y di i j
 	temp = (rand() % (tc));
 	i = tx[temp];
 	j = ty[temp];
-
 	while (c->GetCellID() != 211 && walk) {
 		//Print Zoo
 		ClearScreen();
 		PrintZoo(j,i);
 		PrintStatus();
-
 		cout << "(" << i << "," << j << ")" << c->GetCellID()<< endl;
 		//Interact
 		if (((j - 1) >= 0) && (move != 3)) {
@@ -297,43 +280,35 @@ void Driver::StartTour()
 				}
 			}
 		}
-		/*Metode gerak: 
-		atas (x - 1): 1
-		kanan (y + 1): 2
-		bawah (x + 1): 3
-		kiri (y - 1): 4
-		*/
 		c_move = 0;
-		if (((j - 1) >= 0) && (move != 3)){
+		if (((j - 1) >= 0) && (move != 3)) {
 			c = z->GetCell(i, j - 1);
-			if (c->GetCellID() == 21 || c->GetCellID() == 211 ){
+			if (c->GetCellID() == 21 || c->GetCellID() == 211 ) {
 				t_move[c_move] = 1;
 				c_move++;
 			}
 		}
-		if (((i + 1) < z->GetHeight()) && (move != 4)){
+		if (((i + 1) < z->GetHeight()) && (move != 4)) {
 			c = z->GetCell(i + 1, j);
-			if (c->GetCellID() == 21 || c->GetCellID() == 211){
+			if (c->GetCellID() == 21 || c->GetCellID() == 211) {
 				t_move[c_move] = 2;
 				c_move++;
 			}
 		}
-		if (((j + 1) < z->GetWidth()) && (move != 1)){
+		if (((j + 1) < z->GetWidth()) && (move != 1)) {
 			c = z->GetCell(i, j + 1);
-			if (c->GetCellID() == 21 || c->GetCellID() == 211){
+			if (c->GetCellID() == 21 || c->GetCellID() == 211) {
 				t_move[c_move] = 3;
 				c_move++;
 			}
 		}
-		if (((i - 1) >= 0) && (move != 2)){
+		if (((i - 1) >= 0) && (move != 2)) {
 			c = z->GetCell(i - 1, j);
-			if (c->GetCellID() == 21 || c->GetCellID() == 211){
+			if (c->GetCellID() == 21 || c->GetCellID() == 211) {
 				t_move[c_move] = 4;
 				c_move++;
 			}
 		}
-
-		//Random jalan yang mungkin pake mod cmove, simpen di move
 		if (c_move > 0) {
 			move = t_move[(rand() % c_move)];
 			if (move == 1) {
@@ -359,15 +334,11 @@ void Driver::StartTour()
 		c = z->GetCell(i, j);
 		Delay(500);
 	}
-	cout << "Tur selesai :D" << endl;
 }
-
-void Driver::PrintZoo()
-{
+void Driver::PrintZoo() {
 	int i, j;
 	Cell* c;
 	Animal* a;
-
 	for (i = 0; i < z->GetWidth(); i++) {
 		cout << "|";
 		for (j = 0; j < z->GetHeight(); j++) {
@@ -394,13 +365,10 @@ void Driver::PrintZoo()
 		cout << endl;
 	}
 }
-
-void Driver::PrintZoo(int x, int y)
-{
+void Driver::PrintZoo(int x, int y) {
 	int i, j;
 	Cell* c;
 	Animal* a;
-
 	for (i = 0; i < z->GetWidth(); i++) {
 		cout << "|";
 		for (j = 0; j < z->GetHeight(); j++) {
@@ -432,13 +400,10 @@ void Driver::PrintZoo(int x, int y)
 		cout << endl;
 	}
 }
-
-void Driver::PrintZoo(int x1, int y1, int x2, int y2)
-{
+void Driver::PrintZoo(int x1, int y1, int x2, int y2) {
 	int i, j;
 	Cell* c;
 	Animal* a;
-
 	for (i = y1; i <= y2; i++) {
 		cout << "|";
 		for (j = x1; j <= x2; j++) {
@@ -465,9 +430,7 @@ void Driver::PrintZoo(int x1, int y1, int x2, int y2)
 		cout << endl;
 	}
 }
-
-void Driver::PrintStatus()
-{
+void Driver::PrintStatus() {
 	cout << "========================================" << endl;
 	cout << "              - Food Count -" << endl;
 	cout << "   Herbivore : " << z->CountFoodHerbivore() << endl;

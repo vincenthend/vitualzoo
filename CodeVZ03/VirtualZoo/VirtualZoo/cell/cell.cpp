@@ -6,24 +6,18 @@ Cell::Cell() {
 	code = 0;
 	cage_id = -1;
 }
-
-void Cell::SetCageIDode(char c) {
+void Cell::SetCode(char c) {
 	code = c;
 }
-
 void Cell::Render() {
 	cout << code;
 }
-
-int Cell::GetCellID()
-{
+int Cell::GetCellID() {
 	return cell_id;
 }
-
 int Cell::GetLocationX() {
 	return (loc_x);
 }
-
 int Cell::GetLocationY() {
 	return (loc_y);
 }
